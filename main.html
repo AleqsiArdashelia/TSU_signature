@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multilang</title>
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+
+        .label_container {
+            text-align: end;
+        }
+
+        input {
+            width: 240px;
+        }
+
+        input[type=checkbox] {
+            width: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form action="">
+            <table>
+                <tr>
+                    <td class="label_container"><label for="name_ge_input">სახელი და გვარი ქართულად:</label></td>
+                    <td><input type="text" placeholder="ალექსი არდაშელია" id="name_ge_input" name="name_ge_input"
+                            required oninput="name_ge()"></td>
+                </tr>
+                <tr>
+                    <td class="label_container"><label for="name_eng_input">სახელი და გვარი ინგლისურად:</label>
+                    </td>
+                    <td><input type="text" placeholder="Aleksi Ardashelia" id="name_eng_input" name="name_eng_input"
+                            required oninput="name_eng()">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label_container"><label for="jtitle_ge_input">თანამდებობა ქართულად:</label></td>
+                    <td><input type="text" placeholder="უფროსი სპეციალისტი" id="jtitle_ge_input" name="jtitle_ge_input"
+                            required oninput="jtitle_ge()"></td>
+                </tr>
+                <tr>
+                    <td class="label_container"><label for="jtitle_eng_input">თანამდებობა ინგლისურად:</label></td>
+                    <td><input type="text" placeholder="Senior Specialist" id="jtitle_eng_input" name="jtitle_eng_input"
+                            required oninput="jtitle_eng()"></td>
+                </tr>
+                <tr>
+                    <td class="label_container"><label for="dep_ge_input">სამსახური/ინსტიტუტი ქართულად:</label></td>
+                    <td><input type="text" placeholder="რესურსების მართვის სამსახური" id="dep_ge_input"
+                            name="dep_ge_input" oninput="dep_ge()"></td>
+                </tr>
+                <tr>
+                    <td class="label_container"><label for="dep_eng_input">სამსახური/ინსტიტუტი ინგლისურად:</label></td>
+                    <td><input type="text" placeholder="Department of Resource Management" id="dep_eng_input"
+                            name="dep_eng_input" oninput="dep_eng()"></td>
+                </tr>
+                <tr>
+                    <td class="label_container"><label for="wphone_y">შიდა ნომრის გამოჩენა:</label></td>
+                    <td>
+                        <input type="checkbox" name="wphoney/n" id="wphone_y" value="wphone_y" onclick="phoneyorn()">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label_container"><label for="wphone_input">სამსახურის შიდა ნომერი:</label></td>
+                    <td><input type="number" placeholder="1234" id="wphone_input" name="wphone_input"
+                            pattern="[0-9]{4}" oninput="wphone()"></td>
+
+                </tr>
+                <tr>
+                <tr>
+                    <td class="label_container"><label for="pphone_y">პერსონალური ნომრის გამოჩენა:</label></td>
+                    <td>
+                            <input type="checkbox" name="pphoney/n" id="pphone_y" value="pphone_y" onclick="phoneyorn()">
+                    </td>
+                </tr>
+                </tr>
+                <tr>
+                    <td class="label_container"><label for="pphone_input">პერსონალური ნომერი:</label></td>
+                    <td><input type="number" placeholder="579 02 86 86" id="pphone_input" name="pphone_input" oninput="pphone()"></td>
+                </tr>
+                <tr>
+                    <td class="label_container"><label for="email_input">ელექტრონული პოსტის მისამართი:</label></td>
+                    <td><input type="email" placeholder="Aleksi.Ardashelia@tsu.ge" id="email_input" name="email_input"
+                            required oninput="email()"></td>
+                </tr>
+                <tr>
+                    <td class="label_container"><label for="room_input"> ოთახის ნომერი:</label></td>
+                    <td><input type="number" placeholder="122" id="room_input" name="room_input" oninput="room()"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+
+
+
+    <hr style="border-width: 5px; border-style:solid ; border-color: #AD0101;">
+
+
+
+
+
+    <table cellpadding="0" cellspacing="0"
+        style="vertical-align: -webkit-baseline-middle; font-size: small; font-family: Verdana;">
+        <tbody>
+            <tr>
+                <td>
+                    <table cellpadding="0" cellspacing="0"
+                        style="vertical-align: -webkit-baseline-middle; font-size: small; font-family: Verdana;">
+                        <tbody>
+                            <tr>
+                                <td width="150" style="vertical-align: middle;"><span
+                                        style="margin-right: 20px; display: block;"><img
+                                            src="https://tsu.ge/assets/media/files/8/Photo/tsu_logo_mc.png"
+                                            role="presentation" width="130" style="max-width: 130px;"></span></td>
+                                <td style="vertical-align: middle;">
+                                    <h2 color="#000000"
+                                        style="margin: 0 0 10px 0; color: rgb(0, 0, 0); font-weight: 600; line-height: 14px;">
+                                        <span style="font-size: 14px;" id="name_ge">ალექსი არდაშელია</span><br><span
+                                            style="font-size: 10px;" id="name_eng">Aleksi ARDASHELIA</span>
+                                    </h2>
+                                    <p color="#000000" font-size="small"
+                                        style="margin: 0 0 5px 0; color: rgb(0, 0, 0); font-size: 10px; line-height: 14px;">
+                                        <span id="jtitle_ge">უფროსი სპეციალისტი</span> | <span id="jtitle_eng">Senior Specialist</span>
+                                    </p>
+                                    <p color="#000000" font-size="small"
+                                        style="margin: 0 0 5px 0; font-weight: 500; color: rgb(0, 0, 0); font-size: 10px; line-height: 14px;">
+                                        <span id="dep_ge">რესურსების მართვის სამსახური</span><br><span id="dep_eng">Department of Resource Management</span>
+                                    </p>
+                                    <p color="#000000" font-size="small"
+                                        style="color: #AD0101; margin: 0 0 5px 0; font-size: 10px; line-height: 14px; font-weight: 600;">
+                                        <span>იურიდიული ფაკულტეტი<br>Faculty of Law</span>
+                                    </p>
+                                    <p color="#000000" font-size="small"
+                                        style="margin: 0; font-weight: 500; color: rgb(0, 0, 0); font-size: 10px; line-height: 14px;">
+                                        <span>ივანე ჯავახიშვილის სახელობის<br>თბილისის სახელმწიფო
+                                            უნივერსიტეტი<br>Ivane
+                                            Javakhishvili Tbilisi State University</span>
+                                    </p>
+
+                                </td>
+                                <td width="30">
+                                    <div style="width: 30px;"></div>
+                                </td>
+                                <td color="#ad0010" direction="vertical" width="1" height="auto"
+                                    style="width: 1px; border-bottom: none; border-left: 1px solid #ad0101;">
+                                </td>
+                                <td width="30">
+                                    <div style="width: 30px;"></div>
+                                </td>
+                                <td style="vertical-align: middle;">
+                                    <table cellpadding="0" cellspacing="0"
+                                        style="vertical-align: -webkit-baseline-middle; font-size: small; font-family: Verdana;">
+                                        <tbody>
+                                            <tr height="25" style="vertical-align: middle; display: none;" id="phone_ifany">
+                                                <td width="30" style="vertical-align: middle;">
+                                                    <table cellpadding="0" cellspacing="0"
+                                                        style="vertical-align: -webkit-baseline-middle; font-size: small; font-family: Verdana;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="vertical-align: bottom;"><span
+                                                                        color="#ad0010" width="11"
+                                                                        style="display: inline-block; background-color: #ad0101;"><img
+                                                                            src="https://tsu.ge/assets/media/files/8/signatures/icons/phone-icon-2x.png"
+                                                                            color="#ad0010" alt="mobilePhone" width="13"
+                                                                            style="display: block;"></span>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td style="padding: 0px; color: rgb(0, 0, 0);">
+                                                    <span style="display: none;" id="wphone_div">
+                                                        <a href="tel:+995 (032) 225 04 84" color="#000000"
+                                                            style="text-decoration: none; color: rgb(0, 0, 0); font-size: 10px;"
+                                                            >
+                                                            +995 (032) 225 04 84 (<span id="wphone">1234</span>)</a>
+                                                    </span>
+                                                    <span style="display: none;" id="phone_ifboth"> | </span>
+                                                    <span style="display: none;" id="pphone_div"> <a
+                                                            href="tel:+995579028686" color="#000000"
+                                                            style="text-decoration: none; color: rgb(0, 0, 0); font-size: 10px;"
+                                                            id="pphone">+995 579 02 86 86</a></span>
+                                                </td>
+                                            </tr>
+                                            <tr height="25" style="vertical-align: middle;">
+                                                <td width="30" style="vertical-align: middle;">
+                                                    <table cellpadding="0" cellspacing="0"
+                                                        style="vertical-align: -webkit-baseline-middle; font-size: small; font-family: Verdana;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="vertical-align: bottom;"><span
+                                                                        color="#ad0010" width="11"
+                                                                        style="display: inline-block; background-color: #ad0101;"><img
+                                                                            src="https://tsu.ge/assets/media/files/8/signatures/icons/email-icon-2x.png"
+                                                                            color="#ad0010" alt="emailAddress"
+                                                                            width="13"
+                                                                            style="display: block; background-color: #ad0101;"></span>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td style="padding: 0px;"><a href="mailto:aleksi.ardshelia@tsu.ge" color="#000000"
+                                                        style="text-decoration: none; color: rgb(0, 0, 0); font-size: 10px;"
+                                                        id="email">Aleksi.Ardashelia@tsu.ge</a>
+                                                </td>
+                                            </tr>
+                                            <tr height="25" style="vertical-align: middle;">
+                                                <td width="30" style="vertical-align: middle;">
+                                                    <table cellpadding="0" cellspacing="0"
+                                                        style="vertical-align: -webkit-baseline-middle; font-size: small; font-family: Verdana;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="vertical-align: bottom;"><span
+                                                                        color="#ad0010" width="11"
+                                                                        style="display: inline-block; background-color: #ad0101;"><img
+                                                                            src="https://tsu.ge/assets/media/files/8/signatures/icons/link-icon-2x.png"
+                                                                            color="#ad0010" alt="website" width="13"
+                                                                            style="display: block; background-color: #ad0101;"></span>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td style="padding: 0px;"><a
+                                                        href="https://www.tsu.ge/ka/faculty/%E1%83%98%E1%83%A3%E1%83%A0%E1%83%98%E1%83%93%E1%83%98%E1%83%A3%E1%83%9A%E1%83%98%20%E1%83%A4%E1%83%90%E1%83%99%E1%83%A3%E1%83%9A%E1%83%A2%E1%83%94%E1%83%A2%E1%83%98/9"
+                                                        color="#000000"
+                                                        style="text-decoration: none; color: rgb(0, 0, 0); font-size: 10px;"><span>TSU.GE</span></a>
+                                                </td>
+                                            </tr>
+                                            <tr height="25" style="vertical-align: middle;">
+                                                <td width="30" style="vertical-align: middle;">
+                                                    <table cellpadding="0" cellspacing="0"
+                                                        style="vertical-align: -webkit-baseline-middle; font-size: small; font-family: Verdana;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="vertical-align: bottom;"><span
+                                                                        color="#ad0010" width="11"
+                                                                        style="display: inline-block; background-color: #ad0101;"><img
+                                                                            src="https://tsu.ge/assets/media/files/8/signatures/icons/address-icon-2x.png"
+                                                                            color="#ad0010" alt="address" width="13"
+                                                                            style="display: block; background-color: #ad0101;"></span>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td style="padding: 0px;"><span color="#000000"
+                                                        style="font-size: 10px; color: rgb(0, 0, 0); line-height: 14px;">
+                                                        საქართველო, თბილისი ი. ჭავჭავაძის გამზ. 3, 0179<br>
+                                                        3, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia<br>
+                                                        ოთახი №<span class="room">122</span> | Room №<span
+                                                            class="room">122</span></span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0"
+                                        style="display: inline-block; vertical-align: -webkit-baseline-middle; font-size: small; font-family: Verdana; padding-top: 15px;">
+                                        <tbody>
+                                            <tr style="text-align: right;">
+                                                <td><a href="https://www.facebook.com/TSU.Faculty.of.Law"
+                                                        color="#AD0101"
+                                                        style="display: inline-block; padding: 0px; background-color: #ad0101;"><img
+                                                            src="https://tsu.ge/assets/media/files/8/signatures/icons/facebook-icon-2x.png"
+                                                            alt="facebook" color="#AD0101" height="24"
+                                                            style="background-color: #ad0101; max-width: 135px; display: block;"></a>
+                                                </td>
+                                                <td width="5">
+                                                    <div></div>
+                                                </td>
+                                                <td><a href="https://twitter.com/TsuLawFaculty" color="#AD0101"
+                                                        style="display: inline-block; padding: 0px; background-color: #ad0101;"><img
+                                                            src="https://tsu.ge/assets/media/files/8/signatures/icons/twitter-icon-2x.png"
+                                                            alt="twitter" color="#AD0101" height="24"
+                                                            style="background-color: #ad0101; max-width: 135px; display: block;"></a>
+                                                </td>
+                                                <td width="5">
+                                                    <div></div>
+                                                </td>
+                                                <td><a href="https://ge.linkedin.com/in/tsu-law-faculty-a07b01115"
+                                                        color="#AD0101"
+                                                        style="display: inline-block; padding: 0px; background-color: #ad0101;"><img
+                                                            src="https://tsu.ge/assets/media/files/8/signatures/icons/linkedin-icon-2x.png"
+                                                            alt="linkedin" color="#AD0101" height="24"
+                                                            style="background-color: #ad0101; max-width: 135px; display: block;"></a>
+                                                </td>
+                                                <td width="5">
+                                                    <div></div>
+                                                </td>
+                                                <td><a href="https://www.instagram.com/tbilisistateuniversity_law/"
+                                                        color="#AD0101"
+                                                        style="display: inline-block; padding: 0px; background-color: #ad0101;"><img
+                                                            src="https://tsu.ge/assets/media/files/8/signatures/icons/instagram-icon-2x.png"
+                                                            alt="instagram" color="#AD0101" height="24"
+                                                            style="background-color: #ad0101; max-width: 135px; display: block;"></a>
+                                                </td>
+                                                <td width="5">
+                                                    <div></div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table cellpadding="0" cellspacing="0"
+                        style="width: 100%; vertical-align: -webkit-baseline-middle; font-size: small; font-family: Verdana;">
+                        <tbody>
+                            <tr>
+                                <td height="10"></td>
+                            </tr>
+                            <tr>
+                                <td color="#ad0010" direction="horizontal" width="auto" height="1"
+                                    style="width: 100%; border-bottom: 1px solid rgb(173, 0, 16); border-left: none; display: block;">
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table cellpadding="0" cellspacing="0"
+                        style="width: 100%; vertical-align: -webkit-baseline-middle; font-size: small; font-family: Verdana;">
+                        <tbody>
+                            <tr>
+                                <td style=" vertical-align: top; max-width: 620px;">
+                                    <!-- DISCLAMER -->
+                                    <p style="font-size: 8px; text-align: justify; margin: 10px 0 0 0;">
+                                        <span style="color: #AD0101;">შეტყობინება კონფიდენციალურობის შესახებ:</span>
+                                        წინამდებარე წერილი კონფიდენციალურია და
+                                        განკუთვნილია მხოლოდ წერილში მითითებული პიროვნების ან ორგანიზაციისათვის. თუ
+                                        წერილი თქვენთვის არ არის განკუთვნილი, დაუშვებელია მისი შინაარსის
+                                        გამჟღავნება,
+                                        გავრცელება ან მის შინაარსზე დაყრდნობით ნებისმიერი ქმედების განხორციელება. თუ
+                                        თქვენ შეცდომით მიიღეთ წინამდებარე წერილი, გთხოვთ, აღნიშნულის შესახებ
+                                        დაუყოვნებლივ აცნობოთ ამავე წერილის გამომგზავნს.<br>
+                                        <span style="color: #AD0101;">CONFIDENTIALITY NOTICE:</span>
+                                        This e-mail message may contain confidential and/or privileged material.
+                                        Delivery of this message to any person other than the intended recipient(s)
+                                        does
+                                        not in any way waive privilege or confidentiality. The information
+                                        transmitted
+                                        is intended only for the person or entity to whom or which it is addressed.
+                                        The
+                                        sender accepts no liability for the proper transmission of this
+                                        communication or
+                                        for any delay in its receipt.
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+
+    let wphoney = document.getElementById("wphone_y");
+    let pphoney = document.getElementById("pphone_y");
+
+        function name_ge() {
+            document.getElementById("name_ge").innerHTML = document.getElementById("name_ge_input").value;
+        };
+        function name_eng() {
+            let enname = document.getElementById("name_eng_input").value.split(' ');
+            document.getElementById("name_eng").innerHTML = enname[0].charAt(0).toUpperCase() + enname[0].slice(1) + " " +enname[1].toUpperCase();
+        };
+        function jtitle_ge() {
+            document.getElementById("jtitle_ge").innerHTML = document.getElementById("jtitle_ge_input").value;
+        };
+        function jtitle_eng() {
+            document.getElementById("jtitle_eng").innerHTML = document.getElementById("jtitle_eng_input").value;
+        };
+        function dep_ge() {
+            document.getElementById("dep_ge").innerHTML = document.getElementById("dep_ge_input").value;
+        };
+        function dep_eng() {
+            document.getElementById("dep_eng").innerHTML = document.getElementById("dep_eng_input").value;
+        };
+        function name_ge() {
+            document.getElementById("name_ge").innerHTML = document.getElementById("name_ge_input").value;
+        };
+        function phoneyorn() {
+            if (wphone_y.checked) {
+                document.getElementById('wphone_div').style.display = 'inline';
+            }
+            if (!wphone_y.checked) {
+                document.getElementById('wphone_div').style.display = 'none';
+            }
+            if (pphone_y.checked) {
+                document.getElementById('pphone_div').style.display = 'inline';
+            }
+            if (!pphone_y.checked) {
+                document.getElementById('pphone_div').style.display = 'none';
+            }
+            if (wphone_y.checked || pphone_y.checked) {
+                document.getElementById('phone_ifany').style.display = 'table-row';
+            }
+            if (wphone_y.checked && pphone_y.checked) {
+                document.getElementById('phone_ifboth').style.display = 'inline';
+            }
+            else {
+                document.getElementById('phone_ifboth').style.display = 'none';
+            }
+        }
+        function wphone() {
+            document.getElementById('wphone').innerHTML = document.getElementById("wphone_input").value
+        }
+        function pphone() {
+            document.getElementById('pphone').innerHTML = '+995 ' + document.getElementById("pphone_input").value
+            document.getElementById('pphone').href = "tel:+995 " + document.getElementById("pphone_input").value
+        }
+        function email() {
+            document.getElementById('email').innerHTML = document.getElementById("email_input").value
+            document.getElementById('email').href = "mailto:" + document.getElementById("email_input").value
+        }
+        function room() {
+            roomnum = document.getElementsByClassName('room')
+            for(let i=0; i < roomnum.length; i++) {
+                roomnum[i].innerHTML = document.getElementById("room_input").value
+            }
+
+        }
+        
+    </script>
+</body>
+
+</html>
