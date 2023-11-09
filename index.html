@@ -22,6 +22,10 @@
         input[type=checkbox] {
             width: 15px;
         }
+
+        .displaynone {
+            display: none;
+        }
     </style>
 </head>
 
@@ -42,48 +46,84 @@
                     </td>
                 </tr>
                 <tr>
+                    <td class="label_container"><label for="atitleyorn">აკადემიური თანამდებობის გამოჩენა:</label></td>
+                    <td>
+                        <input type="checkbox" name="atitley/n" id="atitleyorn" value="atitleyorn"
+                            onclick="atitleYorN()">
+                    </td>
+                </tr>
+                <tr id="atitle_input_tr" class="displaynone">
+                    <td class="label_container"><label for="atitle_input">აკადემიური თანამდებობა:</label>
+                    </td>
+                    <td>
+                        <select name="atitle_input" id="atitle_input" oninput="atitle()">
+                            <option value="0" selected>აირჩიეთ</option>
+                            <option value="1">ასოცირებული პროფესორი</option>
+                            <option value="2">პროფესორი</option>
+                            <option value="3">ასისტენტ-პროფესორი</option>
+                            <option value="4">ასისტენტი</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label_container"><label for="jtitleyorn">თანამდებობის გამოჩენა:</label></td>
+                    <td>
+
+                        <input type="checkbox" name="jtitley/n" id="jtitleyorn" value="jtitleyorn"
+                            onclick="jtitleYorN()">
+                    </td>
+                </tr>
+                <tr class="jtitle_input_tr displaynone">
                     <td class="label_container"><label for="jtitle_ge_input">თანამდებობა ქართულად:</label></td>
                     <td><input type="text" placeholder="უფროსი სპეციალისტი" id="jtitle_ge_input" name="jtitle_ge_input"
                             required oninput="jtitle_ge()"></td>
                 </tr>
-                <tr>
+                <tr class="jtitle_input_tr displaynone">
                     <td class="label_container"><label for="jtitle_eng_input">თანამდებობა ინგლისურად:</label></td>
                     <td><input type="text" placeholder="Senior Specialist" id="jtitle_eng_input" name="jtitle_eng_input"
                             required oninput="jtitle_eng()"></td>
                 </tr>
                 <tr>
+                    <td class="label_container"><label for="depyorn">სამსახურის/ინსტიტუტის გამოჩენა:</label></td>
+                    <td>
+                        <input type="checkbox" name="depy/n" id="depyorn" value="depyorn" onclick="depYorN()">
+                    </td>
+                </tr>
+                <tr class="dep_input_tr displaynone">
                     <td class="label_container"><label for="dep_ge_input">სამსახური/ინსტიტუტი ქართულად:</label></td>
                     <td><input type="text" placeholder="რესურსების მართვის სამსახური" id="dep_ge_input"
                             name="dep_ge_input" oninput="dep_ge()"></td>
                 </tr>
-                <tr>
+                <tr class="dep_input_tr displaynone">
                     <td class="label_container"><label for="dep_eng_input">სამსახური/ინსტიტუტი ინგლისურად:</label></td>
                     <td><input type="text" placeholder="Department of Resource Management" id="dep_eng_input"
                             name="dep_eng_input" oninput="dep_eng()"></td>
                 </tr>
                 <tr>
-                    <td class="label_container"><label for="wphone_y">შიდა ნომრის გამოჩენა:</label></td>
+                    <td class="label_container"><label for="wphoneyorn">შიდა ნომრის გამოჩენა:</label></td>
                     <td>
-                        <input type="checkbox" name="wphoney/n" id="wphone_y" value="wphone_y" onclick="phoneyorn()">
+                        <input type="checkbox" name="wphoney/n" id="wphoneyorn" value="wphoneyorn"
+                            onclick="phoneyorn()">
                     </td>
                 </tr>
-                <tr>
+                <tr id="wphone_input_tr" class="displaynone">
                     <td class="label_container"><label for="wphone_input">სამსახურის შიდა ნომერი:</label></td>
-                    <td><input type="number" placeholder="1234" id="wphone_input" name="wphone_input"
-                            pattern="[0-9]{4}" oninput="wphone()"></td>
-
+                    <td><input type="number" placeholder="1234" id="wphone_input" name="wphone_input" pattern="[0-9]{4}"
+                            oninput="wphone()"></td>
                 </tr>
                 <tr>
                 <tr>
-                    <td class="label_container"><label for="pphone_y">პერსონალური ნომრის გამოჩენა:</label></td>
+                    <td class="label_container"><label for="pphoneyorn">პერსონალური ნომრის გამოჩენა:</label></td>
                     <td>
-                            <input type="checkbox" name="pphoney/n" id="pphone_y" value="pphone_y" onclick="phoneyorn()">
+                        <input type="checkbox" name="pphoney/n" id="pphoneyorn" value="pphoneyorn"
+                            onclick="phoneyorn()">
                     </td>
                 </tr>
                 </tr>
-                <tr>
+                <tr id="pphone_input_tr" class="displaynone">
                     <td class="label_container"><label for="pphone_input">პერსონალური ნომერი:</label></td>
-                    <td><input type="number" placeholder="579 02 86 86" id="pphone_input" name="pphone_input" oninput="pphone()"></td>
+                    <td><input type="number" placeholder="579 02 86 86" id="pphone_input" name="pphone_input"
+                            oninput="pphone()"></td>
                 </tr>
                 <tr>
                     <td class="label_container"><label for="email_input">ელექტრონული პოსტის მისამართი:</label></td>
@@ -127,12 +167,21 @@
                                             style="font-size: 10px;" id="name_eng">Aleksi ARDASHELIA</span>
                                     </h2>
                                     <p color="#000000" font-size="small"
-                                        style="margin: 0 0 5px 0; color: rgb(0, 0, 0); font-size: 10px; line-height: 14px; max-width: 240px;">
-                                        <span id="jtitle_ge">უფროსი სპეციალისტი</span> | <span id="jtitle_eng">Senior Specialist</span>
+                                        style="margin: 0 0 5px 0; color: rgb(0, 0, 0); font-size: 10px; line-height: 14px; max-width: 240px; display: none;"
+                                        id="atitle">
+                                        <span id="atitle_ge"></span> | <span id="atitle_eng"></span>
                                     </p>
                                     <p color="#000000" font-size="small"
-                                        style="margin: 0 0 5px 0; font-weight: 500; color: rgb(0, 0, 0); font-size: 10px; line-height: 14px; max-width: 240px;">
-                                        <span id="dep_ge">რესურსების მართვის სამსახური</span><br><span id="dep_eng">Department of Resource Management</span>
+                                        style="margin: 0 0 5px 0; color: rgb(0, 0, 0); font-size: 10px; line-height: 14px; max-width: 240px; display: none;"
+                                        id="jtitle">
+                                        <span id="jtitle_ge">უფროსი სპეციალისტი</span> | <span id="jtitle_eng">Senior
+                                            Specialist</span>
+                                    </p>
+                                    <p color="#000000" font-size="small"
+                                        style="margin: 0 0 5px 0; font-weight: 500; color: rgb(0, 0, 0); font-size: 10px; line-height: 14px; max-width: 240px; display: none;"
+                                        id="dep">
+                                        <span id="dep_ge">რესურსების მართვის სამსახური</span><br><span
+                                            id="dep_eng">Department of Resource Management</span>
                                     </p>
                                     <p color="#000000" font-size="small"
                                         style="color: #AD0101; margin: 0 0 5px 0; font-size: 10px; line-height: 14px; font-weight: 600;">
@@ -159,7 +208,8 @@
                                     <table cellpadding="0" cellspacing="0"
                                         style="vertical-align: -webkit-baseline-middle; font-size: small; font-family: Verdana;">
                                         <tbody>
-                                            <tr height="25" style="vertical-align: middle; display: none;" id="phone_ifany">
+                                            <tr height="25" style="vertical-align: middle; display: none;"
+                                                id="phone_ifany">
                                                 <td width="30" style="vertical-align: middle;">
                                                     <table cellpadding="0" cellspacing="0"
                                                         style="vertical-align: -webkit-baseline-middle; font-size: small; font-family: Verdana;">
@@ -179,8 +229,7 @@
                                                 <td style="padding: 0px; color: rgb(0, 0, 0);">
                                                     <span style="display: none;" id="wphone_div">
                                                         <a href="tel:+995 (032) 225 04 84" color="#000000"
-                                                            style="text-decoration: none; color: rgb(0, 0, 0); font-size: 10px;"
-                                                            >
+                                                            style="text-decoration: none; color: rgb(0, 0, 0); font-size: 10px;">
                                                             +995 (032) 225 04 84 (<span id="wphone">1234</span>)</a>
                                                     </span>
                                                     <span style="display: none;" id="phone_ifboth"> | </span>
@@ -208,7 +257,8 @@
                                                         </tbody>
                                                     </table>
                                                 </td>
-                                                <td style="padding: 0px;"><a href="mailto:aleksi.ardshelia@tsu.ge" color="#000000"
+                                                <td style="padding: 0px;"><a href="mailto:aleksi.ardshelia@tsu.ge"
+                                                        color="#000000"
                                                         style="text-decoration: none; color: rgb(0, 0, 0); font-size: 10px;"
                                                         id="email">Aleksi.Ardashelia@tsu.ge</a>
                                                 </td>
@@ -372,23 +422,88 @@
     </table>
 
     <script>
-        
-    let wphoney = document.getElementById("wphone_y");
-    let pphoney = document.getElementById("pphone_y");
+
+        let wphoneyorn = document.getElementById("wphoneyorn"),
+            pphoneyorn = document.getElementById("pphoneyorn"),
+            atitle_ge = document.getElementById('atitle_ge'),
+            atitle_eng = document.getElementById('atitle_eng'),
+            jtitle_input_tr = document.getElementById('jtitle_input_tr'),
+            dep_input_tr = document.getElementById('dep_input_tr')
+            roomnum = document.getElementsByClassName('room');
+
 
         function name_ge() {
             document.getElementById("name_ge").innerHTML = document.getElementById("name_ge_input").value;
         };
         function name_eng() {
             let enname = document.getElementById("name_eng_input").value.split(' ');
-            document.getElementById("name_eng").innerHTML = enname[0].charAt(0).toUpperCase() + enname[0].slice(1) + " " +enname[1].toUpperCase();
+            document.getElementById("name_eng").innerHTML = enname[0].charAt(0).toUpperCase() + enname[0].slice(1) + " " + enname[1].toUpperCase();
         };
+        function atitleYorN() {
+            if (document.getElementById('atitleyorn').checked) {
+                document.getElementById('atitle').style.display = 'block';
+                document.getElementById('atitle_input_tr').style.display = 'table-row';
+            }
+            else {
+                document.getElementById('atitle').style.display = 'none';
+                document.getElementById('atitle_input_tr').style.display = 'none';
+            }
+        }
+        function atitle() {
+            let atitleval = document.getElementById('atitle_input').selectedIndex;
+            if (atitleval == 0) {
+                atitle_ge.innerHTML = null;
+                atitle_eng.innerHTML = null;
+            }
+            if (atitleval === 1) {
+                atitle_ge.innerHTML = 'ასოცირებული პროფესორი';
+                atitle_eng.innerHTML = 'Associate Professor';
+            }
+            if (atitleval === 2) {
+                atitle_ge.innerHTML = 'პროფესორი';
+                atitle_eng.innerHTML = 'Professor';
+            }
+            if (atitleval === 3) {
+                atitle_ge.innerHTML = 'ასისტენტ-პროფესორი';
+                atitle_eng.innerHTML = 'Assistant Professor';
+            }
+            if (atitleval === 4) {
+                atitle_ge.innerHTML = 'ასისტენტი';
+                atitle_eng.innerHTML = 'Assistant';
+            }
+        };
+        function jtitleYorN() {
+            if (document.getElementById('jtitleyorn').checked) {
+                document.getElementById('jtitle').style.display = 'block';
+                document.getElementsByClassName('jtitle_input_tr')[0].style.display = 'table-row';
+                document.getElementsByClassName('jtitle_input_tr')[1].style.display = 'table-row';
+
+            }
+            else {
+                document.getElementById('jtitle').style.display = 'none';
+                document.getElementsByClassName('jtitle_input_tr')[0].style.display = 'none';
+                document.getElementsByClassName('jtitle_input_tr')[1].style.display = 'none';
+            }
+        }
         function jtitle_ge() {
             document.getElementById("jtitle_ge").innerHTML = document.getElementById("jtitle_ge_input").value;
         };
         function jtitle_eng() {
             document.getElementById("jtitle_eng").innerHTML = document.getElementById("jtitle_eng_input").value;
         };
+        function depYorN() {
+            if (document.getElementById('depyorn').checked) {
+                document.getElementById('dep').style.display = 'block';
+                document.getElementsByClassName('dep_input_tr')[0].style.display = 'table-row';
+                document.getElementsByClassName('dep_input_tr')[1].style.display = 'table-row';
+
+            }
+            else {
+                document.getElementById('dep').style.display = 'none';
+                document.getElementsByClassName('dep_input_tr')[0].style.display = 'none';
+                document.getElementsByClassName('dep_input_tr')[1].style.display = 'none';
+            }
+        }
         function dep_ge() {
             document.getElementById("dep_ge").innerHTML = document.getElementById("dep_ge_input").value;
         };
@@ -399,25 +514,29 @@
             document.getElementById("name_ge").innerHTML = document.getElementById("name_ge_input").value;
         };
         function phoneyorn() {
-            if (wphone_y.checked) {
+            if (wphoneyorn.checked) {
                 document.getElementById('wphone_div').style.display = 'inline';
+                document.getElementById('wphone_input_tr').style.display = 'table-row';
             }
-            if (!wphone_y.checked) {
+            if (!wphoneyorn.checked) {
                 document.getElementById('wphone_div').style.display = 'none';
+                document.getElementById('wphone_input_tr').style.display = 'none';
             }
-            if (pphone_y.checked) {
+            if (pphoneyorn.checked) {
                 document.getElementById('pphone_div').style.display = 'inline';
+                document.getElementById('pphone_input_tr').style.display = 'table-row';
             }
-            if (!pphone_y.checked) {
+            if (!pphoneyorn.checked) {
                 document.getElementById('pphone_div').style.display = 'none';
+                document.getElementById('pphone_input_tr').style.display = 'none';
             }
-            if (wphone_y.checked || pphone_y.checked) {
+            if (wphoneyorn.checked || pphoneyorn.checked) {
                 document.getElementById('phone_ifany').style.display = 'table-row';
             }
-            if (!wphone_y.checked && !pphone_y.checked) {
+            if (!wphoneyorn.checked && !pphoneyorn.checked) {
                 document.getElementById('phone_ifany').style.display = 'none';
             }
-            if (wphone_y.checked && pphone_y.checked) {
+            if (wphoneyorn.checked && pphoneyorn.checked) {
                 document.getElementById('phone_ifboth').style.display = 'inline';
             }
             else {
@@ -425,23 +544,22 @@
             }
         }
         function wphone() {
-            document.getElementById('wphone').innerHTML = document.getElementById("wphone_input").value
+            document.getElementById('wphone').innerHTML = document.getElementById("wphone_input").value;
         }
         function pphone() {
-            document.getElementById('pphone').innerHTML = '+995 ' + document.getElementById("pphone_input").value
-            document.getElementById('pphone').href = "tel:+995 " + document.getElementById("pphone_input").value
+            document.getElementById('pphone').innerHTML = '+995 ' + document.getElementById("pphone_input").value;
+            document.getElementById('pphone').href = "tel:+995 " + document.getElementById("pphone_input").value;
         }
         function email() {
-            document.getElementById('email').innerHTML = document.getElementById("email_input").value
-            document.getElementById('email').href = "mailto:" + document.getElementById("email_input").value
+            document.getElementById('email').innerHTML = document.getElementById("email_input").value;
+            document.getElementById('email').href = "mailto:" + document.getElementById("email_input").value;
         }
         function room() {
-            roomnum = document.getElementsByClassName('room')
-            for(let i=0; i < roomnum.length; i++) {
-                roomnum[i].innerHTML = document.getElementById("room_input").value
-            }
+            roomnum[0].innerHTML = document.getElementById("room_input").value;
+            roomnum[1].innerHTML = document.getElementById("room_input").value;
+
         }
-        
+
     </script>
 </body>
 
