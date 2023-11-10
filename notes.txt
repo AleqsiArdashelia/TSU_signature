@@ -1,3 +1,4 @@
 name_ge     jtitle_ge           dep_ge          wphone_div      phone_ifboth    pphone_div      email       room    
 name_eng    jtitle_eng          dep_eng         wphone          phone_ifany     pphone                              atitle
             jtitle_input_tr     dep_input_tr    wphone_input_tr                 pphone_input_tr                     atitle_input_tr
+#faculty_input faculty() .faculty_color .faculty_color_bd .faculty_color_bg

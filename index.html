@@ -46,6 +46,23 @@
                     </td>
                 </tr>
                 <tr>
+                    <td class="label_container"><label for="faculty_input">ფაკულტეტლი/ცენტრალური:</label>
+                    </td>
+                    <td>
+                        <select name="faculty_input" id="faculty_input" oninput="faculty()">
+                            <option selected>აირჩიეთ</option>
+                            <option>ცენტრალური</option>
+                            <option>იურიდიული ფაკულტეტი</option>
+                            <option>მედიცინის ფაკულტეტი</option>
+                            <option>ეკონომიკისა და ბიზნესის ფაკულტეტი</option>
+                            <option>ფსიქოლოგიისა და განათლების მეცნიერებათა ფაკულტეტი</option>
+                            <option>სოციალურ და პოლიტიკურ მეცნიერებათა ფაკულტეტი</option>
+                            <option>ჰუმანიტარულ მეცნიერებათა ფაკულტეტი</option>
+                            <option>ზუსტ და საბუნებისმეტყველო მეცნიერებათა ფაკულტეტი</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
                     <td class="label_container"><label for="atitleyorn">აკადემიური თანამდებობის გამოჩენა:</label></td>
                     <td>
                         <input type="checkbox" name="atitley/n" id="atitleyorn" value="atitleyorn"
@@ -57,11 +74,11 @@
                     </td>
                     <td>
                         <select name="atitle_input" id="atitle_input" oninput="atitle()">
-                            <option value="0" selected>აირჩიეთ</option>
-                            <option value="1">ასოცირებული პროფესორი</option>
-                            <option value="2">პროფესორი</option>
-                            <option value="3">ასისტენტ-პროფესორი</option>
-                            <option value="4">ასისტენტი</option>
+                            <option selected>აირჩიეთ</option>
+                            <option>პროფესორი</option>
+                            <option>ასოცირებულიპროფესორი</option>
+                            <option>ასისტენტ-პროფესორი</option>
+                            <option>ასისტენტი</option>
                         </select>
                     </td>
                 </tr>
@@ -183,9 +200,10 @@
                                         <span id="dep_ge">რესურსების მართვის სამსახური</span><br><span
                                             id="dep_eng">Department of Resource Management</span>
                                     </p>
-                                    <p color="#000000" font-size="small"
-                                        style="color: #AD0101; margin: 0 0 5px 0; font-size: 10px; line-height: 14px; font-weight: 600;">
-                                        <span>იურიდიული ფაკულტეტი<br>Faculty of Law</span>
+                                    <p class="faculty_color" color="#000000" font-size="small"
+                                        style="color: #AD0101; margin: 0 0 5px 0; font-size: 10px; line-height: 14px; font-weight: 600; max-width: 240px;">
+                                        <span id="faculty_ge">იურიდიული ფაკულტეტი</span><br><span
+                                            id="faculty_eng">Faculty of Law</span>
                                     </p>
                                     <p color="#000000" font-size="small"
                                         style="margin: 0; font-weight: 500; color: rgb(0, 0, 0); font-size: 10px; line-height: 14px;">
@@ -198,8 +216,8 @@
                                 <td width="30">
                                     <div style="width: 30px;"></div>
                                 </td>
-                                <td color="#ad0010" direction="vertical" width="1" height="auto"
-                                    style="width: 1px; border-bottom: none; border-left: 1px solid #ad0101;">
+                                <td class="faculty_color_bd" direction="vertical" width="1" height="auto"
+                                    style="width: 1px; border-bottom: none; border-left: 1px solid; border-color: #AD0101;">
                                 </td>
                                 <td width="30">
                                     <div style="width: 30px;"></div>
@@ -216,10 +234,10 @@
                                                         <tbody>
                                                             <tr>
                                                                 <td style="vertical-align: bottom;"><span
-                                                                        color="#ad0010" width="11"
+                                                                        class="faculty_color_bg" width="11"
                                                                         style="display: inline-block; background-color: #ad0101;"><img
                                                                             src="https://tsu.ge/assets/media/files/8/signatures/icons/phone-icon-2x.png"
-                                                                            color="#ad0010" alt="mobilePhone" width="13"
+                                                                            alt="mobilePhone" width="13"
                                                                             style="display: block;"></span>
                                                                 </td>
                                                             </tr>
@@ -246,12 +264,12 @@
                                                         <tbody>
                                                             <tr>
                                                                 <td style="vertical-align: bottom;"><span
-                                                                        color="#ad0010" width="11"
+                                                                        class="faculty_color_bg" width="11"
                                                                         style="display: inline-block; background-color: #ad0101;"><img
                                                                             src="https://tsu.ge/assets/media/files/8/signatures/icons/email-icon-2x.png"
-                                                                            color="#ad0010" alt="emailAddress"
-                                                                            width="13"
-                                                                            style="display: block; background-color: #ad0101;"></span>
+                                                                            alt="emailAddress" width="13"
+                                                                            style="display: block; background-color: #ad0101; "
+                                                                            class="faculty_color_bg"></span>
                                                                 </td>
                                                             </tr>
                                                         </tbody>
@@ -269,12 +287,13 @@
                                                         style="vertical-align: -webkit-baseline-middle; font-size: small; font-family: Verdana;">
                                                         <tbody>
                                                             <tr>
-                                                                <td style="vertical-align: bottom;"><span
-                                                                        color="#ad0010" width="11"
-                                                                        style="display: inline-block; background-color: #ad0101;"><img
+                                                                <td style="vertical-align: bottom;"><span width="11"
+                                                                        style="display: inline-block; background-color: #ad0101;"
+                                                                        class="faculty_color_bg"><img
                                                                             src="https://tsu.ge/assets/media/files/8/signatures/icons/link-icon-2x.png"
-                                                                            color="#ad0010" alt="website" width="13"
-                                                                            style="display: block; background-color: #ad0101;"></span>
+                                                                            alt="website" width="13"
+                                                                            style="display: block; background-color: #ad0101;"
+                                                                            class="faculty_color_bg"></span>
                                                                 </td>
                                                             </tr>
                                                         </tbody>
@@ -292,12 +311,13 @@
                                                         style="vertical-align: -webkit-baseline-middle; font-size: small; font-family: Verdana;">
                                                         <tbody>
                                                             <tr>
-                                                                <td style="vertical-align: bottom;"><span
-                                                                        color="#ad0010" width="11"
-                                                                        style="display: inline-block; background-color: #ad0101;"><img
+                                                                <td style="vertical-align: bottom;"><span width="11"
+                                                                        style="display: inline-block; background-color: #ad0101;"
+                                                                        class="faculty_color_bg"><img
                                                                             src="https://tsu.ge/assets/media/files/8/signatures/icons/address-icon-2x.png"
-                                                                            color="#ad0010" alt="address" width="13"
-                                                                            style="display: block; background-color: #ad0101;"></span>
+                                                                            alt="address" width="13"
+                                                                            style="display: block; background-color: #ad0101;"
+                                                                            class="faculty_color_bg"></span>
                                                                 </td>
                                                             </tr>
                                                         </tbody>
@@ -318,40 +338,45 @@
                                         <tbody>
                                             <tr style="text-align: right;">
                                                 <td><a href="https://www.facebook.com/TSU.Faculty.of.Law"
-                                                        color="#AD0101"
+                                                        class="faculty_color_bg"
                                                         style="display: inline-block; padding: 0px; background-color: #ad0101;"><img
                                                             src="https://tsu.ge/assets/media/files/8/signatures/icons/facebook-icon-2x.png"
-                                                            alt="facebook" color="#AD0101" height="24"
-                                                            style="background-color: #ad0101; max-width: 135px; display: block;"></a>
+                                                            alt="facebook" height="24"
+                                                            style="background-color: #ad0101; max-width: 135px; display: block;"
+                                                            class="faculty_color_bg"></a>
                                                 </td>
                                                 <td width="5">
                                                     <div></div>
                                                 </td>
-                                                <td><a href="https://twitter.com/TsuLawFaculty" color="#AD0101"
-                                                        style="display: inline-block; padding: 0px; background-color: #ad0101;"><img
+                                                <td><a href="https://twitter.com/TsuLawFaculty"
+                                                        style="display: inline-block; padding: 0px; background-color: #ad0101;"
+                                                        class="faculty_color_bg"><img
                                                             src="https://tsu.ge/assets/media/files/8/signatures/icons/twitter-icon-2x.png"
-                                                            alt="twitter" color="#AD0101" height="24"
-                                                            style="background-color: #ad0101; max-width: 135px; display: block;"></a>
+                                                            alt="twitter" height="24"
+                                                            style="background-color: #ad0101; max-width: 135px; display: block;"
+                                                            class="faculty_color_bg"></a>
                                                 </td>
                                                 <td width="5">
                                                     <div></div>
                                                 </td>
                                                 <td><a href="https://ge.linkedin.com/in/tsu-law-faculty-a07b01115"
-                                                        color="#AD0101"
-                                                        style="display: inline-block; padding: 0px; background-color: #ad0101;"><img
+                                                        style="display: inline-block; padding: 0px; background-color: #ad0101;"
+                                                        class="faculty_color_bg"><img
                                                             src="https://tsu.ge/assets/media/files/8/signatures/icons/linkedin-icon-2x.png"
-                                                            alt="linkedin" color="#AD0101" height="24"
-                                                            style="background-color: #ad0101; max-width: 135px; display: block;"></a>
+                                                            alt="linkedin" height="24"
+                                                            style="background-color: #ad0101; max-width: 135px; display: block;"
+                                                            class="faculty_color_bg"></a>
                                                 </td>
                                                 <td width="5">
                                                     <div></div>
                                                 </td>
                                                 <td><a href="https://www.instagram.com/tbilisistateuniversity_law/"
-                                                        color="#AD0101"
-                                                        style="display: inline-block; padding: 0px; background-color: #ad0101;"><img
+                                                        style="display: inline-block; padding: 0px; background-color: #ad0101;"
+                                                        class="faculty_color_bg"><img
                                                             src="https://tsu.ge/assets/media/files/8/signatures/icons/instagram-icon-2x.png"
-                                                            alt="instagram" color="#AD0101" height="24"
-                                                            style="background-color: #ad0101; max-width: 135px; display: block;"></a>
+                                                            alt="instagram" height="24"
+                                                            style="background-color: #ad0101; max-width: 135px; display: block;"
+                                                            class="faculty_color_bg"></a>
                                                 </td>
                                                 <td width="5">
                                                     <div></div>
@@ -374,8 +399,8 @@
                                 <td height="10"></td>
                             </tr>
                             <tr>
-                                <td color="#ad0010" direction="horizontal" width="auto" height="1"
-                                    style="width: 100%; border-bottom: 1px solid rgb(173, 0, 16); border-left: none; display: block;">
+                                <td direction="horizontal" width="auto" height="1" class="faculty_color_bd"
+                                    style="width: 100%; border-bottom: 1px solid ; border-left: none; display: block; border-color: #ad0101;">
                                 </td>
                             </tr>
 
@@ -392,7 +417,8 @@
                                 <td style=" vertical-align: top; max-width: 620px;">
                                     <!-- DISCLAMER -->
                                     <p style="font-size: 8px; text-align: justify; margin: 10px 0 0 0;">
-                                        <span style="color: #AD0101;">შეტყობინება კონფიდენციალურობის შესახებ:</span>
+                                        <span style="color: #AD0101;" class="faculty_color">შეტყობინება
+                                            კონფიდენციალურობის შესახებ:</span>
                                         წინამდებარე წერილი კონფიდენციალურია და
                                         განკუთვნილია მხოლოდ წერილში მითითებული პიროვნების ან ორგანიზაციისათვის. თუ
                                         წერილი თქვენთვის არ არის განკუთვნილი, დაუშვებელია მისი შინაარსის
@@ -400,7 +426,8 @@
                                         გავრცელება ან მის შინაარსზე დაყრდნობით ნებისმიერი ქმედების განხორციელება. თუ
                                         თქვენ შეცდომით მიიღეთ წინამდებარე წერილი, გთხოვთ, აღნიშნულის შესახებ
                                         დაუყოვნებლივ აცნობოთ ამავე წერილის გამომგზავნს.<br>
-                                        <span style="color: #AD0101;">CONFIDENTIALITY NOTICE:</span>
+                                        <span style="color: #AD0101;" class="faculty_color">CONFIDENTIALITY
+                                            NOTICE:</span>
                                         This e-mail message may contain confidential and/or privileged material.
                                         Delivery of this message to any person other than the intended recipient(s)
                                         does
@@ -423,14 +450,19 @@
 
     <script>
 
-        let wphoneyorn = document.getElementById("wphoneyorn"),
+        let faculty_ge = document.getElementById('faculty_ge'),
+            faculty_eng = document.getElementById('faculty_eng'),
+            facultycolor = document.getElementsByClassName('faculty_color'),
+            facultycolor_bd = document.getElementsByClassName('faculty_color_bd') ,
+            facultycolor_bg = document.getElementsByClassName('faculty_color_bg'),
+            setFacultyColor,
+            wphoneyorn = document.getElementById('wphoneyorn'),
             pphoneyorn = document.getElementById("pphoneyorn"),
             atitle_ge = document.getElementById('atitle_ge'),
             atitle_eng = document.getElementById('atitle_eng'),
             jtitle_input_tr = document.getElementById('jtitle_input_tr'),
-            dep_input_tr = document.getElementById('dep_input_tr')
+            dep_input_tr = document.getElementById('dep_input_tr'),
             roomnum = document.getElementsByClassName('room');
-
 
         function name_ge() {
             document.getElementById("name_ge").innerHTML = document.getElementById("name_ge_input").value;
@@ -438,6 +470,67 @@
         function name_eng() {
             let enname = document.getElementById("name_eng_input").value.split(' ');
             document.getElementById("name_eng").innerHTML = enname[0].charAt(0).toUpperCase() + enname[0].slice(1) + " " + enname[1].toUpperCase();
+        };
+        function faculty() {
+            console.log(facultycolor[2].style.color)
+            let selectFaculty = document.getElementById('faculty_input').selectedIndex;
+            if (selectFaculty == 0) {
+                setFacultyColor = null
+                faculty_ge.innerHTML = null;
+                faculty_eng.innerHTML = null;
+            }
+            if (selectFaculty == 1) {
+                setFacultyColor = '#1166b0'
+                faculty_ge.innerHTML = '';
+                faculty_eng.innerHTML = null;
+            }
+            if (selectFaculty == 2) {
+                setFacultyColor = '#ad0101'
+                faculty_ge.innerHTML = null;
+                faculty_eng.innerHTML = null;
+            }
+            if (selectFaculty == 3) {
+                setFacultyColor = '#99bfff'
+                faculty_ge.innerHTML = null;
+                faculty_eng.innerHTML = null;
+            }
+            if (selectFaculty == 4) {
+                setFacultyColor = '#b3cccc'
+                faculty_ge.innerHTML = null;
+                faculty_eng.innerHTML = null;
+            }
+            if (selectFaculty == 5) {
+                setFacultyColor = '#3a5795'
+                faculty_ge.innerHTML = null;
+                faculty_eng.innerHTML = null;
+            }
+            if (selectFaculty == 6) {
+                setFacultyColor = '#f37a21'
+                faculty_ge.innerHTML = null;
+                faculty_eng.innerHTML = null;
+            }
+            if (selectFaculty == 7) {
+                setFacultyColor = '#feb834'
+                faculty_ge.innerHTML = null;
+                faculty_eng.innerHTML = null;
+            }
+            if (selectFaculty == 8) {
+                setFacultyColor = '#5d9029'
+                faculty_ge.innerHTML = null;
+                faculty_eng.innerHTML = null;
+            }
+            for (let i = 0; i < facultycolor.length; i++) {
+                facultycolor[i].style.color = setFacultyColor;
+            }
+            for (let i = 0; i < facultycolor_bd.length; i++) {
+                facultycolor_bd[i].style.borderColor = setFacultyColor;
+            }
+            for (let i = 0; i < facultycolor_bg.length; i++) {
+                facultycolor_bg[i].style.backgroundColor = setFacultyColor;
+            }
+            console.log(selectFaculty)
+            console.log(setFacultyColor)
+
         };
         function atitleYorN() {
             if (document.getElementById('atitleyorn').checked) {
@@ -448,7 +541,7 @@
                 document.getElementById('atitle').style.display = 'none';
                 document.getElementById('atitle_input_tr').style.display = 'none';
             }
-        }
+        };
         function atitle() {
             let atitleval = document.getElementById('atitle_input').selectedIndex;
             if (atitleval == 0) {
@@ -484,7 +577,7 @@
                 document.getElementsByClassName('jtitle_input_tr')[0].style.display = 'none';
                 document.getElementsByClassName('jtitle_input_tr')[1].style.display = 'none';
             }
-        }
+        };
         function jtitle_ge() {
             document.getElementById("jtitle_ge").innerHTML = document.getElementById("jtitle_ge_input").value;
         };
@@ -503,7 +596,7 @@
                 document.getElementsByClassName('dep_input_tr')[0].style.display = 'none';
                 document.getElementsByClassName('dep_input_tr')[1].style.display = 'none';
             }
-        }
+        };
         function dep_ge() {
             document.getElementById("dep_ge").innerHTML = document.getElementById("dep_ge_input").value;
         };
@@ -542,14 +635,14 @@
             else {
                 document.getElementById('phone_ifboth').style.display = 'none';
             }
-        }
+        };
         function wphone() {
             document.getElementById('wphone').innerHTML = document.getElementById("wphone_input").value;
-        }
+        };
         function pphone() {
             document.getElementById('pphone').innerHTML = '+995 ' + document.getElementById("pphone_input").value;
             document.getElementById('pphone').href = "tel:+995 " + document.getElementById("pphone_input").value;
-        }
+        };
         function email() {
             document.getElementById('email').innerHTML = document.getElementById("email_input").value;
             document.getElementById('email').href = "mailto:" + document.getElementById("email_input").value;
@@ -558,7 +651,7 @@
             roomnum[0].innerHTML = document.getElementById("room_input").value;
             roomnum[1].innerHTML = document.getElementById("room_input").value;
 
-        }
+        };
 
     </script>
 </body>
