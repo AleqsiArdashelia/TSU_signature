@@ -201,7 +201,7 @@
                                             id="dep_eng">Department of Resource Management</span>
                                     </p>
                                     <p class="faculty_color" color="#000000" font-size="small"
-                                        style="color: #AD0101; margin: 0 0 5px 0; font-size: 10px; line-height: 14px; font-weight: 600; max-width: 240px;">
+                                        style="color: #AD0101; margin: 0 0 5px 0; font-size: 10px; line-height: 14px; font-weight: 600; max-width: 240px;" id="faculty_p">
                                         <span id="faculty_ge">იურიდიული ფაკულტეტი</span><br><span
                                             id="faculty_eng">Faculty of Law</span>
                                     </p>
@@ -481,43 +481,47 @@
             }
             if (selectFaculty == 1) {
                 setFacultyColor = '#1166b0'
-                faculty_ge.innerHTML = '';
+                faculty_ge.innerHTML = null;
                 faculty_eng.innerHTML = null;
+                document.getElementById('faculty_p').style.display = 'none';
+            }
+            if (selectFaculty != 1) {
+                document.getElementById('faculty_p').style.display = 'block';
             }
             if (selectFaculty == 2) {
                 setFacultyColor = '#ad0101'
-                faculty_ge.innerHTML = null;
-                faculty_eng.innerHTML = null;
+                faculty_ge.innerHTML = 'იურიდიული ფაკულტეტი';
+                faculty_eng.innerHTML = 'Faculty of Law';
             }
             if (selectFaculty == 3) {
                 setFacultyColor = '#99bfff'
-                faculty_ge.innerHTML = null;
-                faculty_eng.innerHTML = null;
+                faculty_ge.innerHTML = 'მედიცინის ფაკულტეტი';
+                faculty_eng.innerHTML = 'Faculty of Medicine';
             }
             if (selectFaculty == 4) {
                 setFacultyColor = '#b3cccc'
-                faculty_ge.innerHTML = null;
-                faculty_eng.innerHTML = null;
+                faculty_ge.innerHTML = 'ეკონომიკისა და ბიზნესის ფაკულტეტი';
+                faculty_eng.innerHTML = 'Faculty of Economics and Business';
             }
             if (selectFaculty == 5) {
                 setFacultyColor = '#3a5795'
-                faculty_ge.innerHTML = null;
-                faculty_eng.innerHTML = null;
+                faculty_ge.innerHTML = 'ფსიქოლოგიისა და განათლების მეცნიერებათა ფაკულტეტი';
+                faculty_eng.innerHTML = 'Faculty of Psychology and Educational Sciences';
             }
             if (selectFaculty == 6) {
                 setFacultyColor = '#f37a21'
-                faculty_ge.innerHTML = null;
-                faculty_eng.innerHTML = null;
+                faculty_ge.innerHTML = 'სოციალურ და პოლიტიკურ მეცნიერებათა ფაკულტეტი';
+                faculty_eng.innerHTML = 'Faculty of Social and Political Sciences';
             }
             if (selectFaculty == 7) {
                 setFacultyColor = '#feb834'
-                faculty_ge.innerHTML = null;
-                faculty_eng.innerHTML = null;
+                faculty_ge.innerHTML = 'ჰუმანიტარულ მეცნიერებათა ფაკულტეტი';
+                faculty_eng.innerHTML = 'Faculty of Humanities';
             }
             if (selectFaculty == 8) {
                 setFacultyColor = '#5d9029'
-                faculty_ge.innerHTML = null;
-                faculty_eng.innerHTML = null;
+                faculty_ge.innerHTML = 'ზუსტ და საბუნებისმეტყველო მეცნიერებათა ფაკულტეტი';
+                faculty_eng.innerHTML = 'Faculty of Exact and Natural Sciences';
             }
             for (let i = 0; i < facultycolor.length; i++) {
                 facultycolor[i].style.color = setFacultyColor;
