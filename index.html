@@ -273,7 +273,7 @@
                                             <span id="dep_ge">რესურსების მართვის სამსახური</span><br><span
                                                 id="dep_eng">Department of Resource Management</span>
                                         </p>
-                                        <p class="faculty_color" color="#000000" font-size="small"
+                                        <p color="#000000" font-size="small"
                                             style="color: #AD0101; margin: 0 0 5px 0; font-size: 10px; line-height: 14px; font-weight: 600; max-width: 240px;"
                                             id="faculty_p">
                                             <span id="faculty_ge">იურიდიული ფაკულტეტი</span><br><span
@@ -399,7 +399,7 @@
                                                     </td>
                                                     <td style="padding: 0px; max-width: 301px;"><span color="#000000"
                                                             style="font-size: 10px; color: rgb(0, 0, 0); line-height: 14px; ">
-                                                            <span id="address_ge">საქართველო, თბილისი ი. ჭავჭავაძის
+                                                            <span id="address_ge">საქართველო, თბილისი, ი. ჭავჭავაძის
                                                                 გამზ. 3, 0179</span>
                                                             <br>
                                                             <span id="address_eng">3, Ilia chavchavadze Ave., 0179
@@ -495,7 +495,7 @@
                                     <td style=" vertical-align: top; max-width: 620px;">
                                         <!-- DISCLAMER -->
                                         <p style="font-size: 8px; text-align: justify; margin: 10px 0 0 0;">
-                                            <span style="color: #AD0101;" class="faculty_color">შეტყობინება
+                                            <span style="color: #dc0d1f;">შეტყობინება
                                                 კონფიდენციალურობის შესახებ:</span>
                                             წინამდებარე წერილი კონფიდენციალურია და
                                             განკუთვნილია მხოლოდ წერილში მითითებული პიროვნების ან ორგანიზაციისათვის. თუ
@@ -504,7 +504,7 @@
                                             გავრცელება ან მის შინაარსზე დაყრდნობით ნებისმიერი ქმედების განხორციელება. თუ
                                             თქვენ შეცდომით მიიღეთ წინამდებარე წერილი, გთხოვთ, აღნიშნულის შესახებ
                                             დაუყოვნებლივ აცნობოთ ამავე წერილის გამომგზავნს.<br>
-                                            <span style="color: #AD0101;" class="faculty_color">CONFIDENTIALITY
+                                            <span style="color: #dc0d1f;">CONFIDENTIALITY
                                                 NOTICE:</span>
                                             This e-mail message may contain confidential and/or privileged material.
                                             Delivery of this message to any person other than the intended recipient(s)
@@ -529,7 +529,7 @@
     <script>
         let faculty_ge = document.getElementById('faculty_ge'),
             faculty_eng = document.getElementById('faculty_eng'),
-            facultycolor = document.getElementsByClassName('faculty_color'),
+            facultyP = document.getElementById('faculty_p'),
             facultycolor_bd = document.getElementsByClassName('faculty_color_bd'),
             facultycolor_bg = document.getElementsByClassName('faculty_color_bg'),
             setFacultyColor,
@@ -559,10 +559,10 @@
                 setFacultyColor = '#1166b0'
                 faculty_ge.innerHTML = null;
                 faculty_eng.innerHTML = null;
-                document.getElementById('faculty_p').style.display = 'none';
+                facultyP.style.display = 'none';
             }
             if (selectFaculty != 1) {
-                document.getElementById('faculty_p').style.display = 'block';
+                facultyP.style.display = 'block';
             }
             if (selectFaculty == 2) {
                 setFacultyColor = '#ad0101'
@@ -599,18 +599,13 @@
                 faculty_ge.innerHTML = 'ზუსტ და საბუნებისმეტყველო მეცნიერებათა ფაკულტეტი';
                 faculty_eng.innerHTML = 'Faculty of Exact and Natural Sciences';
             }
-            for (let i = 0; i < facultycolor.length; i++) {
-                facultycolor[i].style.color = setFacultyColor;
-            }
+            facultyP.style.color = setFacultyColor;
             for (let i = 0; i < facultycolor_bd.length; i++) {
                 facultycolor_bd[i].style.borderColor = setFacultyColor;
             }
             for (let i = 0; i < facultycolor_bg.length; i++) {
                 facultycolor_bg[i].style.backgroundColor = setFacultyColor;
             }
-            console.log(selectFaculty)
-            console.log(setFacultyColor)
-
         };
         function atitleYorN() {
             if (document.getElementById('atitleyorn').checked) {
