@@ -167,6 +167,60 @@
                             required oninput="email()"></td>
                 </tr>
                 <tr>
+                    <td class="label_container"><label for="address_input"> შენობა:</label></td>
+                    <td>
+                        <select name="atitle_input" id="address_input" oninput="address()">
+                            <option selected value="null">აირჩიეთ</option>
+                            <option
+                                value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 1, 0179|1, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
+                                1 კორპუსი</option>
+                            <option
+                                value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 3, 0179|3, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
+                                2 კორპუსი</option>
+                            <option
+                                value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 11, 0179|11, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
+                                3 კორპუსი</option>
+                            <option
+                                value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 14, 0179|14, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
+                                4 კორპუსი</option>
+                            <option
+                                value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 36, 0179|36, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
+                                5 კორპუსი
+                            </option>
+                            <option
+                                value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 8, 0179|8, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
+                                6 კორპუსი</option>
+                            <option
+                                value="საქართველო, თბილისი, ი. ქეთევან წამებულის გამზ. 55, 0179|55, Ketevan Tsamebuli Ave, Tbilisi, 0179 Tbilisi, Georgia">
+                                7 კორპუსი</option>
+                            <option
+                                value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 13, 0179|13, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
+                                8 კორპუსი</option>
+                            <option
+                                value="საქართველო, თბილისი, ვაჟა-ფშაველას გამზ. 44, 0179|44, Vazha-Pshavela ave Ave., 0179 Tbilisi, Georgia">
+                                9 კორპუსი</option>
+                            <option
+                                value="საქართველო, თბილისი, უნივერსიტეტის ქ. 2, 0179|1, University Str., 0179 Tbilisi, Georgia">
+                                10 კორპუსი</option>
+                            <option
+                                value="საქართველო, თბილისი, უნივერსიტეტის ქ. 13, 0179|13, University Str., 0179 Tbilisi, Georgia">
+                                11 კორპუსი</option>
+                            <option
+                                value="საქართველო, თბილისი, უნივერსიტეტის ქ. 11, 0179|11, University Str., 0179 Tbilisi, Georgia">
+                                12 კორპუსი</option>
+                            <option
+                                value="საქართველო, თბილისი, მიხეილ ჭიაურელის ქ. 2, 0179|2, M. Tchiaureli Str., 0179 Tbilisi, Georgia">
+                                მედიცინის ფაკულტეტი</option>
+                            <option
+                                value="საქართველო, თბილისი, ტატა თვალჭრელიძის ქ. 11, 0179|11, T. Tvalchrelidze Str., 0179 Tbilisi, Georgia">
+                                საერთო საცხოვრებელი (ლისი)</option>
+                            <option
+                                value="საქართველო, თბილისი, წყნეთის გზატკეცილი, ბაგების სტუდქალაქი, კორ. 2, 0179|2 Bldg., Bagebi Dormitory, Tskneti Hwy, 0179 Tbilisi, Georgia">
+                                საერთო საცხოვრებელი (ბაგები)</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
                     <td class="label_container"><label for="room_input"> ოთახის ნომერი:</label></td>
                     <td><input type="number" placeholder="122" id="room_input" name="room_input" oninput="room()"></td>
                 </tr>
@@ -343,11 +397,13 @@
                                                             </tbody>
                                                         </table>
                                                     </td>
-                                                    <td style="padding: 0px;"><span color="#000000"
-                                                            style="font-size: 10px; color: rgb(0, 0, 0); line-height: 14px;">
-                                                            <span id="address_ge">საქართველო, თბილისი ი. ჭავჭავაძის გამზ. 3, 0179</span>
+                                                    <td style="padding: 0px; max-width: 301px;"><span color="#000000"
+                                                            style="font-size: 10px; color: rgb(0, 0, 0); line-height: 14px; ">
+                                                            <span id="address_ge">საქართველო, თბილისი ი. ჭავჭავაძის
+                                                                გამზ. 3, 0179</span>
                                                             <br>
-                                                            <span id="address_eng">3, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia</span>
+                                                            <span id="address_eng">3, Ilia chavchavadze Ave., 0179
+                                                                Tbilisi, Georgia</span>
                                                             <br>
                                                             ოთახი №<span class="room">122</span> | Room №<span
                                                                 class="room">122</span></span>
@@ -493,7 +549,6 @@
             document.getElementById("name_eng").innerHTML = enname[0].charAt(0).toUpperCase() + enname[0].slice(1) + " " + enname[1].toUpperCase();
         };
         function faculty() {
-            console.log(facultycolor[2].style.color)
             let selectFaculty = document.getElementById('faculty_input').selectedIndex;
             if (selectFaculty == 0) {
                 setFacultyColor = null
@@ -672,6 +727,12 @@
             document.getElementById('email').innerHTML = document.getElementById("email_input").value;
             document.getElementById('email').href = "mailto:" + document.getElementById("email_input").value;
         }
+        function address() {
+            let selectAddress = document.getElementById('address_input').value.split('|');
+            document.getElementById('address_ge').innerHTML = selectAddress[0]
+            document.getElementById('address_eng').innerHTML = selectAddress[1]
+
+        };
         function room() {
             roomnum[0].innerHTML = document.getElementById("room_input").value;
             roomnum[1].innerHTML = document.getElementById("room_input").value;
