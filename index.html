@@ -53,193 +53,206 @@
         style="display:inline-block;padding:0px;background-color:#ad0101;"
         class="faculty_color_bg"><img
             src="https://tsu.ge/assets/media/files/8/signatures/icons/linkedin-icon-2x.png"
-             height="24"
+            height="24"
             style="background-color:#ad0101;max-width:135px;display:block;"
             class="faculty_color_bg"></a></td>
 <td width="5">
     <div></div>
 </td>
-<td><a href="https://www.instagram.com/tbilisistateuniversity_law/"
+    <td><a href="https://twitter.com/TsuLawFaculty"
         style="display:inline-block;padding:0px;background-color:#ad0101;"
         class="faculty_color_bg"><img
-            src="https://tsu.ge/assets/media/files/8/signatures/icons/instagram-icon-2x.png"
-             height="24"
-            style="background-color:#ad0101;max-width:135px;display:block;"
-            class="faculty_color_bg"></a></td>
-    <div style="display:flex;justify-content:space-evenly;align-items:center;padding:50px 0;"> -->
+            src="https://tsu.ge/assets/media/files/8/signatures/icons/twitter-icon-2x.png"
+            height="24" style="background-color:#ad0101;max-width:135px;display:block;"
+            class="faculty_color_bg"></a></td>-->
 
-<form action="">
-    <table>
-        <tr>
-            <td class="label_container"><label for="name_ge_input">სახელი და გვარი ქართულად:</label></td>
-            <td><input type="text" placeholder="ალექსი არდაშელია" id="name_ge_input" name="name_ge_input" required
-                    oninput="name_ge()"></td>
-        </tr>
-        <tr>
-            <td class="label_container"><label for="name_eng_input">სახელი და გვარი ინგლისურად:</label>
-            </td>
-            <td><input type="text" placeholder="Aleksi Ardashelia" id="name_eng_input" name="name_eng_input" required
-                    oninput="name_eng()">
-            </td>
-        </tr>
-        <tr>
-            <td class="label_container"><label for="faculty_input">ფაკულტეტლი/ცენტრალური:</label>
-            </td>
-            <td>
-                <select name="faculty_input" id="faculty_input" oninput="faculty()">
-                    <option selected>აირჩიეთ</option>
-                    <option>ცენტრალური</option>
-                    <option>იურიდიული ფაკულტეტი</option>
-                    <option>მედიცინის ფაკულტეტი</option>
-                    <option>ეკონომიკისა და ბიზნესის ფაკულტეტი</option>
-                    <option>ფსიქოლოგიისა და განათლების მეცნიერებათა ფაკულტეტი</option>
-                    <option>სოციალურ და პოლიტიკურ მეცნიერებათა ფაკულტეტი</option>
-                    <option>ჰუმანიტარულ მეცნიერებათა ფაკულტეტი</option>
-                    <option>ზუსტ და საბუნებისმეტყველო მეცნიერებათა ფაკულტეტი</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td class="label_container"><label for="atitleyorn">აკადემიური თანამდებობის გამოჩენა:</label></td>
-            <td>
-                <input type="checkbox" name="atitley/n" id="atitleyorn" value="atitleyorn" onclick="atitleYorN()">
-            </td>
-        </tr>
-        <tr id="atitle_input_tr" class="displaynone">
-            <td class="label_container"><label for="atitle_input">აკადემიური თანამდებობა:</label>
-            </td>
-            <td>
-                <select name="atitle_input" id="atitle_input" oninput="atitle()">
-                    <option selected>აირჩიეთ</option>
-                    <option>პროფესორი</option>
-                    <option>ასოცირებული პროფესორი</option>
-                    <option>ასისტენტ-პროფესორი</option>
-                    <option>ასისტენტი</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td class="label_container"><label for="jtitleyorn">თანამდებობის გამოჩენა:</label></td>
-            <td>
 
-                <input type="checkbox" name="jtitley/n" id="jtitleyorn" value="jtitleyorn" onclick="jtitleYorN()">
-            </td>
-        </tr>
-        <tr class="jtitle_input_tr displaynone">
-            <td class="label_container"><label for="jtitle_ge_input">თანამდებობა ქართულად:</label></td>
-            <td><input type="text" placeholder="უფროსი სპეციალისტი" id="jtitle_ge_input" name="jtitle_ge_input" required
-                    oninput="jtitle_ge()"></td>
-        </tr>
-        <tr class="jtitle_input_tr displaynone">
-            <td class="label_container"><label for="jtitle_eng_input">თანამდებობა ინგლისურად:</label></td>
-            <td><input type="text" placeholder="Senior Specialist" id="jtitle_eng_input" name="jtitle_eng_input"
-                    required oninput="jtitle_eng()"></td>
-        </tr>
-        <tr>
-            <td class="label_container"><label for="depyorn">სამსახურის/ინსტიტუტის გამოჩენა:</label></td>
-            <td>
-                <input type="checkbox" name="depy/n" id="depyorn" value="depyorn" onclick="depYorN()">
-            </td>
-        </tr>
-        <tr class="dep_input_tr displaynone">
-            <td class="label_container"><label for="dep_ge_input">სამსახური/ინსტიტუტი ქართულად:</label></td>
-            <td><input type="text" placeholder="რესურსების მართვის სამსახური" id="dep_ge_input" name="dep_ge_input"
-                    oninput="dep_ge()"></td>
-        </tr>
-        <tr class="dep_input_tr displaynone">
-            <td class="label_container"><label for="dep_eng_input">სამსახური/ინსტიტუტი ინგლისურად:</label></td>
-            <td><input type="text" placeholder="Department of Resource Management" id="dep_eng_input"
-                    name="dep_eng_input" oninput="dep_eng()"></td>
-        </tr>
-        <tr>
-            <td class="label_container"><label for="wphoneyorn">შიდა ნომრის გამოჩენა:</label></td>
-            <td>
-                <input type="checkbox" name="wphoney/n" id="wphoneyorn" value="wphoneyorn" onclick="phoneyorn()">
-            </td>
-        </tr>
-        <tr id="wphone_input_tr" class="displaynone">
-            <td class="label_container"><label for="wphone_input">სამსახურის შიდა ნომერი:</label></td>
-            <td><input type="text" placeholder="1234" id="wphone_input" name="wphone_input" pattern="[0-9]{4}"
-                    oninput="wphone()"></td>
-        </tr>
-        <tr>
-        <tr>
-            <td class="label_container"><label for="pphoneyorn">პერსონალური ნომრის გამოჩენა:</label></td>
-            <td>
-                <input type="checkbox" name="pphoney/n" id="pphoneyorn" value="pphoneyorn" onclick="phoneyorn()">
-            </td>
-        </tr>
-        </tr>
-        <tr id="pphone_input_tr" class="displaynone">
-            <td class="label_container"><label for="pphone_input">პერსონალური ნომერი:</label></td>
-            <td><input type="number" placeholder="579 02 86 86" id="pphone_input" name="pphone_input" oninput="pphone()">
-            </td>
-        </tr>
-        <tr>
-            <td class="label_container"><label for="email_input">ელექტრონული პოსტის მისამართი:</label></td>
-            <td><input type="email" placeholder="Aleksi.Ardashelia@tsu.ge" id="email_input" name="email_input" required
-                    oninput="email()"></td>
-        </tr>
-        <tr>
-            <td class="label_container"><label for="address_input"> შენობა:</label></td>
-            <td>
-                <select name="atitle_input" id="address_input" oninput="address()">
-                    <option selected value="null">აირჩიეთ</option>
-                    <option
-                        value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 1, 0179|1, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
-                        1 კორპუსი</option>
-                    <option
-                        value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 3, 0179|3, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
-                        2 კორპუსი</option>
-                    <option
-                        value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 11, 0179|11, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
-                        3 კორპუსი</option>
-                    <option
-                        value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 14, 0179|14, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
-                        4 კორპუსი</option>
-                    <option
-                        value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 36, 0179|36, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
-                        5 კორპუსი
-                    </option>
-                    <option
-                        value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 8, 0179|8, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
-                        6 კორპუსი</option>
-                    <option
-                        value="საქართველო, თბილისი, ი. ქეთევან წამებულის გამზ. 55, 0179|55, Ketevan Tsamebuli Ave, Tbilisi, 0179 Tbilisi, Georgia">
-                        7 კორპუსი</option>
-                    <option
-                        value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 13, 0179|13, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
-                        8 კორპუსი</option>
-                    <option
-                        value="საქართველო, თბილისი, ვაჟა-ფშაველას გამზ. 44, 0179|44, Vazha-Pshavela ave Ave., 0179 Tbilisi, Georgia">
-                        9 კორპუსი</option>
-                    <option
-                        value="საქართველო, თბილისი, უნივერსიტეტის ქ. 2, 0179|1, University Str., 0179 Tbilisi, Georgia">
-                        10 კორპუსი</option>
-                    <option
-                        value="საქართველო, თბილისი, უნივერსიტეტის ქ. 13, 0179|13, University Str., 0179 Tbilisi, Georgia">
-                        11 კორპუსი</option>
-                    <option
-                        value="საქართველო, თბილისი, უნივერსიტეტის ქ. 11, 0179|11, University Str., 0179 Tbilisi, Georgia">
-                        12 კორპუსი</option>
-                    <option
-                        value="საქართველო, თბილისი, მიხეილ ჭიაურელის ქ. 2, 0179|2, M. Tchiaureli Str., 0179 Tbilisi, Georgia">
-                        მედიცინის ფაკულტეტი</option>
-                    <option
-                        value="საქართველო, თბილისი, ტატა თვალჭრელიძის ქ. 11, 0179|11, T. Tvalchrelidze Str., 0179 Tbilisi, Georgia">
-                        საერთო საცხოვრებელი (ლისი)</option>
-                    <option
-                        value="საქართველო, თბილისი, წყნეთის გზატკეცილი, ბაგების სტუდქალაქი, კორ. 2, 0179|2 Bldg., Bagebi Dormitory, Tskneti Hwy, 0179 Tbilisi, Georgia">
-                        საერთო საცხოვრებელი (ბაგები)</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td class="label_container"><label for="room_input"> ოთახის ნომერი:</label></td>
-            <td><input type="number" placeholder="122" id="room_input" name="room_input" oninput="room()"></td>
-        </tr>
-    </table>
-</form>
+<div style="display:flex;justify-content:space-evenly;align-items:center;padding:50px 0;">
+    <!-- <div style="width: 50%;">
+        <p>შეავსეთ ინფორმაცია, შევსების შემდგომ შემოხაზეთ და დააკოპირეთ (Ctrl + C) ქვევით მოცემული ხემლოწერა, გადადით <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#settings/general" target="_blank" style="background-color: yellow;">ამ ბმულზე</a>, ხელოწერის ველში ჩააკოპირეთ თქვენი ახალი ხელმოწერა და გვედის ბოლოში დააჭირეთ შენახვას</p>
+    </div> -->
+    <form action="">
+        <table>
+            <tr>
+                <td class="label_container"><label for="name_ge_input">სახელი და გვარი ქართულად:</label></td>
+                <td><input type="text" placeholder="ალექსი არდაშელია" id="name_ge_input" name="name_ge_input" required
+                        oninput="name_ge()"></td>
+            </tr>
+            <tr>
+                <td class="label_container"><label for="name_eng_input">სახელი და გვარი ინგლისურად:</label>
+                </td>
+                <td><input type="text" placeholder="Aleksi Ardashelia" id="name_eng_input" name="name_eng_input"
+                        required oninput="name_eng()">
+                </td>
+            </tr>
+            <tr>
+                <td class="label_container"><label for="faculty_input">ფაკულტეტლი/ცენტრალური:</label>
+                </td>
+                <td>
+                    <select name="faculty_input" id="faculty_input" oninput="faculty()">
+                        <option selected value="null">აირჩიეთ</option>
+                        <option value="||#1166b0">ცენტრალური</option>
+                        <option value="იურიდიული ფაკურტეტი|Faculty of Law|#ad0101">იურიდიული ფაკულტეტი</option>
+                        <option value="მედიცინის ფაკულტეტი|Faculty of Medicine|#99bfff">მედიცინის ფაკულტეტი</option>
+                        <option value="ეკონომიკისა და ბიზნესის ფაკულტეტი|Faculty of Economics and Business|#b3cccc">
+                            ეკონომიკისა და ბიზნესის ფაკულტეტი</option>
+                        <option
+                            value="ფსიქოლოგიისა და განათლების მეცნიერებათა ფაკულტეტი|Faculty of Psychology and Educational Sciences|#3a5795">
+                            ფსიქოლოგიისა და განათლების მეცნიერებათა ფაკულტეტი</option>
+                        <option
+                            value="სოციალურ და პოლიტიკურ მეცნიერებათა ფაკულტეტი|Faculty of Social and Political Sciences|#f37a21">
+                            სოციალურ და პოლიტიკურ მეცნიერებათა ფაკულტეტი</option>
+                        <option value="ჰუმანიტარულ მეცნიერებათა ფაკულტეტი|Faculty of Humanities|#feb834">ჰუმანიტარულ
+                            მეცნიერებათა ფაკულტეტი</option>
+                        <option
+                            value="ზუსტ და საბუნებისმეტყველო მეცნიერებათა ფაკულტეტი|Faculty of Exact and Natural Sciences|#5d9029">
+                            ზუსტ და საბუნებისმეტყველო მეცნიერებათა ფაკულტეტი</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="label_container"><label for="atitleyorn">აკადემიური თანამდებობის გამოჩენა:</label></td>
+                <td>
+                    <input type="checkbox" name="atitley/n" id="atitleyorn" value="atitleyorn" onclick="atitleYorN()">
+                </td>
+            </tr>
+            <tr id="atitle_input_tr" class="displaynone">
+                <td class="label_container"><label for="atitle_input">აკადემიური თანამდებობა:</label>
+                </td>
+                <td>
+                    <select name="atitle_input" id="atitle_input" oninput="atitle()">
+                        <option selected value="null">აირჩიეთ</option>
+                        <option>პროფესორი</option>
+                        <option>ასოცირებული პროფესორი</option>
+                        <option>ასისტენტ-პროფესორი</option>
+                        <option>ასისტენტი</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="label_container"><label for="jtitleyorn">თანამდებობის გამოჩენა:</label></td>
+                <td>
+
+                    <input type="checkbox" name="jtitley/n" id="jtitleyorn" value="jtitleyorn" onclick="jtitleYorN()">
+                </td>
+            </tr>
+            <tr class="jtitle_input_tr displaynone">
+                <td class="label_container"><label for="jtitle_ge_input">თანამდებობა ქართულად:</label></td>
+                <td><input type="text" placeholder="უფროსი სპეციალისტი" id="jtitle_ge_input" name="jtitle_ge_input"
+                        required oninput="jtitle_ge()"></td>
+            </tr>
+            <tr class="jtitle_input_tr displaynone">
+                <td class="label_container"><label for="jtitle_eng_input">თანამდებობა ინგლისურად:</label></td>
+                <td><input type="text" placeholder="Senior Specialist" id="jtitle_eng_input" name="jtitle_eng_input"
+                        required oninput="jtitle_eng()"></td>
+            </tr>
+            <tr>
+                <td class="label_container"><label for="depyorn">სამსახურის/ინსტიტუტის გამოჩენა:</label></td>
+                <td>
+                    <input type="checkbox" name="depy/n" id="depyorn" value="depyorn" onclick="depYorN()">
+                </td>
+            </tr>
+            <tr class="dep_input_tr displaynone">
+                <td class="label_container"><label for="dep_ge_input">სამსახური/ინსტიტუტი ქართულად:</label></td>
+                <td><input type="text" placeholder="რესურსების მართვის სამსახური" id="dep_ge_input" name="dep_ge_input"
+                        oninput="dep_ge()"></td>
+            </tr>
+            <tr class="dep_input_tr displaynone">
+                <td class="label_container"><label for="dep_eng_input">სამსახური/ინსტიტუტი ინგლისურად:</label></td>
+                <td><input type="text" placeholder="Department of Resource Management" id="dep_eng_input"
+                        name="dep_eng_input" oninput="dep_eng()"></td>
+            </tr>
+            <tr>
+                <td class="label_container"><label for="wphoneyorn">შიდა ნომრის გამოჩენა:</label></td>
+                <td>
+                    <input type="checkbox" name="wphoney/n" id="wphoneyorn" value="wphoneyorn" onclick="phoneyorn()">
+                </td>
+            </tr>
+            <tr id="wphone_input_tr" class="displaynone">
+                <td class="label_container"><label for="wphone_input">სამსახურის შიდა ნომერი:</label></td>
+                <td><input type="text" placeholder="1234" id="wphone_input" name="wphone_input" pattern="[0-9]{4}"
+                        oninput="wphone()"></td>
+            </tr>
+            <tr>
+            <tr>
+                <td class="label_container"><label for="pphoneyorn">პერსონალური ნომრის გამოჩენა:</label></td>
+                <td>
+                    <input type="checkbox" name="pphoney/n" id="pphoneyorn" value="pphoneyorn" onclick="phoneyorn()">
+                </td>
+            </tr>
+            </tr>
+            <tr id="pphone_input_tr" class="displaynone">
+                <td class="label_container"><label for="pphone_input">პერსონალური ნომერი:</label></td>
+                <td><input type="number" placeholder="579 02 86 86" id="pphone_input" name="pphone_input"
+                        oninput="pphone()">
+                </td>
+            </tr>
+            <tr>
+                <td class="label_container"><label for="email_input">ელექტრონული პოსტის მისამართი:</label></td>
+                <td><input type="email" placeholder="Aleksi.Ardashelia@tsu.ge" id="email_input" name="email_input"
+                        required oninput="email()"></td>
+            </tr>
+            <tr>
+                <td class="label_container"><label for="address_input"> შენობა:</label></td>
+                <td>
+                    <select name="atitle_input" id="address_input" oninput="address()">
+                        <option selected value="null">აირჩიეთ</option>
+                        <option
+                            value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 1, 0179|1, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
+                            1 კორპუსი</option>
+                        <option
+                            value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 3, 0179|3, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
+                            2 კორპუსი</option>
+                        <option
+                            value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 11, 0179|11, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
+                            3 კორპუსი</option>
+                        <option
+                            value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 14, 0179|14, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
+                            4 კორპუსი</option>
+                        <option
+                            value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 36, 0179|36, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
+                            5 კორპუსი
+                        </option>
+                        <option
+                            value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 8, 0179|8, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
+                            6 კორპუსი</option>
+                        <option
+                            value="საქართველო, თბილისი, ი. ქეთევან წამებულის გამზ. 55, 0179|55, Ketevan Tsamebuli Ave, Tbilisi, 0179 Tbilisi, Georgia">
+                            7 კორპუსი</option>
+                        <option
+                            value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 13, 0179|13, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
+                            8 კორპუსი</option>
+                        <option
+                            value="საქართველო, თბილისი, ვაჟა-ფშაველას გამზ. 44, 0179|44, Vazha-Pshavela ave Ave., 0179 Tbilisi, Georgia">
+                            9 კორპუსი</option>
+                        <option
+                            value="საქართველო, თბილისი, უნივერსიტეტის ქ. 2, 0179|1, University Str., 0179 Tbilisi, Georgia">
+                            10 კორპუსი</option>
+                        <option
+                            value="საქართველო, თბილისი, უნივერსიტეტის ქ. 13, 0179|13, University Str., 0179 Tbilisi, Georgia">
+                            11 კორპუსი</option>
+                        <option
+                            value="საქართველო, თბილისი, უნივერსიტეტის ქ. 11, 0179|11, University Str., 0179 Tbilisi, Georgia">
+                            12 კორპუსი</option>
+                        <option
+                            value="საქართველო, თბილისი, მიხეილ ჭიაურელის ქ. 2, 0179|2, M. Tchiaureli Str., 0179 Tbilisi, Georgia">
+                            მედიცინის ფაკულტეტი</option>
+                        <option
+                            value="საქართველო, თბილისი, ტატა თვალჭრელიძის ქ. 11, 0179|11, T. Tvalchrelidze Str., 0179 Tbilisi, Georgia">
+                            საერთო საცხოვრებელი (ლისი)</option>
+                        <option
+                            value="საქართველო, თბილისი, წყნეთის გზატკეცილი, ბაგების სტუდქალაქი, კორ. 2, 0179|2 Bldg., Bagebi Dormitory, Tskneti Hwy, 0179 Tbilisi, Georgia">
+                            საერთო საცხოვრებელი (ბაგები)</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="label_container"><label for="room_input"> ოთახის ნომერი:</label></td>
+                <td><input type="number" placeholder="122" id="room_input" name="room_input" oninput="room()"></td>
+            </tr>
+        </table>
+    </form>
+
 </div>
 
 
@@ -306,7 +319,6 @@
                                     </table>
                                 </td>
                                 <td style="padding:0px;"><span style="display:none;" id="wphone_div"><a
-                                            
                                             style="text-decoration:none;color:rgb(0, 0, 0);font-size:10px;">
                                             +995 (032) 225 04 84 (<span id="wphone"></span>)</a></span><span
                                         style="display:none;" id="phone_ifboth"> <br> </span><span style="display:none;"
@@ -383,15 +395,15 @@
                                 <td width="5">
                                     <div></div>
                                 </td>
-                                <td><a href="https://twitter.com/TsuLawFaculty"
-                                        style="display:inline-block;padding:0px;background-color:#ad0101;"
-                                        class="faculty_color_bg"><img
-                                            src="https://tsu.ge/assets/media/files/8/signatures/icons/twitter-icon-2x.png"
-                                            height="24" style="background-color:#ad0101;max-width:135px;display:block;"
-                                            class="faculty_color_bg"></a></td>
                                 <td width="5">
                                     <div></div>
                                 </td>
+                                <td><a href="https://www.instagram.com/tbilisistateuniversity_law/"
+                                        style="display:inline-block;padding:0px;background-color:#ad0101;"
+                                        class="faculty_color_bg"><img
+                                            src="https://tsu.ge/assets/media/files/8/signatures/icons/instagram-icon-2x.png"
+                                            height="24" style="background-color:#ad0101;max-width:135px;display:block;"
+                                            class="faculty_color_bg"></a></td>
                                 <!-- 51-69 -->
                                 <td width="5">
                                     <div></div>
@@ -464,10 +476,10 @@
         roomnum = document.getElementsByClassName('room');
 
     const phoneFormat = (input) => {
-        if (typeof(input) !== 'string') input = input.toString()
+        if (typeof (input) !== 'string') input = input.toString()
         return input.replace(/^(\d{3})(\d{2})(\d{2})(\d{2})/, '$1 $2 $3 $4')
     }
-    
+
     function name_ge() {
         document.getElementById("name_ge").innerHTML = document.getElementById("name_ge_input").value;
     };
@@ -476,56 +488,67 @@
         document.getElementById("name_eng").innerHTML = enname[0].charAt(0).toUpperCase() + enname[0].slice(1) + " " + enname[1].toUpperCase();
     };
     function faculty() {
-        let selectFaculty = document.getElementById('faculty_input').selectedIndex;
-        if (selectFaculty == 0) {
-            setFacultyColor = null
-            faculty_ge.innerHTML = null;
-            faculty_eng.innerHTML = null;
-        }
-        if (selectFaculty == 1) {
-            setFacultyColor = '#1166b0'
-            faculty_ge.innerHTML = null;
-            faculty_eng.innerHTML = null;
+        let selectFaculty = document.getElementById('faculty_input').value.split('|');
+        console.log(selectFaculty[0])
+        if (selectFaculty[0] == "") {
             facultyP.style.display = 'none';
         }
-        if (selectFaculty != 1) {
+        else {
             facultyP.style.display = 'block';
         }
-        if (selectFaculty == 2) {
-            setFacultyColor = '#ad0101'
-            faculty_ge.innerHTML = 'იურიდიული ფაკულტეტი';
-            faculty_eng.innerHTML = 'Faculty of Law';
-        }
-        if (selectFaculty == 3) {
-            setFacultyColor = '#99bfff'
-            faculty_ge.innerHTML = 'მედიცინის ფაკულტეტი';
-            faculty_eng.innerHTML = 'Faculty of Medicine';
-        }
-        if (selectFaculty == 4) {
-            setFacultyColor = '#b3cccc'
-            faculty_ge.innerHTML = 'ეკონომიკისა და ბიზნესის ფაკულტეტი';
-            faculty_eng.innerHTML = 'Faculty of Economics and Business';
-        }
-        if (selectFaculty == 5) {
-            setFacultyColor = '#3a5795'
-            faculty_ge.innerHTML = 'ფსიქოლოგიისა და განათლების მეცნიერებათა ფაკულტეტი';
-            faculty_eng.innerHTML = 'Faculty of Psychology and Educational Sciences';
-        }
-        if (selectFaculty == 6) {
-            setFacultyColor = '#f37a21'
-            faculty_ge.innerHTML = 'სოციალურ და პოლიტიკურ მეცნიერებათა ფაკულტეტი';
-            faculty_eng.innerHTML = 'Faculty of Social and Political Sciences';
-        }
-        if (selectFaculty == 7) {
-            setFacultyColor = '#feb834'
-            faculty_ge.innerHTML = 'ჰუმანიტარულ მეცნიერებათა ფაკულტეტი';
-            faculty_eng.innerHTML = 'Faculty of Humanities';
-        }
-        if (selectFaculty == 8) {
-            setFacultyColor = '#5d9029'
-            faculty_ge.innerHTML = 'ზუსტ და საბუნებისმეტყველო მეცნიერებათა ფაკულტეტი';
-            faculty_eng.innerHTML = 'Faculty of Exact and Natural Sciences';
-        }
+        faculty_ge.innerHTML = selectFaculty[0];
+        faculty_eng.innerHTML = selectFaculty[1];
+        setFacultyColor = selectFaculty[2];
+        // let selectFaculty = document.getElementById('faculty_input').selectedIndex;
+        // if (selectFaculty == 0) {
+        //     setFacultyColor = null
+        //     faculty_ge.innerHTML = null;
+        //     faculty_eng.innerHTML = null;
+        // }
+        // if (selectFaculty == 1) {
+        //     setFacultyColor = '#1166b0'
+        //     faculty_ge.innerHTML = null;
+        //     faculty_eng.innerHTML = null;
+        //     facultyP.style.display = 'none';
+        // }
+        // if (selectFaculty != 1) {
+        //     facultyP.style.display = 'block';
+        // }
+        // if (selectFaculty == 2) {
+        //     setFacultyColor = '#ad0101'
+        //     faculty_ge.innerHTML = 'იურიდიული ფაკულტეტი';
+        //     faculty_eng.innerHTML = 'Faculty of Law';
+        // }
+        // if (selectFaculty == 3) {
+        //     setFacultyColor = '#99bfff'
+        //     faculty_ge.innerHTML = 'მედიცინის ფაკულტეტი';
+        //     faculty_eng.innerHTML = 'Faculty of Medicine';
+        // }
+        // if (selectFaculty == 4) {
+        //     setFacultyColor = '#b3cccc'
+        //     faculty_ge.innerHTML = 'ეკონომიკისა და ბიზნესის ფაკულტეტი';
+        //     faculty_eng.innerHTML = 'Faculty of Economics and Business';
+        // }
+        // if (selectFaculty == 5) {
+        //     setFacultyColor = '#3a5795'
+        //     faculty_ge.innerHTML = 'ფსიქოლოგიისა და განათლების მეცნიერებათა ფაკულტეტი';
+        //     faculty_eng.innerHTML = 'Faculty of Psychology and Educational Sciences';
+        // }
+        // if (selectFaculty == 6) {
+        //     setFacultyColor = '#f37a21'
+        //     faculty_ge.innerHTML = 'სოციალურ და პოლიტიკურ მეცნიერებათა ფაკულტეტი';
+        //     faculty_eng.innerHTML = 'Faculty of Social and Political Sciences';
+        // }
+        // if (selectFaculty == 7) {
+        //     setFacultyColor = '#feb834'
+        //     faculty_ge.innerHTML = 'ჰუმანიტარულ მეცნიერებათა ფაკულტეტი';
+        //     faculty_eng.innerHTML = 'Faculty of Humanities';
+        // }
+        // if (selectFaculty == 8) {
+        //     setFacultyColor = '#5d9029'
+        //     faculty_ge.innerHTML = 'ზუსტ და საბუნებისმეტყველო მეცნიერებათა ფაკულტეტი';
+        //     faculty_eng.innerHTML = 'Faculty of Exact and Natural Sciences';
+        // }
         facultyP.style.color = setFacultyColor;
         for (let i = 0; i < facultycolor_bd.length; i++) {
             facultycolor_bd[i].style.borderColor = setFacultyColor;
@@ -624,7 +647,7 @@
             document.getElementById('wphone_div').style.display = 'none';
             document.getElementById('wphone_input_tr').style.display = 'none';
             document.getElementById('wphone').innerHTML = null;
-            document.getElementById('wphone').removeAttribute('href');
+            document.getElementById('wphone').parentElement.removeAttribute('href');
 
         }
         if (pphoneyorn.checked) {
@@ -653,7 +676,7 @@
     };
     function wphone() {
         document.getElementById('wphone').innerHTML = document.getElementById("wphone_input").value;
-        document.getElementById('wphone').href= "tel:+995 (032) 225 04 84"
+        document.getElementById('wphone').parentElement.href = "tel:+995 (032) 225 04 84"
     };
     function pphone() {
         document.getElementById('pphone').innerHTML = '+995 ' + phoneFormat(document.getElementById("pphone_input").value);
