@@ -67,7 +67,7 @@
             class="faculty_color_bg"></a></td>-->
 
 
-<div style="display:flex;justify-content:space-evenly;align-items:center;padding:50px 0;">
+<div style="display:flex;flex-direction: column;justify-content:space-evenly;align-items:center;padding:50px 0;">
     <!-- <div style="width: 50%;">
         <p>შეავსეთ ინფორმაცია, შევსების შემდგომ შემოხაზეთ და დააკოპირეთ (Ctrl + C) ქვევით მოცემული ხემლოწერა, გადადით <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#settings/general" target="_blank" style="background-color: yellow;">ამ ბმულზე</a>, ხელოწერის ველში ჩააკოპირეთ თქვენი ახალი ხელმოწერა და გვედის ბოლოში დააჭირეთ შენახვას</p>
     </div> -->
@@ -75,14 +75,14 @@
         <table>
             <tr>
                 <td class="label_container"><label for="name_ge_input">სახელი და გვარი ქართულად:</label></td>
-                <td><input type="text" placeholder="ალექსი არდაშელია" id="name_ge_input" name="name_ge_input" required
+                <td><input type="text" placeholder="ალექსი არდაშელია" id="name_ge_input" name="name_ge_input"
                         oninput="name_ge()"></td>
             </tr>
             <tr>
                 <td class="label_container"><label for="name_eng_input">სახელი და გვარი ინგლისურად:</label>
                 </td>
                 <td><input type="text" placeholder="Aleksi Ardashelia" id="name_eng_input" name="name_eng_input"
-                        required oninput="name_eng()">
+                        oninput="name_eng()">
                 </td>
             </tr>
             <tr>
@@ -92,9 +92,14 @@
                     <select name="faculty_input" id="faculty_input" oninput="faculty()">
                         <option selected value="null">აირჩიეთ</option>
                         <option value="||#1166b0">ცენტრალური</option>
-                        <option value="იურიდიული ფაკურტეტი|Faculty of Law|#ad0101|https://tsu.ge/ka/faculty/FACULTY%20OF%20LAW/9">იურიდიული ფაკულტეტი</option>
-                        <option value="მედიცინის ფაკულტეტი|Faculty of Medicine|#99bfff|https://tsu.ge/ka/faculty/FACULTY%20OF%20MEDICINE/8">მედიცინის ფაკულტეტი</option>
-                        <option value="ეკონომიკისა და ბიზნესის ფაკულტეტი|Faculty of Economics and Business|#b3cccc|https://tsu.ge/ka/faculty/FACULTY%20OF%20ECONOMICS%20AND%20BUSINESS/7">
+                        <option
+                            value="იურიდიული ფაკურტეტი|Faculty of Law|#ad0101|https://tsu.ge/ka/faculty/FACULTY%20OF%20LAW/9">
+                            იურიდიული ფაკულტეტი</option>
+                        <option
+                            value="მედიცინის ფაკულტეტი|Faculty of Medicine|#99bfff|https://tsu.ge/ka/faculty/FACULTY%20OF%20MEDICINE/8">
+                            მედიცინის ფაკულტეტი</option>
+                        <option
+                            value="ეკონომიკისა და ბიზნესის ფაკულტეტი|Faculty of Economics and Business|#b3cccc|https://tsu.ge/ka/faculty/FACULTY%20OF%20ECONOMICS%20AND%20BUSINESS/7">
                             ეკონომიკისა და ბიზნესის ფაკულტეტი</option>
                         <option
                             value="ფსიქოლოგიისა და განათლების მეცნიერებათა ფაკულტეტი|Faculty of Psychology and Educational Sciences|#3a5795|https://tsu.ge/ka/faculty/FACULTY%20OF%20PSYCHOLOGY%20AND%20EDUCATIONAL%20SCIENCES/6">
@@ -102,7 +107,9 @@
                         <option
                             value="სოციალურ და პოლიტიკურ მეცნიერებათა ფაკულტეტი|Faculty of Social and Political Sciences|#f37a21|https://tsu.ge/ka/faculty/FACULTY%20OF%20SOCIAL%20AND%20POLITICAL%20SCIENCES/5">
                             სოციალურ და პოლიტიკურ მეცნიერებათა ფაკულტეტი</option>
-                        <option value="ჰუმანიტარულ მეცნიერებათა ფაკულტეტი|Faculty of Humanities|#feb834|https://tsu.ge/ka/faculty/FACULTY%20OF%20HUMANITIES/4">ჰუმანიტარულ
+                        <option
+                            value="ჰუმანიტარულ მეცნიერებათა ფაკულტეტი|Faculty of Humanities|#feb834|https://tsu.ge/ka/faculty/FACULTY%20OF%20HUMANITIES/4">
+                            ჰუმანიტარულ
                             მეცნიერებათა ფაკულტეტი</option>
                         <option
                             value="ზუსტ და საბუნებისმეტყველო მეცნიერებათა ფაკულტეტი|Faculty of Exact and Natural Sciences|#5d9029|https://tsu.ge/ka/faculty/FACULTY%20OF%20EXACT%20AND%20NATURAL%20SCIENCES/2">
@@ -139,12 +146,12 @@
             <tr class="jtitle_input_tr displaynone">
                 <td class="label_container"><label for="jtitle_ge_input">თანამდებობა ქართულად:</label></td>
                 <td><input type="text" placeholder="უფროსი სპეციალისტი" id="jtitle_ge_input" name="jtitle_ge_input"
-                        required oninput="jtitle_ge()"></td>
+                        oninput="jtitle_ge()"></td>
             </tr>
             <tr class="jtitle_input_tr displaynone">
                 <td class="label_container"><label for="jtitle_eng_input">თანამდებობა ინგლისურად:</label></td>
                 <td><input type="text" placeholder="Senior Specialist" id="jtitle_eng_input" name="jtitle_eng_input"
-                        required oninput="jtitle_eng()"></td>
+                        oninput="jtitle_eng()"></td>
             </tr>
             <tr>
                 <td class="label_container"><label for="depyorn">სამსახურის/ინსტიტუტის გამოჩენა:</label></td>
@@ -190,7 +197,7 @@
             <tr>
                 <td class="label_container"><label for="email_input">ელექტრონული პოსტის მისამართი:</label></td>
                 <td><input type="email" placeholder="Aleksi.Ardashelia@tsu.ge" id="email_input" name="email_input"
-                        required oninput="email()"></td>
+                        oninput="email()"></td>
             </tr>
             <tr>
                 <td class="label_container"><label for="address_input"> შენობა:</label></td>
@@ -252,7 +259,8 @@
             </tr>
         </table>
     </form>
-
+    <button id="btnCopy" style="margin-top: 20px; font-size: 20px;" data-clipboard-action="copy"
+        data-clipboard-target="#signature">ხელმოწერის კოპირება</button>
 </div>
 
 
@@ -261,7 +269,7 @@
 
 
 
-<table cellpadding="0" cellspacing="0" style="vertical-align:-webkit-baseline-middle;font-size:small;">
+<table cellpadding="0" cellspacing="0" style="vertical-align:-webkit-baseline-middle;font-size:small;" id="signature">
     <tr>
         <td>
             <table cellpadding="0" cellspacing="0"
@@ -271,9 +279,9 @@
                                 src="https://tsu.ge/assets/media/files/8/Photo/tsu_logo_mc.png" width="130"
                                 style="max-width:130px;"></span></td>
                     <td style="vertical-align:middle;">
-                        <h2 style="margin:0 0 10px 0;font-weight:600;line-height:14px;color: #000 !important;"><span style="font-size:14px;"
-                                id="name_ge">ალექსი არდაშელია</span><br><span style="font-size:10px;"
-                                id="name_eng">Aleksi ARDASHELIA</span></h2>
+                        <h2 style="margin:0 0 10px 0;font-weight:600;line-height:14px;color: #000 !important;"><span
+                                style="font-size:14px;" id="name_ge">ალექსი არდაშელია</span><br><span
+                                style="font-size:10px;" id="name_eng">Aleksi ARDASHELIA</span></h2>
                         <p font-size="small"
                             style="margin:0 0 5px 0;font-size:10px;line-height:14px;max-width:240px;display:none;color: #000 !important;"
                             id="atitle"><span id="atitle_ge"></span> | <span id="atitle_eng"></span></p>
@@ -287,7 +295,8 @@
                             style="color:#AD0101 !important;margin:0 0 5px 0;font-size:10px;line-height:14px;font-weight:600;max-width:240px;"
                             id="faculty_p"><span id="faculty_ge">იურიდიული ფაკულტეტი</span><br><span
                                 id="faculty_eng">Faculty of Law</span></p>
-                        <p font-size="small" style="margin:0;font-weight:500;font-size:10px;line-height:14px;color: #000 !important;">
+                        <p font-size="small"
+                            style="margin:0;font-weight:500;font-size:10px;line-height:14px;color: #000 !important;">
                             <span>ივანე
                                 ჯავახიშვილის სახელობის<br>თბილისის სახელმწიფო უნივერსიტეტი<br>Ivane
                                 Javakhishvili Tbilisi State University</span>
@@ -376,7 +385,8 @@
                                     </table>
                                 </td>
                                 <td style="padding:0px;max-width:301px;"><span
-                                        style="font-size:10px;line-height:14px;color: #000 !important;"><span id="address_ge">საქართველო,
+                                        style="font-size:10px;line-height:14px;color: #000 !important;"><span
+                                            id="address_ge">საქართველო,
                                             თბილისი, ი. ჭავჭავაძის გამზ. 3,
                                             0179</span><br><span id="address_eng">3, Ilia chavchavadze
                                             Ave., 0179 Tbilisi, Georgia</span><br> ოთახი №<span class="room">122</span>
@@ -459,8 +469,10 @@
     </tr>
 
 </table>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
 <script>
+
+
     let faculty_ge = document.getElementById('faculty_ge'),
         faculty_eng = document.getElementById('faculty_eng'),
         facultyP = document.getElementById('faculty_p'),
@@ -473,7 +485,22 @@
         atitle_eng = document.getElementById('atitle_eng'),
         jtitle_input_tr = document.getElementById('jtitle_input_tr'),
         dep_input_tr = document.getElementById('dep_input_tr'),
-        roomnum = document.getElementsByClassName('room');
+        roomnum = document.getElementsByClassName('room'),
+        clipboard = new ClipboardJS('#btnCopy');
+
+    clipboard.on('success', function (e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        alert("ხელმოწერა დაკოპირებულია")
+        e.clearSelection();
+    });
+
+    clipboard.on('error', function (e) {
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        alert("ხელმოწერის დაკოპირება ვერ მოხერხდა")
+    });
 
     const phoneFormat = (input) => {
         if (typeof (input) !== 'string') input = input.toString()
