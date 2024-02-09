@@ -4,14 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>multilang</title>
+    <title>TSU Singature</title>
     <style>
-        /* *,
-        *::before,
-        *::after {
+        body {
             margin: 0;
+            background-color: #1b107a;
+        }
 
-        } */
+        .top {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            padding: 50px 0;
+            color: #f1bd00;
+        }
 
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
@@ -20,13 +27,20 @@
 
         .label_container {
             text-align: end;
+            font-size: 20px;
         }
 
-        input {
-            width: 240px;
+        input,
+        select {
+            /* box-sizing: border-box; */
+            font-size: 16px;
+            width: 350px;
+            box-sizing: border-box;
+            padding: 2px;
         }
 
         input[type=checkbox] {
+            transform: scale(1.3);
             width: 15px;
         }
 
@@ -34,10 +48,42 @@
             display: none;
         }
 
-        #button {
+        #btnCopy {
+            font-size: 20px;
+            padding: 7px;
+            color: #f1bd00;
+            background-color: #1b107a;
+            border-color: #f1bd00;
+            border-radius: 8px;
+            border-style: solid;
+        }
+
+        #btnCopy:hover {
+            cursor: pointer;
+            border-width: 4px;
             padding: 5px;
-            font-size: 16px;
             font-weight: bold;
+        }
+
+        #instructions li,
+        #instructions li p {
+            font-size: inherit;
+            margin: inherit;
+        }
+
+        #instructions {
+            margin: 0;
+            font-size: 20px;
+            padding: 0;
+        }
+
+        #signature-card {
+            margin-inline: auto;
+            margin-block: 20px;
+            width: max-content;
+            background-color: white;
+            padding: 50px;
+            border-radius: 10px;
         }
 
         #signature_div {
@@ -67,7 +113,7 @@
             class="faculty_color_bg"></a></td>-->
 
 
-<div style="display:flex;flex-direction: row;justify-content:space-evenly;align-items:center;padding:50px 0;">
+<div class="top">
     <form action="">
         <table>
             <tr>
@@ -258,231 +304,250 @@
             </tr>
         </table>
     </form>
-    <button id="btnCopy" style="margin-top: 20px; font-size: 20px;" data-clipboard-action="copy"
-        data-clipboard-target="#signature">ხელმოწერის კოპირება</button>
+    <button id="btnCopy" data-clipboard-action="copy" data-clipboard-target="#signature">ხელმოწერის კოპირება</button>
     <div>
-        <ol>
-            <li>შეავსეთ თქვენთვის შესაფერისის ველები</li>
-            <li>დააჭირეთ "ხელმოწერის კოპირების ღილაკს"</li>
-            <li>გახსენით Gmail-ი</li>
-            <li>ზედა მარცხენა კუთხეში დააჭირეთ პარამეტრების ღილაკს <svg class="Xy" xmlns="http://www.w3.org/2000/svg"
-                    width="24" height="24" viewBox="0 0 24 24">
-                    <path
-                        d="M13.85 22.25h-3.7c-.74 0-1.36-.54-1.45-1.27l-.27-1.89c-.27-.14-.53-.29-.79-.46l-1.8.72c-.7.26-1.47-.03-1.81-.65L2.2 15.53c-.35-.66-.2-1.44.36-1.88l1.53-1.19c-.01-.15-.02-.3-.02-.46 0-.15.01-.31.02-.46l-1.52-1.19c-.59-.45-.74-1.26-.37-1.88l1.85-3.19c.34-.62 1.11-.9 1.79-.63l1.81.73c.26-.17.52-.32.78-.46l.27-1.91c.09-.7.71-1.25 1.44-1.25h3.7c.74 0 1.36.54 1.45 1.27l.27 1.89c.27.14.53.29.79.46l1.8-.72c.71-.26 1.48.03 1.82.65l1.84 3.18c.36.66.2 1.44-.36 1.88l-1.52 1.19c.01.15.02.3.02.46s-.01.31-.02.46l1.52 1.19c.56.45.72 1.23.37 1.86l-1.86 3.22c-.34.62-1.11.9-1.8.63l-1.8-.72c-.26.17-.52.32-.78.46l-.27 1.91c-.1.68-.72 1.22-1.46 1.22zm-3.23-2h2.76l.37-2.55.53-.22c.44-.18.88-.44 1.34-.78l.45-.34 2.38.96 1.38-2.4-2.03-1.58.07-.56c.03-.26.06-.51.06-.78s-.03-.53-.06-.78l-.07-.56 2.03-1.58-1.39-2.4-2.39.96-.45-.35c-.42-.32-.87-.58-1.33-.77l-.52-.22-.37-2.55h-2.76l-.37 2.55-.53.21c-.44.19-.88.44-1.34.79l-.45.33-2.38-.95-1.39 2.39 2.03 1.58-.07.56a7 7 0 0 0-.06.79c0 .26.02.53.06.78l.07.56-2.03 1.58 1.38 2.4 2.39-.96.45.35c.43.33.86.58 1.33.77l.53.22.38 2.55z">
-                    </path>
-                    <circle cx="12" cy="12" r="3.5"></circle>
-                </svg></li>
-            <li>დააჭირეთ ყველა პარამეტრის ნახვას (See all settings, Все настройки)</li>
-            <li>ჩააკოპირეთ (Ctrl+V) ხელმოწერის (Signature, Подпись) სექციაში</li>
-            <li>გვერდის ბოლოში დააჭირეთ შენახვას (Save Changes, Сохранить изменения)</li>
+        <ol id="instructions">
+            <li>
+                <p>შეავსეთ თქვენთვის შესაფერისის ველები</p>
+            </li>
+            <li>
+                <p>დააჭირეთ "ხელმოწერის კოპირების ღილაკს"</p>
+            </li>
+            <li>
+                <p>გახსენით Gmail-ი</p>
+            </li>
+            <li>
+                <p>ზედა მარცხენა კუთხეში დააჭირეთ პარამეტრების ღილაკს <svg class="Xy" xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" viewbox="0 0 24 24" style="position: relative; top: 6;">
+                        <path fill="#f1bd00"
+                            d="M13.85 22.25h-3.7c-.74 0-1.36-.54-1.45-1.27l-.27-1.89c-.27-.14-.53-.29-.79-.46l-1.8.72c-.7.26-1.47-.03-1.81-.65L2.2 15.53c-.35-.66-.2-1.44.36-1.88l1.53-1.19c-.01-.15-.02-.3-.02-.46 0-.15.01-.31.02-.46l-1.52-1.19c-.59-.45-.74-1.26-.37-1.88l1.85-3.19c.34-.62 1.11-.9 1.79-.63l1.81.73c.26-.17.52-.32.78-.46l.27-1.91c.09-.7.71-1.25 1.44-1.25h3.7c.74 0 1.36.54 1.45 1.27l.27 1.89c.27.14.53.29.79.46l1.8-.72c.71-.26 1.48.03 1.82.65l1.84 3.18c.36.66.2 1.44-.36 1.88l-1.52 1.19c.01.15.02.3.02.46s-.01.31-.02.46l1.52 1.19c.56.45.72 1.23.37 1.86l-1.86 3.22c-.34.62-1.11.9-1.8.63l-1.8-.72c-.26.17-.52.32-.78.46l-.27 1.91c-.1.68-.72 1.22-1.46 1.22zm-3.23-2h2.76l.37-2.55.53-.22c.44-.18.88-.44 1.34-.78l.45-.34 2.38.96 1.38-2.4-2.03-1.58.07-.56c.03-.26.06-.51.06-.78s-.03-.53-.06-.78l-.07-.56 2.03-1.58-1.39-2.4-2.39.96-.45-.35c-.42-.32-.87-.58-1.33-.77l-.52-.22-.37-2.55h-2.76l-.37 2.55-.53.21c-.44.19-.88.44-1.34.79l-.45.33-2.38-.95-1.39 2.39 2.03 1.58-.07.56a7 7 0 0 0-.06.79c0 .26.02.53.06.78l.07.56-2.03 1.58 1.38 2.4 2.39-.96.45.35c.43.33.86.58 1.33.77l.53.22.38 2.55z">
+                        </path>
+                        <circle fill="#f1bd00" cx="12" cy="12" r="3.5"></circle>
+                    </svg></p>
+            </li>
+            <li>
+                <p>დააჭირეთ ყველა პარამეტრის ნახვას (See all settings, Все настройки)</p>
+            </li>
+            <li>
+                <p>გვერდის ბოლოში დააჭირეთ შენახვას (Save Changes, Сохранить изменения)</p>
+            </li>
+            <li>
+                <p>ჩააკოპირეთ (Ctrl+V) ხელმოწერის (Signature, Подпись) სექციაში</p>
+            </li>
         </ol>
     </div>
 </div>
 
+<div id="signature-card">
+
+    <table cellpadding="0" cellspacing="0" style="vertical-align:-webkit-baseline-middle;font-size:small;"
+        id="signature">
+        <tr>
+            <td>
+                <table cellpadding="0" cellspacing="0"
+                    style="vertical-align:-webkit-baseline-middle;font-size:small;font-family:Verdana;">
+                    <tr>
+                        <td width="150" style="vertical-align:middle;"><span
+                                style="margin-right:20px;display:block;"><img
+                                    src="https://tsu.ge/assets/media/files/8/Photo/tsu_logo_mc.png" width="130"
+                                    style="max-width:130px;"></span></td>
+                        <td style="vertical-align:middle;">
+                            <h2 style="margin:0 0 10px 0;font-weight:600;line-height:14px;color: #000 !important;"><span
+                                    style="font-size:14px;" id="name_ge"></span><br><span style="font-size:10px;"
+                                    id="name_eng"></span></h2>
+                            <p font-size="small"
+                                style="margin:0 0 5px 0;font-size:10px;line-height:14px;max-width:240px;display:none;color: #000 !important;"
+                                id="atitle"><span id="atitle_ge"></span> | <span id="atitle_eng"></span></p>
+                            <p font-size="small"
+                                style="margin:0 0 5px 0;font-size:10px;line-height:14px;max-width:240px;display:none;color: #000 !important;"
+                                id="jtitle"><span id="jtitle_ge"></span> | <span id="jtitle_eng"></span></p>
+                            <p font-size="small"
+                                style="margin:0 0 5px 0;font-weight:500;font-size:10px;line-height:14px;max-width:240px;display:none;color: #000 !important;"
+                                id="dep"><span id="dep_ge"></span><br><span id="dep_eng"></span></p>
+                            <p font-size="small"
+                                style="color:#1166b0 !important;margin:0 0 5px 0;font-size:10px;line-height:14px;font-weight:600;max-width:240px;"
+                                id="faculty_p"><span id="faculty_ge"></span><br><span id="faculty_eng"></span></p>
+                            <p font-size="small"
+                                style="margin:0;font-weight:500;font-size:10px;line-height:14px;color: #000 !important;">
+                                <span>ივანე
+                                    ჯავახიშვილის სახელობის<br>თბილისის სახელმწიფო უნივერსიტეტი<br>Ivane
+                                    Javakhishvili Tbilisi State University</span>
+                            </p>
+                        </td>
+                        <td width="30">
+                            <div></div>
+                        </td>
+                        <td class="faculty_bd" width="1" height="auto"
+                            style="width:1px;border-bottom:none;border-left:1px solid;border-color:#1166b0;">
+                        </td>
+                        <td width="30">
+                            <div style="width:30px;"></div>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <table cellpadding="0" cellspacing="0"
+                                style="vertical-align:-webkit-baseline-middle;font-size:small;font-family:Verdana;">
+                                <tr height="25" style="vertical-align:middle;display:none;" id="phone_ifany">
+                                    <td width="30" style="vertical-align:middle;">
+                                        <table cellpadding="0" cellspacing="0"
+                                            style="vertical-align:-webkit-baseline-middle;font-size:small;">
+                                            <tr>
+                                                <td style="vertical-align:bottom;"><span class="faculty_color_bg"
+                                                        width="11"
+                                                        style="display:inline-block;background-color:#1166b0;"><img
+                                                            src="https://tsu.ge/assets/media/files/8/signatures/icons/phone-icon-2x.png"
+                                                            width="13" style="display:block;"></span>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td style="padding:0px;"><span style="display:none;" id="wphone_div"><a
+                                                style="text-decoration:none;color: #000 !important;font-size:10px;">
+                                                +995 (032) 225 04 84 (<span id="wphone"></span>)</a></span><span
+                                            style="display:none;" id="phone_ifboth"> <br> </span><span
+                                            style="display:none;" id="pphone_div"><a
+                                                style="text-decoration:none;color: #000 !important;font-size:10px;"
+                                                id="pphone"></a></span></td>
+                                </tr>
+                                <tr height="25" style="vertical-align:middle;">
+                                    <td width="30" style="vertical-align:middle;">
+                                        <table cellpadding="0" cellspacing="0"
+                                            style="vertical-align:-webkit-baseline-middle;font-size:small;">
+                                            <tr>
+                                                <td style="vertical-align:bottom;"><span class="faculty_color_bg"
+                                                        width="11"
+                                                        style="display:inline-block;background-color:#1166b0;"><img
+                                                            src="https://tsu.ge/assets/media/files/8/signatures/icons/email-icon-2x.png"
+                                                            width="13" style="display:block;background-color:#1166b0;"
+                                                            class="faculty_color_bg"></span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td style="padding:0px;"><a href="mailto:aleksi.ardshelia@tsu.ge"
+                                            style="text-decoration:none;color: #000 !important;;font-size:10px;"
+                                            id="email"></a></td>
+                                </tr>
+                                <tr height="25" style="vertical-align:middle;">
+                                    <td width="30" style="vertical-align:middle;">
+                                        <table cellpadding="0" cellspacing="0"
+                                            style="vertical-align:-webkit-baseline-middle;font-size:small;">
+                                            <tr>
+                                                <td style="vertical-align:bottom;"><span width="11"
+                                                        style="display:inline-block;background-color:#1166b0;"
+                                                        class="faculty_color_bg"><img
+                                                            src="https://tsu.ge/assets/media/files/8/signatures/icons/link-icon-2x.png"
+                                                            width="13" style="display:block;background-color:#1166b0;"
+                                                            class="faculty_color_bg"></span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td style="padding:0px;"><a id="web" href="https://www.tsu.ge"
+                                            style="text-decoration:none;color: #000 !important;font-size:10px;">TSU.GE</a>
+                                    </td>
+                                </tr>
+                                <tr height="25" style="vertical-align:middle;">
+                                    <td width="30" style="vertical-align:middle;">
+                                        <table cellpadding="0" cellspacing="0"
+                                            style="vertical-align:-webkit-baseline-middle;font-size:small;">
+                                            <tr>
+                                                <td style="vertical-align:bottom;"><span width="11"
+                                                        style="display:inline-block;background-color:#1166b0;"
+                                                        class="faculty_color_bg"><img
+                                                            src="https://tsu.ge/assets/media/files/8/signatures/icons/address-icon-2x.png"
+                                                            width="13" style="display:block;background-color:#1166b0;"
+                                                            class="faculty_color_bg"></span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td style="padding:0px;max-width:301px;"><span
+                                            style="font-size:10px;line-height:14px;color: #000 !important;"><span
+                                                id="address_ge"></span><br><span id="address_eng"></span><br> ოთახი
+                                            №<span class="room"></span>
+                                            | Room №<span class="room"></span></span>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellpadding="0" cellspacing="0"
+                                style="display:inline-block;vertical-align:-webkit-baseline-middle;font-size:small;padding-top:15px;">
+                                <tr style="text-align:right;">
+                                    <td><a id="fb" href="https://www.facebook.com/TSU.Faculty.of.Law"
+                                            class="faculty_color_bg"
+                                            style="display:inline-block;padding:0px;background-color:#1166b0;"><img
+                                                src="https://tsu.ge/assets/media/files/8/signatures/icons/facebook-icon-2x.png"
+                                                height="24"
+                                                style="background-color:#1166b0;max-width:135px;display:block;"
+                                                class="faculty_color_bg"></a></td>
+                                    <td width="5">
+                                        <div></div>
+                                    </td>
+                                    <td width="5">
+                                        <div></div>
+                                    </td>
+                                    <td><a id="ig" href="https://www.instagram.com/tbilisistateuniversity_law/"
+                                            style="display:inline-block;padding:0px;background-color:#1166b0;"
+                                            class="faculty_color_bg"><img
+                                                src="https://tsu.ge/assets/media/files/8/signatures/icons/instagram-icon-2x.png"
+                                                height="24"
+                                                style="background-color:#1166b0;max-width:135px;display:block;"
+                                                class="faculty_color_bg"></a></td>
+                                    <!-- 51-69 -->
+                                    <td width="5">
+                                        <div></div>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table cellpadding="0" cellspacing="0"
+                    style="width:100%;vertical-align:-webkit-baseline-middle;font-size:small;">
+                    <tr>
+                        <td height="10"></td>
+                    </tr>
+                    <tr>
+                        <td direction="horizontal" width="auto" height="1" class="faculty_bd"
+                            style="width:100%;border-bottom:1px solid ;border-left:none;display:block;border-color:#1166b0;">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table cellpadding="0" cellspacing="0"
+                    style="width:100%;vertical-align:-webkit-baseline-middle;font-size:small;font-family:Verdana;">
+                    <tr>
+                        <td style="vertical-align:top;max-width:620px;">
+                            <p style="font-size:8px;text-align:justify;margin:10px 0 0 0;color: #000 !important;"><span
+                                    style="color:#dc0d1f;">შეტყობინება კონფიდენციალურობის შესახებ:</span>
+                                წინამდებარე წერილი კონფიდენციალურია და განკუთვნილია მხოლოდ წერილში მითითებული
+                                პიროვნების ან ორგანიზაციისათვის. თუ წერილი თქვენთვის არ არის განკუთვნილი,
+                                დაუშვებელია მისი შინაარსის გამჟღავნება, გავრცელება ან მის შინაარსზე დაყრდნობით
+                                ნებისმიერი ქმედების განხორციელება. თუ თქვენ შეცდომით მიიღეთ წინამდებარე წერილი,
+                                გთხოვთ, აღნიშნულის შესახებ დაუყოვნებლივ აცნობოთ ამავე წერილის
+                                გამომგზავნს.<br><span style="color:#dc0d1f;">CONFIDENTIALITY NOTICE:</span> This
+                                e-mail message may contain confidential and/or privileged material. Delivery of
+                                this message to any person other than the intended recipient(s) does not in any
+                                way waive privilege or confidentiality. The information transmitted is intended
+                                only for the person or entity to whom or which it is addressed. The sender
+                                accepts no liability for the proper transmission of this communication or for
+                                any delay in its receipt. </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+    </table>
+
+</div>
 
 
-<hr style="border-width:5px;border-style:solid ;border-color:#1166b0;margin:0 0 50px 0;">
-
-
-
-<table cellpadding="0" cellspacing="0" style="vertical-align:-webkit-baseline-middle;font-size:small;" id="signature">
-    <tr>
-        <td>
-            <table cellpadding="0" cellspacing="0"
-                style="vertical-align:-webkit-baseline-middle;font-size:small;font-family:Verdana;">
-                <tr>
-                    <td width="150" style="vertical-align:middle;"><span style="margin-right:20px;display:block;"><img
-                                src="https://tsu.ge/assets/media/files/8/Photo/tsu_logo_mc.png" width="130"
-                                style="max-width:130px;"></span></td>
-                    <td style="vertical-align:middle;">
-                        <h2 style="margin:0 0 10px 0;font-weight:600;line-height:14px;color: #000 !important;"><span
-                                style="font-size:14px;" id="name_ge"></span><br><span style="font-size:10px;"
-                                id="name_eng"></span></h2>
-                        <p font-size="small"
-                            style="margin:0 0 5px 0;font-size:10px;line-height:14px;max-width:240px;display:none;color: #000 !important;"
-                            id="atitle"><span id="atitle_ge"></span> | <span id="atitle_eng"></span></p>
-                        <p font-size="small"
-                            style="margin:0 0 5px 0;font-size:10px;line-height:14px;max-width:240px;display:none;color: #000 !important;"
-                            id="jtitle"><span id="jtitle_ge"></span> | <span id="jtitle_eng"></span></p>
-                        <p font-size="small"
-                            style="margin:0 0 5px 0;font-weight:500;font-size:10px;line-height:14px;max-width:240px;display:none;color: #000 !important;"
-                            id="dep"><span id="dep_ge"></span><br><span id="dep_eng"></span></p>
-                        <p font-size="small"
-                            style="color:#1166b0 !important;margin:0 0 5px 0;font-size:10px;line-height:14px;font-weight:600;max-width:240px;"
-                            id="faculty_p"><span id="faculty_ge"></span><br><span id="faculty_eng"></span></p>
-                        <p font-size="small"
-                            style="margin:0;font-weight:500;font-size:10px;line-height:14px;color: #000 !important;">
-                            <span>ივანე
-                                ჯავახიშვილის სახელობის<br>თბილისის სახელმწიფო უნივერსიტეტი<br>Ivane
-                                Javakhishvili Tbilisi State University</span>
-                        </p>
-                    </td>
-                    <td width="30">
-                        <div></div>
-                    </td>
-                    <td class="faculty_bd" width="1" height="auto"
-                        style="width:1px;border-bottom:none;border-left:1px solid;border-color:#1166b0;">
-                    </td>
-                    <td width="30">
-                        <div style="width:30px;"></div>
-                    </td>
-                    <td style="vertical-align:middle;">
-                        <table cellpadding="0" cellspacing="0"
-                            style="vertical-align:-webkit-baseline-middle;font-size:small;font-family:Verdana;">
-                            <tr height="25" style="vertical-align:middle;display:none;" id="phone_ifany">
-                                <td width="30" style="vertical-align:middle;">
-                                    <table cellpadding="0" cellspacing="0"
-                                        style="vertical-align:-webkit-baseline-middle;font-size:small;">
-                                        <tr>
-                                            <td style="vertical-align:bottom;"><span class="faculty_color_bg" width="11"
-                                                    style="display:inline-block;background-color:#1166b0;"><img
-                                                        src="https://tsu.ge/assets/media/files/8/signatures/icons/phone-icon-2x.png"
-                                                        width="13" style="display:block;"></span>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td style="padding:0px;"><span style="display:none;" id="wphone_div"><a
-                                            style="text-decoration:none;color: #000 !important;font-size:10px;">
-                                            +995 (032) 225 04 84 (<span id="wphone"></span>)</a></span><span
-                                        style="display:none;" id="phone_ifboth"> <br> </span><span style="display:none;"
-                                        id="pphone_div"><a
-                                            style="text-decoration:none;color: #000 !important;font-size:10px;"
-                                            id="pphone"></a></span></td>
-                            </tr>
-                            <tr height="25" style="vertical-align:middle;">
-                                <td width="30" style="vertical-align:middle;">
-                                    <table cellpadding="0" cellspacing="0"
-                                        style="vertical-align:-webkit-baseline-middle;font-size:small;">
-                                        <tr>
-                                            <td style="vertical-align:bottom;"><span class="faculty_color_bg" width="11"
-                                                    style="display:inline-block;background-color:#1166b0;"><img
-                                                        src="https://tsu.ge/assets/media/files/8/signatures/icons/email-icon-2x.png"
-                                                        width="13" style="display:block;background-color:#1166b0;"
-                                                        class="faculty_color_bg"></span></td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td style="padding:0px;"><a href="mailto:aleksi.ardshelia@tsu.ge"
-                                        style="text-decoration:none;color: #000 !important;;font-size:10px;"
-                                        id="email"></a></td>
-                            </tr>
-                            <tr height="25" style="vertical-align:middle;">
-                                <td width="30" style="vertical-align:middle;">
-                                    <table cellpadding="0" cellspacing="0"
-                                        style="vertical-align:-webkit-baseline-middle;font-size:small;">
-                                        <tr>
-                                            <td style="vertical-align:bottom;"><span width="11"
-                                                    style="display:inline-block;background-color:#1166b0;"
-                                                    class="faculty_color_bg"><img
-                                                        src="https://tsu.ge/assets/media/files/8/signatures/icons/link-icon-2x.png"
-                                                        width="13" style="display:block;background-color:#1166b0;"
-                                                        class="faculty_color_bg"></span></td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td style="padding:0px;"><a id="web" href="https://www.tsu.ge"
-                                        style="text-decoration:none;color: #000 !important;font-size:10px;">TSU.GE</a>
-                                </td>
-                            </tr>
-                            <tr height="25" style="vertical-align:middle;">
-                                <td width="30" style="vertical-align:middle;">
-                                    <table cellpadding="0" cellspacing="0"
-                                        style="vertical-align:-webkit-baseline-middle;font-size:small;">
-                                        <tr>
-                                            <td style="vertical-align:bottom;"><span width="11"
-                                                    style="display:inline-block;background-color:#1166b0;"
-                                                    class="faculty_color_bg"><img
-                                                        src="https://tsu.ge/assets/media/files/8/signatures/icons/address-icon-2x.png"
-                                                        width="13" style="display:block;background-color:#1166b0;"
-                                                        class="faculty_color_bg"></span></td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td style="padding:0px;max-width:301px;"><span
-                                        style="font-size:10px;line-height:14px;color: #000 !important;"><span
-                                            id="address_ge"></span><br><span id="address_eng"></span><br> ოთახი №<span
-                                            class="room"></span>
-                                        | Room №<span class="room"></span></span>
-                                </td>
-                            </tr>
-                        </table>
-                        <table cellpadding="0" cellspacing="0"
-                            style="display:inline-block;vertical-align:-webkit-baseline-middle;font-size:small;padding-top:15px;">
-                            <tr style="text-align:right;">
-                                <td><a id="fb" href="https://www.facebook.com/TSU.Faculty.of.Law"
-                                        class="faculty_color_bg"
-                                        style="display:inline-block;padding:0px;background-color:#1166b0;"><img
-                                            src="https://tsu.ge/assets/media/files/8/signatures/icons/facebook-icon-2x.png"
-                                            height="24" style="background-color:#1166b0;max-width:135px;display:block;"
-                                            class="faculty_color_bg"></a></td>
-                                <td width="5">
-                                    <div></div>
-                                </td>
-                                <td width="5">
-                                    <div></div>
-                                </td>
-                                <td><a id="ig" href="https://www.instagram.com/tbilisistateuniversity_law/"
-                                        style="display:inline-block;padding:0px;background-color:#1166b0;"
-                                        class="faculty_color_bg"><img
-                                            src="https://tsu.ge/assets/media/files/8/signatures/icons/instagram-icon-2x.png"
-                                            height="24" style="background-color:#1166b0;max-width:135px;display:block;"
-                                            class="faculty_color_bg"></a></td>
-                                <!-- 51-69 -->
-                                <td width="5">
-                                    <div></div>
-                                </td>
-                            </tr>
-
-                        </table>
-                    </td>
-                </tr>
-
-            </table>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <table cellpadding="0" cellspacing="0"
-                style="width:100%;vertical-align:-webkit-baseline-middle;font-size:small;">
-                <tr>
-                    <td height="10"></td>
-                </tr>
-                <tr>
-                    <td direction="horizontal" width="auto" height="1" class="faculty_bd"
-                        style="width:100%;border-bottom:1px solid ;border-left:none;display:block;border-color:#1166b0;">
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <table cellpadding="0" cellspacing="0"
-                style="width:100%;vertical-align:-webkit-baseline-middle;font-size:small;font-family:Verdana;">
-                <tr>
-                    <td style="vertical-align:top;max-width:620px;">
-                        <p style="font-size:8px;text-align:justify;margin:10px 0 0 0;color: #000 !important;"><span
-                                style="color:#dc0d1f;">შეტყობინება კონფიდენციალურობის შესახებ:</span>
-                            წინამდებარე წერილი კონფიდენციალურია და განკუთვნილია მხოლოდ წერილში მითითებული
-                            პიროვნების ან ორგანიზაციისათვის. თუ წერილი თქვენთვის არ არის განკუთვნილი,
-                            დაუშვებელია მისი შინაარსის გამჟღავნება, გავრცელება ან მის შინაარსზე დაყრდნობით
-                            ნებისმიერი ქმედების განხორციელება. თუ თქვენ შეცდომით მიიღეთ წინამდებარე წერილი,
-                            გთხოვთ, აღნიშნულის შესახებ დაუყოვნებლივ აცნობოთ ამავე წერილის
-                            გამომგზავნს.<br><span style="color:#dc0d1f;">CONFIDENTIALITY NOTICE:</span> This
-                            e-mail message may contain confidential and/or privileged material. Delivery of
-                            this message to any person other than the intended recipient(s) does not in any
-                            way waive privilege or confidentiality. The information transmitted is intended
-                            only for the person or entity to whom or which it is addressed. The sender
-                            accepts no liability for the proper transmission of this communication or for
-                            any delay in its receipt. </p>
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-
-</table>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
 <script>
 
