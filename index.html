@@ -16,8 +16,13 @@
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
+            flex-wrap:wrap;
             padding: 50px 0;
             color: #f1bd00;
+        }
+
+        .top > * {
+            margin-block: 50px;
         }
 
         input::-webkit-outer-spin-button,
@@ -28,6 +33,7 @@
         .label_container {
             text-align: end;
             font-size: 20px;
+            max-width: 400px;
         }
 
         input,
@@ -56,13 +62,14 @@
             border-color: #f1bd00;
             border-radius: 8px;
             border-style: solid;
+            margin: 40px;
+            transition: 0.3s;
+            transition-timing-function: ease-in-out;
         }
 
         #btnCopy:hover {
+            background-color: #110958;
             cursor: pointer;
-            border-width: 4px;
-            padding: 5px;
-            font-weight: bold;
         }
 
         #instructions li,
