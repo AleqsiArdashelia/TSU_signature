@@ -75,11 +75,12 @@
             margin: 0;
             font-size: 20px;
             padding: 0;
+            max-width: 600px;
         }
 
         #signature-card {
             margin-inline: auto;
-            margin-block: 20px;
+            margin-block: 40px;
             width: max-content;
             background-color: white;
             padding: 50px;
@@ -118,13 +119,13 @@
         <table>
             <tr>
                 <td class="label_container"><label for="name_ge_input">სახელი და გვარი ქართულად:</label></td>
-                <td><input type="text" placeholder="ალექსი არდაშელია" id="name_ge_input" name="name_ge_input"
+                <td><input type="text" placeholder="სახლეი გვარი" id="name_ge_input" name="name_ge_input"
                         oninput="name_ge()"></td>
             </tr>
             <tr>
                 <td class="label_container"><label for="name_eng_input">სახელი და გვარი ინგლისურად:</label>
                 </td>
-                <td><input type="text" placeholder="Aleksi Ardashelia" id="name_eng_input" name="name_eng_input"
+                <td><input type="text" placeholder="Name LASTNAME" id="name_eng_input" name="name_eng_input"
                         oninput="name_eng()">
                 </td>
             </tr>
@@ -182,7 +183,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="label_container"><label for="jtitleyorn">თანამდებობის გამოჩენა:</label></td>
+                <td class="label_container"><label for="jtitleyorn">ადმინისტრაციული/დამატებითი თანამდებობის გამოჩენა:</label></td>
                 <td>
 
                     <input type="checkbox" name="jtitley/n" id="jtitleyorn" value="jtitleyorn" onclick="jtitleYorN()">
@@ -190,12 +191,12 @@
             </tr>
             <tr class="jtitle_input_tr displaynone">
                 <td class="label_container"><label for="jtitle_ge_input">თანამდებობა ქართულად:</label></td>
-                <td><input type="text" placeholder="უფროსი სპეციალისტი" id="jtitle_ge_input" name="jtitle_ge_input"
+                <td><input type="text" placeholder="თანამდებობა" id="jtitle_ge_input" name="jtitle_ge_input"
                         oninput="jtitle_ge()"></td>
             </tr>
             <tr class="jtitle_input_tr displaynone">
                 <td class="label_container"><label for="jtitle_eng_input">თანამდებობა ინგლისურად:</label></td>
-                <td><input type="text" placeholder="Senior Specialist" id="jtitle_eng_input" name="jtitle_eng_input"
+                <td><input type="text" placeholder="Position" id="jtitle_eng_input" name="jtitle_eng_input"
                         oninput="jtitle_eng()"></td>
             </tr>
             <tr>
@@ -206,42 +207,42 @@
             </tr>
             <tr class="dep_input_tr displaynone">
                 <td class="label_container"><label for="dep_ge_input">სამსახური/ინსტიტუტი ქართულად:</label></td>
-                <td><input type="text" placeholder="რესურსების მართვის სამსახური" id="dep_ge_input" name="dep_ge_input"
+                <td><input type="text" placeholder="სამსახურის/ინსტიტუტის დასახელება" id="dep_ge_input" name="dep_ge_input"
                         oninput="dep_ge()"></td>
             </tr>
             <tr class="dep_input_tr displaynone">
                 <td class="label_container"><label for="dep_eng_input">სამსახური/ინსტიტუტი ინგლისურად:</label></td>
-                <td><input type="text" placeholder="Department of Resource Management" id="dep_eng_input"
+                <td><input type="text" placeholder="Name of the Department/Institute" id="dep_eng_input"
                         name="dep_eng_input" oninput="dep_eng()"></td>
             </tr>
             <tr>
-                <td class="label_container"><label for="wphoneyorn">შიდა ნომრის გამოჩენა:</label></td>
+                <td class="label_container"><label for="wphoneyorn">თსუ-ს შიდა სატელეფონო ნომრის გამოჩენა:</label></td>
                 <td>
                     <input type="checkbox" name="wphoney/n" id="wphoneyorn" value="wphoneyorn" onclick="phoneyorn()">
                 </td>
             </tr>
             <tr id="wphone_input_tr" class="displaynone">
-                <td class="label_container"><label for="wphone_input">სამსახურის შიდა ნომერი:</label></td>
-                <td><input type="text" placeholder="1234" id="wphone_input" name="wphone_input" pattern="[0-9]{4}"
+                <td class="label_container"><label for="wphone_input">ნომერი:</label></td>
+                <td><input type="text" placeholder="შიდა ნომერი" id="wphone_input" name="wphone_input" pattern="[0-9]{4}"
                         oninput="wphone()"></td>
             </tr>
             <tr>
             <tr>
-                <td class="label_container"><label for="pphoneyorn">პერსონალური ნომრის გამოჩენა:</label></td>
+                <td class="label_container"><label for="pphoneyorn">პერსონალური ტელეფონის ნომრის გამოჩენა:</label></td>
                 <td>
                     <input type="checkbox" name="pphoney/n" id="pphoneyorn" value="pphoneyorn" onclick="phoneyorn()">
                 </td>
             </tr>
             </tr>
             <tr id="pphone_input_tr" class="displaynone">
-                <td class="label_container"><label for="pphone_input">პერსონალური ნომერი:</label></td>
-                <td><input type="number" placeholder="579 02 86 86" id="pphone_input" name="pphone_input"
+                <td class="label_container"><label for="pphone_input">ნომერი:</label></td>
+                <td><input type="number" placeholder="პერსონალური ნომერი" id="pphone_input" name="pphone_input"
                         oninput="pphone()">
                 </td>
             </tr>
             <tr>
                 <td class="label_container"><label for="email_input">ელექტრონული პოსტის მისამართი:</label></td>
-                <td><input type="email" placeholder="Aleksi.Ardashelia@tsu.ge" id="email_input" name="email_input"
+                <td><input type="email" placeholder="სამსახურეობრივი ელ. ფოსტის მისამართი" id="email_input" name="email_input"
                         oninput="email()"></td>
             </tr>
             <tr>
@@ -299,7 +300,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="label_container"><label for="room_input"> ოთახის ნომერი:</label></td>
+                <td class="label_container"><label for="room_input">ოთახის ნომერი:</label></td>
                 <td><input type="number" placeholder="122" id="room_input" name="room_input" oninput="room()"></td>
             </tr>
         </table>
