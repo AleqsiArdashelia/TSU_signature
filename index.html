@@ -16,12 +16,12 @@
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
-            flex-wrap:wrap;
+            flex-wrap: wrap;
             padding: 50px 0;
             color: #f1bd00;
         }
 
-        .top > * {
+        .top>* {
             margin-block: 50px;
         }
 
@@ -105,9 +105,10 @@
             /* max-width: max-content; */
             padding: 10px;
             border-top: black solid 2px;
-            border-radius: 30px 30px 0 0 ;
+            border-radius: 30px 30px 0 0;
             text-align: end;
         }
+
         #bottom p {
             margin: 0;
             font-size: 16px;
@@ -204,7 +205,8 @@
                 </td>
             </tr>
             <tr>
-                <td class="label_container"><label for="jtitleyorn">ადმინისტრაციული/დამატებითი თანამდებობის გამოჩენა:</label></td>
+                <td class="label_container"><label for="jtitleyorn">ადმინისტრაციული/დამატებითი თანამდებობის
+                        გამოჩენა:</label></td>
                 <td>
 
                     <input type="checkbox" name="jtitley/n" id="jtitleyorn" value="jtitleyorn" onclick="jtitleYorN()">
@@ -228,8 +230,8 @@
             </tr>
             <tr class="dep_input_tr displaynone">
                 <td class="label_container"><label for="dep_ge_input">სამსახური/ინსტიტუტი ქართულად:</label></td>
-                <td><input type="text" placeholder="სამსახურის/ინსტიტუტის დასახელება" id="dep_ge_input" name="dep_ge_input"
-                        oninput="dep_ge()"></td>
+                <td><input type="text" placeholder="სამსახურის/ინსტიტუტის დასახელება" id="dep_ge_input"
+                        name="dep_ge_input" oninput="dep_ge()"></td>
             </tr>
             <tr class="dep_input_tr displaynone">
                 <td class="label_container"><label for="dep_eng_input">სამსახური/ინსტიტუტი ინგლისურად:</label></td>
@@ -244,8 +246,8 @@
             </tr>
             <tr id="wphone_input_tr" class="displaynone">
                 <td class="label_container"><label for="wphone_input">ნომერი:</label></td>
-                <td><input type="text" placeholder="შიდა ნომერი" id="wphone_input" name="wphone_input" pattern="[0-9]{4}"
-                        oninput="wphone()"></td>
+                <td><input type="text" placeholder="შიდა ნომერი" id="wphone_input" name="wphone_input"
+                        pattern="[0-9]{4}" oninput="wphone()"></td>
             </tr>
             <tr>
             <tr>
@@ -263,8 +265,8 @@
             </tr>
             <tr>
                 <td class="label_container"><label for="email_input">ელექტრონული პოსტის მისამართი:</label></td>
-                <td><input type="email" placeholder="სამსახურეობრივი ელ. ფოსტის მისამართი" id="email_input" name="email_input"
-                        oninput="email()"></td>
+                <td><input type="email" placeholder="სამსახურეობრივი ელ. ფოსტის მისამართი" id="email_input"
+                        name="email_input" oninput="email()"></td>
             </tr>
             <tr>
                 <td class="label_container"><label for="address_input"> შენობა:</label></td>
@@ -322,7 +324,12 @@
             </tr>
             <tr>
                 <td class="label_container"><label for="room_input">ოთახის ნომერი:</label></td>
-                <td><input type="number" placeholder="ოთახის ნომერი" id="room_input" name="room_input" oninput="room()"></td>
+                <td><input type="number" placeholder="ოთახის ნომერი" id="room_input" name="room_input" oninput="room()">
+                </td>
+            </tr>
+            <tr>
+                <td class="label_container"><label for="confyorn">კონფიდენციალურობის შეტყობინების ჩვენება:</label></td>
+                <td ><input type="checkbox" name="confy/n" id="confyorn" value="confyorn" onclick="confYorN()" checked></td>
             </tr>
         </table>
     </form>
@@ -520,7 +527,6 @@
                             </table>
                         </td>
                     </tr>
-
                 </table>
             </td>
         </tr>
@@ -532,7 +538,7 @@
                         <td height="10"></td>
                     </tr>
                     <tr>
-                        <td direction="horizontal" width="auto" height="1" class="faculty_bd"
+                        <td direction="horizontal" width="auto" height="1" class="faculty_bd "
                             style="width:100%;border-bottom:1px solid ;border-left:none;display:block;border-color:#1166b0;">
                         </td>
                     </tr>
@@ -542,7 +548,7 @@
         <tr>
             <td>
                 <table cellpadding="0" cellspacing="0"
-                    style="width:100%;vertical-align:-webkit-baseline-middle;font-size:small;font-family:Verdana;">
+                    style="width:100%;vertical-align:-webkit-baseline-middle;font-size:small;font-family:Verdana;" id="conf">
                     <tr>
                         <td style="vertical-align:top;max-width:620px;">
                             <p style="font-size:8px;text-align:justify;margin:10px 0 0 0;color: #000 !important;"><span
@@ -781,6 +787,17 @@
         roomnum[0].innerHTML = document.getElementById("room_input").value;
         roomnum[1].innerHTML = document.getElementById("room_input").value;
     };
+    function confYorN() {
+        if (document.getElementById('confyorn').checked) {
+            console.log('checked')
+            document.getElementById('conf').style.display = 'table';
+        }
+
+        else {
+            console.log('unchecked')
+            document.getElementById('conf').style.display = 'none';
+        }
+    }
 </script>
 </body>
 
