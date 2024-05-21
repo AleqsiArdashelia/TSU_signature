@@ -20,14 +20,14 @@
             padding: 50px 0;
             color: #f1bd00;
             letter-spacing: 0.03rem;
-            
+
         }
 
         .top>* {
             margin-block: 50px;
         }
 
-        .top *{
+        .top * {
             font-size: inherit;
         }
 
@@ -82,6 +82,7 @@
             font-size: inherit;
             margin: 5px;
         }
+
         #instructions li p {
             font-size: inherit;
             min-height: 30px;
@@ -94,7 +95,7 @@
             padding: 0;
             max-width: 600px;
         }
-        
+
 
         #signature-card {
             margin-inline: auto;
@@ -126,10 +127,11 @@
             font-weight: bold;
         }
 
-        @media only screen and (max-width: 1700px)  {
+        @media only screen and (max-width: 1700px) {
             .top {
                 font-size: 14px;
             }
+
             .top {
                 flex-direction: column;
             }
@@ -137,8 +139,8 @@
     </style>
 </head>
 
-<!-- <body>
-    <td><a href="https://ge.linkedin.com/in/tsu-law-faculty-a07b01115"
+<body>
+    <!--    <td><a href="https://ge.linkedin.com/in/tsu-law-faculty-a07b01115"
         style="display:inline-block;padding:0px;background-color:#ad0101;"
         class="faculty_color_bg"><img
             src="https://tsu.ge/assets/media/files/8/signatures/icons/linkedin-icon-2x.png"
@@ -153,674 +155,692 @@
         class="faculty_color_bg"><img
             src="https://tsu.ge/assets/media/files/8/signatures/icons/twitter-icon-2x.png"
             height="24" style="background-color:#ad0101;max-width:135px;display:block;"
-            class="faculty_color_bg"></a></td>-->
+            class="faculty_color_bg"></a></td> -->
 
 
-<div class="top">
-    <form action="">
-        <table>
-            <tr>
-                <td class="label_container"><label for="name_ge_input">სახელი და გვარი ქართულად:</label></td>
-                <td><input type="text" placeholder="სახელი გვარი" id="name_ge_input" name="name_ge_input"
-                        oninput="name_ge()"></td>
-            </tr>
-            <tr>
-                <td class="label_container"><label for="name_eng_input">სახელი და გვარი ინგლისურად:</label>
-                </td>
-                <td><input type="text" placeholder="Name LASTNAME" id="name_eng_input" name="name_eng_input"
-                        oninput="name_eng()">
-                </td>
-            </tr>
-            <tr>
-                <td class="label_container"><label for="faculty_input">ფაკულტეტლი/ცენტრალური:</label>
-                </td>
-                <td>
-                    <select name="faculty_input" id="faculty_input" oninput="faculty()">
-                        <option selected value="null">აირჩიეთ</option>
-                        <option
-                            value="||#1166b0|https://tsu.ge/ka/faculty/FACULTY%20OF%20LAW/9|https://www.facebook.com/TbilisiStateUniversity/|https://www.instagram.com/tbilisistateuniversity">
-                            ცენტრალური</option>
-                        <option
-                            value="იურიდიული ფაკურტეტი|Faculty of Law|#ad0101|https://tsu.ge/ka/faculty/FACULTY%20OF%20LAW/9|https://www.facebook.com/TSU.Faculty.of.Law|https://www.instagram.com/tbilisistateuniversity_law">
-                            იურიდიული ფაკულტეტი</option>
-                        <option
-                            value="მედიცინის ფაკულტეტი|Faculty of Medicine|#99bfff|https://tsu.ge/ka/faculty/FACULTY%20OF%20MEDICINE/8|https://www.facebook.com/TSU.MedFacuty|https://www.instagram.com/tbilisistateuniversity">
-                            მედიცინის ფაკულტეტი</option>
-                        <option
-                            value="ეკონომიკისა და ბიზნესის ფაკულტეტი|Faculty of Economics and Business|#b3cccc|https://tsu.ge/ka/faculty/FACULTY%20OF%20ECONOMICS%20AND%20BUSINESS/7|https://www.facebook.com/TbilisiStateUniversity/|https://www.instagram.com/tbilisistateuniversity">
-                            ეკონომიკისა და ბიზნესის ფაკულტეტი</option>
-                        <option
-                            value="ფსიქოლოგიისა და განათლების მეცნიერებათა ფაკულტეტი|Faculty of Psychology and Educational Sciences|#3a5795|https://tsu.ge/ka/faculty/FACULTY%20OF%20PSYCHOLOGY%20AND%20EDUCATIONAL%20SCIENCES/6|https://www.facebook.com/TbilisiStateUniversity/|https://www.instagram.com/tbilisistateuniversity">
-                            ფსიქოლოგიისა და განათლების მეცნიერებათა ფაკულტეტი</option>
-                        <option
-                            value="სოციალურ და პოლიტიკურ მეცნიერებათა ფაკულტეტი|Faculty of Social and Political Sciences|#f37a21|https://tsu.ge/ka/faculty/FACULTY%20OF%20SOCIAL%20AND%20POLITICAL%20SCIENCES/5|https://www.facebook.com/TbilisiStateUniversity/|https://www.instagram.com/tbilisistateuniversity">
-                            სოციალურ და პოლიტიკურ მეცნიერებათა ფაკულტეტი</option>
-                        <option
-                            value="ჰუმანიტარულ მეცნიერებათა ფაკულტეტი|Faculty of Humanities|#feb834|https://tsu.ge/ka/faculty/FACULTY%20OF%20HUMANITIES/4|https://www.facebook.com/TbilisiStateUniversity/|https://www.instagram.com/tbilisistateuniversity">
-                            ჰუმანიტარულ
-                            მეცნიერებათა ფაკულტეტი</option>
-                        <option
-                            value="ზუსტ და საბუნებისმეტყველო მეცნიერებათა ფაკულტეტი|Faculty of Exact and Natural Sciences|#5d9029|https://tsu.ge/ka/faculty/FACULTY%20OF%20EXACT%20AND%20NATURAL%20SCIENCES/2|https://www.facebook.com/TbilisiStateUniversity/|https://www.instagram.com/tbilisistateuniversity">
-                            ზუსტ და საბუნებისმეტყველო მეცნიერებათა ფაკულტეტი</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td class="label_container"><label for="atitleyorn">აკადემიური თანამდებობის გამოჩენა:</label></td>
-                <td>
-                    <input type="checkbox" name="atitley/n" id="atitleyorn" value="atitleyorn" onclick="atitleYorN()">
-                </td>
-            </tr>
-            <tr id="atitle_input_tr" class="displaynone">
-                <td class="label_container"><label for="atitle_input">აკადემიური თანამდებობა:</label>
-                </td>
-                <td>
-                    <select name="atitle_input" id="atitle_input" oninput="atitle()">
-                        <option selected value="null">აირჩიეთ</option>
-                        <option>პროფესორი</option>
-                        <option>ასოცირებული პროფესორი</option>
-                        <option>ასისტენტ-პროფესორი</option>
-                        <option>ასისტენტი</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td class="label_container"><label for="jtitleyorn">ადმინისტრაციული/დამატებითი თანამდებობის
-                        გამოჩენა:</label></td>
-                <td>
+    <div class="top">
+        <form action="">
+            <table>
+                <tr>
+                    <td class="label_container"><label for="name_ge_input">სახელი და გვარი ქართულად:</label></td>
+                    <td><input type="text" placeholder="სახელი გვარი" id="name_ge_input" name="name_ge_input"
+                            oninput="name_ge()"></td>
+                </tr>
+                <tr>
+                    <td class="label_container"><label for="name_eng_input">სახელი და გვარი ინგლისურად:</label>
+                    </td>
+                    <td><input type="text" placeholder="Name LASTNAME" id="name_eng_input" name="name_eng_input"
+                            oninput="name_eng()">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label_container"><label for="faculty_input">ფაკულტეტლი/ცენტრალური:</label>
+                    </td>
+                    <td>
+                        <select name="faculty_input" id="faculty_input" oninput="faculty()">
+                            <option selected value="null">აირჩიეთ</option>
+                            <option
+                                value="||#1166b0|https://tsu.ge/ka/faculty/FACULTY%20OF%20LAW/9|https://www.facebook.com/TbilisiStateUniversity/|https://www.instagram.com/tbilisistateuniversity">
+                                ცენტრალური</option>
+                            <option
+                                value="იურიდიული ფაკულტეტი|Faculty of Law|#ad0101|https://tsu.ge/ka/faculty/FACULTY%20OF%20LAW/9|https://www.facebook.com/TSU.Faculty.of.Law|https://www.instagram.com/tbilisistateuniversity_law">
+                                იურიდიული ფაკულტეტი</option>
+                            <option
+                                value="მედიცინის ფაკულტეტი|Faculty of Medicine|#99bfff|https://tsu.ge/ka/faculty/FACULTY%20OF%20MEDICINE/8|https://www.facebook.com/TSU.MedFacuty|https://www.instagram.com/tbilisistateuniversity">
+                                მედიცინის ფაკულტეტი</option>
+                            <option
+                                value="ეკონომიკისა და ბიზნესის ფაკულტეტი|Faculty of Economics and Business|#b3cccc|https://tsu.ge/ka/faculty/FACULTY%20OF%20ECONOMICS%20AND%20BUSINESS/7|https://www.facebook.com/TbilisiStateUniversity/|https://www.instagram.com/tbilisistateuniversity">
+                                ეკონომიკისა და ბიზნესის ფაკულტეტი</option>
+                            <option
+                                value="ფსიქოლოგიისა და განათლების მეცნიერებათა ფაკულტეტი|Faculty of Psychology and Educational Sciences|#3a5795|https://tsu.ge/ka/faculty/FACULTY%20OF%20PSYCHOLOGY%20AND%20EDUCATIONAL%20SCIENCES/6|https://www.facebook.com/TbilisiStateUniversity/|https://www.instagram.com/tbilisistateuniversity">
+                                ფსიქოლოგიისა და განათლების მეცნიერებათა ფაკულტეტი</option>
+                            <option
+                                value="სოციალურ და პოლიტიკურ მეცნიერებათა ფაკულტეტი|Faculty of Social and Political Sciences|#f37a21|https://tsu.ge/ka/faculty/FACULTY%20OF%20SOCIAL%20AND%20POLITICAL%20SCIENCES/5|https://www.facebook.com/TbilisiStateUniversity/|https://www.instagram.com/tbilisistateuniversity">
+                                სოციალურ და პოლიტიკურ მეცნიერებათა ფაკულტეტი</option>
+                            <option
+                                value="ჰუმანიტარულ მეცნიერებათა ფაკულტეტი|Faculty of Humanities|#feb834|https://tsu.ge/ka/faculty/FACULTY%20OF%20HUMANITIES/4|https://www.facebook.com/TbilisiStateUniversity/|https://www.instagram.com/tbilisistateuniversity">
+                                ჰუმანიტარულ
+                                მეცნიერებათა ფაკულტეტი</option>
+                            <option
+                                value="ზუსტ და საბუნებისმეტყველო მეცნიერებათა ფაკულტეტი|Faculty of Exact and Natural Sciences|#5d9029|https://tsu.ge/ka/faculty/FACULTY%20OF%20EXACT%20AND%20NATURAL%20SCIENCES/2|https://www.facebook.com/TbilisiStateUniversity/|https://www.instagram.com/tbilisistateuniversity">
+                                ზუსტ და საბუნებისმეტყველო მეცნიერებათა ფაკულტეტი</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label_container"><label for="atitleyorn">აკადემიური თანამდებობის გამოჩენა:</label></td>
+                    <td>
+                        <input type="checkbox" name="atitley/n" id="atitleyorn" value="atitleyorn"
+                            onclick="atitleYorN()">
+                    </td>
+                </tr>
+                <tr id="atitle_input_tr" class="displaynone">
+                    <td class="label_container"><label for="atitle_input">აკადემიური თანამდებობა:</label>
+                    </td>
+                    <td>
+                        <select name="atitle_input" id="atitle_input" oninput="atitle()">
+                            <option selected value="null">აირჩიეთ</option>
+                            <option>პროფესორი</option>
+                            <option>ასოცირებული პროფესორი</option>
+                            <option>ასისტენტ-პროფესორი</option>
+                            <option>ასისტენტი</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label_container"><label for="jtitleyorn">ადმინისტრაციული/დამატებითი თანამდებობის
+                            გამოჩენა:</label></td>
+                    <td>
 
-                    <input type="checkbox" name="jtitley/n" id="jtitleyorn" value="jtitleyorn" onclick="jtitleYorN()">
-                </td>
-            </tr>
-            <tr class="jtitle_input_tr displaynone">
-                <td class="label_container"><label for="jtitle_ge_input">თანამდებობა ქართულად:</label></td>
-                <td><input type="text" placeholder="თანამდებობა" id="jtitle_ge_input" name="jtitle_ge_input"
-                        oninput="jtitle_ge()"></td>
-            </tr>
-            <tr class="jtitle_input_tr displaynone">
-                <td class="label_container"><label for="jtitle_eng_input">თანამდებობა ინგლისურად:</label></td>
-                <td><input type="text" placeholder="Position" id="jtitle_eng_input" name="jtitle_eng_input"
-                        oninput="jtitle_eng()"></td>
-            </tr>
-            <tr>
-                <td class="label_container"><label for="depyorn">სამსახურის/ინსტიტუტის გამოჩენა:</label></td>
-                <td>
-                    <input type="checkbox" name="depy/n" id="depyorn" value="depyorn" onclick="depYorN()">
-                </td>
-            </tr>
-            <tr class="dep_input_tr displaynone">
-                <td class="label_container"><label for="dep_ge_input">სამსახური/ინსტიტუტი ქართულად:</label></td>
-                <td><input type="text" placeholder="სამსახურის/ინსტიტუტის დასახელება" id="dep_ge_input"
-                        name="dep_ge_input" oninput="dep_ge()"></td>
-            </tr>
-            <tr class="dep_input_tr displaynone">
-                <td class="label_container"><label for="dep_eng_input">სამსახური/ინსტიტუტი ინგლისურად:</label></td>
-                <td><input type="text" placeholder="Name of the Department/Institute" id="dep_eng_input"
-                        name="dep_eng_input" oninput="dep_eng()"></td>
-            </tr>
-            <tr>
-                <td class="label_container"><label for="wphoneyorn">თსუ-ს შიდა სატელეფონო ნომრის გამოჩენა:</label></td>
-                <td>
-                    <input type="checkbox" name="wphoney/n" id="wphoneyorn" value="wphoneyorn" onclick="phoneyorn()">
-                </td>
-            </tr>
-            <tr id="wphone_input_tr" class="displaynone">
-                <td class="label_container"><label for="wphone_input">ნომერი:</label></td>
-                <td><input type="text" placeholder="შიდა ნომერი" id="wphone_input" name="wphone_input"
-                        pattern="[0-9]{4}" oninput="wphone()"></td>
-            </tr>
-            <tr>
-            <tr>
-                <td class="label_container"><label for="pphoneyorn">პერსონალური ტელეფონის ნომრის გამოჩენა:</label></td>
-                <td>
-                    <input type="checkbox" name="pphoney/n" id="pphoneyorn" value="pphoneyorn" onclick="phoneyorn()">
-                </td>
-            </tr>
-            </tr>
-            <tr id="pphone_input_tr" class="displaynone">
-                <td class="label_container"><label for="pphone_input">ნომერი:</label></td>
-                <td><input type="number" placeholder="პერსონალური ნომერი" id="pphone_input" name="pphone_input"
-                        oninput="pphone()">
-                </td>
-            </tr>
-            <tr>
-                <td class="label_container"><label for="email_input">ელექტრონული პოსტის მისამართი:</label></td>
-                <td><input type="email" placeholder="სამსახურეობრივი ელ. ფოსტის მისამართი" id="email_input"
-                        name="email_input" oninput="email()"></td>
-            </tr>
-            <tr>
-                <td class="label_container"><label for="address_input"> შენობა:</label></td>
-                <td>
-                    <select name="atitle_input" id="address_input" oninput="address()">
-                        <option selected value="null">აირჩიეთ</option>
-                        <option
-                            value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 1, 0179|1, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
-                            1 კორპუსი</option>
-                        <option
-                            value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 3, 0179|3, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
-                            2 კორპუსი</option>
-                        <option
-                            value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 11, 0179|11, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
-                            3 კორპუსი</option>
-                        <option
-                            value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 14, 0179|14, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
-                            4 კორპუსი</option>
-                        <option
-                            value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 36, 0179|36, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
-                            5 კორპუსი
-                        </option>
-                        <option
-                            value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 8, 0179|8, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
-                            6 კორპუსი</option>
-                        <option
-                            value="საქართველო, თბილისი, ი. ქეთევან წამებულის გამზ. 55, 0179|55, Ketevan Tsamebuli Ave, Tbilisi, 0179 Tbilisi, Georgia">
-                            7 კორპუსი</option>
-                        <option
-                            value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 13, 0179|13, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
-                            8 კორპუსი</option>
-                        <option
-                            value="საქართველო, თბილისი, ვაჟა-ფშაველას გამზ. 44, 0179|44, Vazha-Pshavela ave Ave., 0179 Tbilisi, Georgia">
-                            9 კორპუსი</option>
-                        <option
-                            value="საქართველო, თბილისი, უნივერსიტეტის ქ. 2, 0179|1, University Str., 0179 Tbilisi, Georgia">
-                            10 კორპუსი</option>
-                        <option
-                            value="საქართველო, თბილისი, უნივერსიტეტის ქ. 13, 0179|13, University Str., 0179 Tbilisi, Georgia">
-                            11 კორპუსი</option>
-                        <option
-                            value="საქართველო, თბილისი, უნივერსიტეტის ქ. 11, 0179|11, University Str., 0179 Tbilisi, Georgia">
-                            12 კორპუსი</option>
-                        <option
-                            value="საქართველო, თბილისი, მიხეილ ჭიაურელის ქ. 2, 0179|2, M. Tchiaureli Str., 0179 Tbilisi, Georgia">
-                            მედიცინის ფაკულტეტი</option>
-                        <option
-                            value="საქართველო, თბილისი, ტატა თვალჭრელიძის ქ. 11, 0179|11, T. Tvalchrelidze Str., 0179 Tbilisi, Georgia">
-                            საერთო საცხოვრებელი (ლისი)</option>
-                        <option
-                            value="საქართველო, თბილისი, წყნეთის გზატკეცილი, ბაგების სტუდქალაქი, კორ. 2, 0179|2 Bldg., Bagebi Dormitory, Tskneti Hwy, 0179 Tbilisi, Georgia">
-                            საერთო საცხოვრებელი (ბაგები)</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td class="label_container"><label for="room_input">ოთახის ნომერი:</label></td>
-                <td><input type="number" placeholder="ოთახის ნომერი" id="room_input" name="room_input" oninput="room()">
-                </td>
-            </tr>
-            <tr>
-                <td class="label_container"><label for="confyorn">კონფიდენციალურობის შეტყობინების ჩვენება:</label></td>
-                <td ><input type="checkbox" name="confy/n" id="confyorn" value="confyorn" onclick="confYorN()" checked></td>
-            </tr>
-        </table>
-    </form>
-    <button id="btnCopy" data-clipboard-action="copy" data-clipboard-target="#signature">ხელმოწერის დაკოპირება</button>
+                        <input type="checkbox" name="jtitley/n" id="jtitleyorn" value="jtitleyorn"
+                            onclick="jtitleYorN()">
+                    </td>
+                </tr>
+                <tr class="jtitle_input_tr displaynone">
+                    <td class="label_container"><label for="jtitle_ge_input">თანამდებობა ქართულად:</label></td>
+                    <td><input type="text" placeholder="თანამდებობა" id="jtitle_ge_input" name="jtitle_ge_input"
+                            oninput="jtitle_ge()"></td>
+                </tr>
+                <tr class="jtitle_input_tr displaynone">
+                    <td class="label_container"><label for="jtitle_eng_input">თანამდებობა ინგლისურად:</label></td>
+                    <td><input type="text" placeholder="Position" id="jtitle_eng_input" name="jtitle_eng_input"
+                            oninput="jtitle_eng()"></td>
+                </tr>
+                <tr>
+                    <td class="label_container"><label for="depyorn">სამსახურის/ინსტიტუტის გამოჩენა:</label></td>
+                    <td>
+                        <input type="checkbox" name="depy/n" id="depyorn" value="depyorn" onclick="depYorN()">
+                    </td>
+                </tr>
+                <tr class="dep_input_tr displaynone">
+                    <td class="label_container"><label for="dep_ge_input">სამსახური/ინსტიტუტი ქართულად:</label></td>
+                    <td><input type="text" placeholder="სამსახურის/ინსტიტუტის დასახელება" id="dep_ge_input"
+                            name="dep_ge_input" oninput="dep_ge()"></td>
+                </tr>
+                <tr class="dep_input_tr displaynone">
+                    <td class="label_container"><label for="dep_eng_input">სამსახური/ინსტიტუტი ინგლისურად:</label></td>
+                    <td><input type="text" placeholder="Name of the Department/Institute" id="dep_eng_input"
+                            name="dep_eng_input" oninput="dep_eng()"></td>
+                </tr>
+                <tr>
+                    <td class="label_container"><label for="wphoneyorn">თსუ-ს შიდა სატელეფონო ნომრის გამოჩენა:</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="wphoney/n" id="wphoneyorn" value="wphoneyorn"
+                            onclick="phoneyorn()">
+                    </td>
+                </tr>
+                <tr id="wphone_input_tr" class="displaynone">
+                    <td class="label_container"><label for="wphone_input">ნომერი:</label></td>
+                    <td><input type="text" placeholder="შიდა ნომერი" id="wphone_input" name="wphone_input"
+                            pattern="[0-9]{4}" oninput="wphone()"></td>
+                </tr>
+                <tr>
+                <tr>
+                    <td class="label_container"><label for="pphoneyorn">პერსონალური ტელეფონის ნომრის გამოჩენა:</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="pphoney/n" id="pphoneyorn" value="pphoneyorn"
+                            onclick="phoneyorn()">
+                    </td>
+                </tr>
+                </tr>
+                <tr id="pphone_input_tr" class="displaynone">
+                    <td class="label_container"><label for="pphone_input">ნომერი:</label></td>
+                    <td><input type="number" placeholder="პერსონალური ნომერი" id="pphone_input" name="pphone_input"
+                            oninput="pphone()">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label_container"><label for="email_input">ელექტრონული პოსტის მისამართი:</label></td>
+                    <td><input type="email" placeholder="სამსახურეობრივი ელ. ფოსტის მისამართი" id="email_input"
+                            name="email_input" oninput="email()"></td>
+                </tr>
+                <tr>
+                    <td class="label_container"><label for="address_input"> შენობა:</label></td>
+                    <td>
+                        <select name="atitle_input" id="address_input" oninput="address()">
+                            <option selected value="null">აირჩიეთ</option>
+                            <option
+                                value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 1, 0179|1, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
+                                1 კორპუსი</option>
+                            <option
+                                value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 3, 0179|3, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
+                                2 კორპუსი</option>
+                            <option
+                                value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 11, 0179|11, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
+                                3 კორპუსი</option>
+                            <option
+                                value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 14, 0179|14, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
+                                4 კორპუსი</option>
+                            <option
+                                value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 36, 0179|36, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
+                                5 კორპუსი
+                            </option>
+                            <option
+                                value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 8, 0179|8, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
+                                6 კორპუსი</option>
+                            <option
+                                value="საქართველო, თბილისი, ი. ქეთევან წამებულის გამზ. 55, 0179|55, Ketevan Tsamebuli Ave, Tbilisi, 0179 Tbilisi, Georgia">
+                                7 კორპუსი</option>
+                            <option
+                                value="საქართველო, თბილისი, ი. ჭავჭავაძის გამზ. 13, 0179|13, Ilia chavchavadze Ave., 0179 Tbilisi, Georgia">
+                                8 კორპუსი</option>
+                            <option
+                                value="საქართველო, თბილისი, ვაჟა-ფშაველას გამზ. 44, 0179|44, Vazha-Pshavela ave Ave., 0179 Tbilisi, Georgia">
+                                9 კორპუსი</option>
+                            <option
+                                value="საქართველო, თბილისი, უნივერსიტეტის ქ. 2, 0179|1, University Str., 0179 Tbilisi, Georgia">
+                                10 კორპუსი</option>
+                            <option
+                                value="საქართველო, თბილისი, უნივერსიტეტის ქ. 13, 0179|13, University Str., 0179 Tbilisi, Georgia">
+                                11 კორპუსი</option>
+                            <option
+                                value="საქართველო, თბილისი, უნივერსიტეტის ქ. 11, 0179|11, University Str., 0179 Tbilisi, Georgia">
+                                12 კორპუსი</option>
+                            <option
+                                value="საქართველო, თბილისი, მიხეილ ჭიაურელის ქ. 2, 0179|2, M. Tchiaureli Str., 0179 Tbilisi, Georgia">
+                                მედიცინის ფაკულტეტი</option>
+                            <option
+                                value="საქართველო, თბილისი, ტატა თვალჭრელიძის ქ. 11, 0179|11, T. Tvalchrelidze Str., 0179 Tbilisi, Georgia">
+                                საერთო საცხოვრებელი (ლისი)</option>
+                            <option
+                                value="საქართველო, თბილისი, წყნეთის გზატკეცილი, ბაგების სტუდქალაქი, კორ. 2, 0179|2 Bldg., Bagebi Dormitory, Tskneti Hwy, 0179 Tbilisi, Georgia">
+                                საერთო საცხოვრებელი (ბაგები)</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label_container"><label for="room_input">ოთახის ნომერი:</label></td>
+                    <td><input type="number" placeholder="ოთახის ნომერი" id="room_input" name="room_input"
+                            oninput="room()">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label_container"><label for="confyorn">კონფიდენციალურობის შეტყობინების ჩვენება:</label>
+                    </td>
+                    <td><input type="checkbox" name="confy/n" id="confyorn" value="confyorn" onclick="confYorN()"
+                            checked></td>
+                </tr>
+            </table>
+        </form>
+        <button id="btnCopy" data-clipboard-action="copy" data-clipboard-target="#signature">ხელმოწერის
+            დაკოპირება</button>
 
-    <div>
-        <ol id="instructions">
-            <li>
-                <p>შეავსეთ თქვენთვის შესაფერისის ველები</p>
-            </li>
-            <li>
-                <p>დააჭირეთ "ხელმოწერის კოპირების ღილაკს"</p>
-            </li>
-            <li>
-                <p>გახსენით Gmail-ი</p>
-            </li>
-            <li>
-                <p>ზედა მარცხენა კუთხეში დააჭირეთ პარამეტრების ღილაკს <svg class="Xy" xmlns="http://www.w3.org/2000/svg"
-                        width="24" height="24" viewbox="0 0 24 24" style="position: relative; top: 6;">
-                        <path fill="#f1bd00"
-                            d="M13.85 22.25h-3.7c-.74 0-1.36-.54-1.45-1.27l-.27-1.89c-.27-.14-.53-.29-.79-.46l-1.8.72c-.7.26-1.47-.03-1.81-.65L2.2 15.53c-.35-.66-.2-1.44.36-1.88l1.53-1.19c-.01-.15-.02-.3-.02-.46 0-.15.01-.31.02-.46l-1.52-1.19c-.59-.45-.74-1.26-.37-1.88l1.85-3.19c.34-.62 1.11-.9 1.79-.63l1.81.73c.26-.17.52-.32.78-.46l.27-1.91c.09-.7.71-1.25 1.44-1.25h3.7c.74 0 1.36.54 1.45 1.27l.27 1.89c.27.14.53.29.79.46l1.8-.72c.71-.26 1.48.03 1.82.65l1.84 3.18c.36.66.2 1.44-.36 1.88l-1.52 1.19c.01.15.02.3.02.46s-.01.31-.02.46l1.52 1.19c.56.45.72 1.23.37 1.86l-1.86 3.22c-.34.62-1.11.9-1.8.63l-1.8-.72c-.26.17-.52.32-.78.46l-.27 1.91c-.1.68-.72 1.22-1.46 1.22zm-3.23-2h2.76l.37-2.55.53-.22c.44-.18.88-.44 1.34-.78l.45-.34 2.38.96 1.38-2.4-2.03-1.58.07-.56c.03-.26.06-.51.06-.78s-.03-.53-.06-.78l-.07-.56 2.03-1.58-1.39-2.4-2.39.96-.45-.35c-.42-.32-.87-.58-1.33-.77l-.52-.22-.37-2.55h-2.76l-.37 2.55-.53.21c-.44.19-.88.44-1.34.79l-.45.33-2.38-.95-1.39 2.39 2.03 1.58-.07.56a7 7 0 0 0-.06.79c0 .26.02.53.06.78l.07.56-2.03 1.58 1.38 2.4 2.39-.96.45.35c.43.33.86.58 1.33.77l.53.22.38 2.55z">
-                        </path>
-                        <circle fill="#f1bd00" cx="12" cy="12" r="3.5"></circle>
-                    </svg></p>
-            </li>
-            <li>
-                <p>დააჭირეთ ყველა პარამეტრის ნახვას (See all settings, Все настройки)</p>
-            </li>
-            <li>
-                <p>ჩააკოპირეთ (Ctrl+V, Command+V) ხელმოწერის ("მინაწერი" ,Signature, Подпись) სექციაში</p>
-            </li>
-            <li>
-                <p>"მინაწერის ნაგულისხმევი პარამეტრები"-ში "ახალი ელფოსტისთვის გამოიყენეთ" და "პასუხში/გადამისამართებაში გამოყენება" ჩამონათვლებში აირჩიეთ ბოლოს შექმნილი ხელმოწერა (Signature defaults, FOR NEW EMAIL USE, ON RELPY/FORWARD USE; Настройки подписи по умолчанию, В НОВЫХ ПИСЬМАХ, В НОВЫХ ПИСЬМАХ)</p>
-            </li>
-            <li>
-                <p>გვერდის ბოლოში დააჭირეთ შენახვას (Save Changes, Сохранить изменения)</p>
-            </li>
-        </ol>
+        <div>
+            <ol id="instructions">
+                <li>
+                    <p>შეავსეთ თქვენთვის შესაფერისის ველები</p>
+                </li>
+                <li>
+                    <p>დააჭირეთ "ხელმოწერის კოპირების ღილაკს"</p>
+                </li>
+                <li>
+                    <p>გახსენით Gmail-ი</p>
+                </li>
+                <li>
+                    <p>ზედა მარცხენა კუთხეში დააჭირეთ პარამეტრების ღილაკს <svg class="Xy"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
+                            style="position: relative; top: 6;">
+                            <path fill="#f1bd00"
+                                d="M13.85 22.25h-3.7c-.74 0-1.36-.54-1.45-1.27l-.27-1.89c-.27-.14-.53-.29-.79-.46l-1.8.72c-.7.26-1.47-.03-1.81-.65L2.2 15.53c-.35-.66-.2-1.44.36-1.88l1.53-1.19c-.01-.15-.02-.3-.02-.46 0-.15.01-.31.02-.46l-1.52-1.19c-.59-.45-.74-1.26-.37-1.88l1.85-3.19c.34-.62 1.11-.9 1.79-.63l1.81.73c.26-.17.52-.32.78-.46l.27-1.91c.09-.7.71-1.25 1.44-1.25h3.7c.74 0 1.36.54 1.45 1.27l.27 1.89c.27.14.53.29.79.46l1.8-.72c.71-.26 1.48.03 1.82.65l1.84 3.18c.36.66.2 1.44-.36 1.88l-1.52 1.19c.01.15.02.3.02.46s-.01.31-.02.46l1.52 1.19c.56.45.72 1.23.37 1.86l-1.86 3.22c-.34.62-1.11.9-1.8.63l-1.8-.72c-.26.17-.52.32-.78.46l-.27 1.91c-.1.68-.72 1.22-1.46 1.22zm-3.23-2h2.76l.37-2.55.53-.22c.44-.18.88-.44 1.34-.78l.45-.34 2.38.96 1.38-2.4-2.03-1.58.07-.56c.03-.26.06-.51.06-.78s-.03-.53-.06-.78l-.07-.56 2.03-1.58-1.39-2.4-2.39.96-.45-.35c-.42-.32-.87-.58-1.33-.77l-.52-.22-.37-2.55h-2.76l-.37 2.55-.53.21c-.44.19-.88.44-1.34.79l-.45.33-2.38-.95-1.39 2.39 2.03 1.58-.07.56a7 7 0 0 0-.06.79c0 .26.02.53.06.78l.07.56-2.03 1.58 1.38 2.4 2.39-.96.45.35c.43.33.86.58 1.33.77l.53.22.38 2.55z">
+                            </path>
+                            <circle fill="#f1bd00" cx="12" cy="12" r="3.5"></circle>
+                        </svg></p>
+                </li>
+                <li>
+                    <p>დააჭირეთ ყველა პარამეტრის ნახვას (See all settings, Все настройки)</p>
+                </li>
+                <li>
+                    <p>ჩააკოპირეთ (Ctrl+V, Command+V) ხელმოწერის ("მინაწერი" ,Signature, Подпись) სექციაში</p>
+                </li>
+                <li>
+                    <p>"მინაწერის ნაგულისხმევი პარამეტრები"-ში "ახალი ელფოსტისთვის გამოიყენეთ" და
+                        "პასუხში/გადამისამართებაში გამოყენება" ჩამონათვლებში აირჩიეთ ბოლოს შექმნილი ხელმოწერა (Signature
+                        defaults, FOR NEW EMAIL USE, ON RELPY/FORWARD USE; Настройки подписи по умолчанию, В НОВЫХ
+                        ПИСЬМАХ, В НОВЫХ ПИСЬМАХ)</p>
+                </li>
+                <li>
+                    <p>გვერდის ბოლოში დააჭირეთ შენახვას (Save Changes, Сохранить изменения)</p>
+                </li>
+            </ol>
+        </div>
     </div>
-</div>
 
-<div id="signature-card">
+    <div id="signature-card">
 
-    <table cellpadding="0" cellspacing="0" style="vertical-align:-webkit-baseline-middle;font-size:small;"
-        id="signature">
-        <tr>
-            <td>
-                <table cellpadding="0" cellspacing="0"
-                    style="vertical-align:-webkit-baseline-middle;font-size:small;font-family:Verdana;">
-                    <tr>
-                        <td width="150" style="vertical-align:middle;"><span
-                                style="margin-right:20px;display:block;"><img
-                                    src="https://tsu.ge/assets/media/files/8/Photo/tsu_logo_mc.png" width="130"
-                                    style="max-width:130px;"></span></td>
-                        <td style="vertical-align:middle;">
-                            <h2 style="margin:0 0 10px 0;font-weight:600;line-height:14px;color: #000 !important;"><span
-                                    style="font-size:14px;" id="name_ge"></span><br><span style="font-size:10px;"
-                                    id="name_eng"></span></h2>
-                            <p font-size="small"
-                                style="margin:0 0 5px 0;font-size:10px;line-height:14px;max-width:240px;display:none;color: #000 !important;"
-                                id="atitle"><span id="atitle_ge"></span> | <span id="atitle_eng"></span></p>
-                            <p font-size="small"
-                                style="margin:0 0 5px 0;font-size:10px;line-height:14px;max-width:240px;display:none;color: #000 !important;"
-                                id="jtitle"><span id="jtitle_ge"></span> | <span id="jtitle_eng"></span></p>
-                            <p font-size="small"
-                                style="margin:0 0 5px 0;font-weight:500;font-size:10px;line-height:14px;max-width:240px;display:none;color: #000 !important;"
-                                id="dep"><span id="dep_ge"></span><br><span id="dep_eng"></span></p>
-                            <p font-size="small"
-                                style="color:#1166b0 !important;margin:0 0 5px 0;font-size:10px;line-height:14px;font-weight:600;max-width:240px;"
-                                id="faculty_p"><span id="faculty_ge"></span><br><span id="faculty_eng"></span></p>
-                            <p font-size="small"
-                                style="margin:0;font-weight:500;font-size:10px;line-height:14px;color: #000 !important;">
-                                <span>ივანე
-                                    ჯავახიშვილის სახელობის<br>თბილისის სახელმწიფო უნივერსიტეტი<br>Ivane
-                                    Javakhishvili Tbilisi State University</span>
-                            </p>
-                        </td>
-                        <td width="30">
-                            <div></div>
-                        </td>
-                        <td class="faculty_bd" width="1" height="auto"
-                            style="width:1px;border-bottom:none;border-left:1px solid;border-color:#1166b0;">
-                        </td>
-                        <td width="30">
-                            <div style="width:30px;"></div>
-                        </td>
-                        <td style="vertical-align:middle;">
-                            <table cellpadding="0" cellspacing="0"
-                                style="vertical-align:-webkit-baseline-middle;font-size:small;font-family:Verdana;">
-                                <tr height="25" style="vertical-align:middle;display:none;" id="phone_ifany">
-                                    <td width="30" style="vertical-align:middle;">
-                                        <table cellpadding="0" cellspacing="0"
-                                            style="vertical-align:-webkit-baseline-middle;font-size:small;">
-                                            <tr>
-                                                <td style="vertical-align:bottom;"><span class="faculty_color_bg"
-                                                        width="11"
-                                                        style="display:inline-block;background-color:#1166b0;"><img
-                                                            src="https://tsu.ge/assets/media/files/8/signatures/icons/phone-icon-2x.png"
-                                                            width="13" style="display:block;"></span>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                    <td style="padding:0px;"><span style="display:none;" id="wphone_div"><a
-                                                style="text-decoration:none;color: #000 !important;font-size:10px;">
-                                                +995 (032) 225 04 84 (<span id="wphone"></span>)</a></span><span
-                                            style="display:none;" id="phone_ifboth"> <br> </span><span
-                                            style="display:none;" id="pphone_div"><a
-                                                style="text-decoration:none;color: #000 !important;font-size:10px;"
-                                                id="pphone"></a></span></td>
-                                </tr>
-                                <tr height="25" style="vertical-align:middle;">
-                                    <td width="30" style="vertical-align:middle;">
-                                        <table cellpadding="0" cellspacing="0"
-                                            style="vertical-align:-webkit-baseline-middle;font-size:small;">
-                                            <tr>
-                                                <td style="vertical-align:bottom;"><span class="faculty_color_bg"
-                                                        width="11"
-                                                        style="display:inline-block;background-color:#1166b0;"><img
-                                                            src="https://tsu.ge/assets/media/files/8/signatures/icons/email-icon-2x.png"
-                                                            width="13" style="display:block;background-color:#1166b0;"
-                                                            class="faculty_color_bg"></span></td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                    <td style="padding:0px;"><a href="mailto:aleksi.ardshelia@tsu.ge"
-                                            style="text-decoration:none;color: #000 !important;;font-size:10px;"
-                                            id="email"></a></td>
-                                </tr>
-                                <tr height="25" style="vertical-align:middle;">
-                                    <td width="30" style="vertical-align:middle;">
-                                        <table cellpadding="0" cellspacing="0"
-                                            style="vertical-align:-webkit-baseline-middle;font-size:small;">
-                                            <tr>
-                                                <td style="vertical-align:bottom;"><span width="11"
-                                                        style="display:inline-block;background-color:#1166b0;"
-                                                        class="faculty_color_bg"><img
-                                                            src="https://tsu.ge/assets/media/files/8/signatures/icons/link-icon-2x.png"
-                                                            width="13" style="display:block;background-color:#1166b0;"
-                                                            class="faculty_color_bg"></span></td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                    <td style="padding:0px;"><a id="web" href="https://www.tsu.ge"
-                                            style="text-decoration:none;color: #000 !important;font-size:10px;">TSU.GE</a>
-                                    </td>
-                                </tr>
-                                <tr height="25" style="vertical-align:middle;">
-                                    <td width="30" style="vertical-align:middle;">
-                                        <table cellpadding="0" cellspacing="0"
-                                            style="vertical-align:-webkit-baseline-middle;font-size:small;">
-                                            <tr>
-                                                <td style="vertical-align:bottom;"><span width="11"
-                                                        style="display:inline-block;background-color:#1166b0;"
-                                                        class="faculty_color_bg"><img
-                                                            src="https://tsu.ge/assets/media/files/8/signatures/icons/address-icon-2x.png"
-                                                            width="13" style="display:block;background-color:#1166b0;"
-                                                            class="faculty_color_bg"></span></td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                    <td style="padding:0px;max-width:301px;"><span
-                                            style="font-size:10px;line-height:14px;color: #000 !important;"><span
-                                                id="address_ge"></span><br><span id="address_eng"></span><br> ოთახი
-                                            №<span class="room"></span>
-                                            | Room №<span class="room"></span></span>
-                                    </td>
-                                </tr>
-                            </table>
-                            <table cellpadding="0" cellspacing="0"
-                                style="display:inline-block;vertical-align:-webkit-baseline-middle;font-size:small;padding-top:15px;">
-                                <tr style="text-align:right;">
-                                    <td><a id="fb" href="https://www.facebook.com/TSU.Faculty.of.Law"
-                                            class="faculty_color_bg"
-                                            style="display:inline-block;padding:0px;background-color:#1166b0;"><img
-                                                src="https://tsu.ge/assets/media/files/8/signatures/icons/facebook-icon-2x.png"
-                                                height="24"
-                                                style="background-color:#1166b0;max-width:135px;display:block;"
-                                                class="faculty_color_bg"></a></td>
-                                    <td width="5">
-                                        <div></div>
-                                    </td>
-                                    <td width="5">
-                                        <div></div>
-                                    </td>
-                                    <td><a id="ig" href="https://www.instagram.com/tbilisistateuniversity_law/"
-                                            style="display:inline-block;padding:0px;background-color:#1166b0;"
-                                            class="faculty_color_bg"><img
-                                                src="https://tsu.ge/assets/media/files/8/signatures/icons/instagram-icon-2x.png"
-                                                height="24"
-                                                style="background-color:#1166b0;max-width:135px;display:block;"
-                                                class="faculty_color_bg"></a></td>
-                                    <!-- 51-69 -->
-                                    <td width="5">
-                                        <div></div>
-                                    </td>
-                                </tr>
+        <table cellpadding="0" cellspacing="0" style="vertical-align:-webkit-baseline-middle;font-size:small;"
+            id="signature">
+            <tr>
+                <td>
+                    <table cellpadding="0" cellspacing="0"
+                        style="vertical-align:-webkit-baseline-middle;font-size:small;font-family:Verdana;">
+                        <tr>
+                            <td width="150" style="vertical-align:middle;"><span
+                                    style="margin-right:20px;display:block;"><img
+                                        src="https://tsu.ge/assets/media/files/8/Photo/tsu_logo_mc.png" width="130"
+                                        style="max-width:130px;"></span></td>
+                            <td style="vertical-align:middle;">
+                                <h2 style="margin:0 0 10px 0;font-weight:600;line-height:14px;color: #000 !important;">
+                                    <span style="font-size:14px;" id="name_ge"></span><br><span style="font-size:10px;"
+                                        id="name_eng"></span></h2>
+                                <p font-size="small"
+                                    style="margin:0 0 5px 0;font-size:10px;line-height:14px;max-width:240px;display:none;color: #000 !important;"
+                                    id="atitle"><span id="atitle_ge"></span> | <span id="atitle_eng"></span></p>
+                                <p font-size="small"
+                                    style="margin:0 0 5px 0;font-size:10px;line-height:14px;max-width:240px;display:none;color: #000 !important;"
+                                    id="jtitle"><span id="jtitle_ge"></span> | <span id="jtitle_eng"></span></p>
+                                <p font-size="small"
+                                    style="margin:0 0 5px 0;font-weight:500;font-size:10px;line-height:14px;max-width:240px;display:none;color: #000 !important;"
+                                    id="dep"><span id="dep_ge"></span><br><span id="dep_eng"></span></p>
+                                <p font-size="small"
+                                    style="color:#1166b0 !important;margin:0 0 5px 0;font-size:10px;line-height:14px;font-weight:600;max-width:240px;"
+                                    id="faculty_p"><span id="faculty_ge"></span><br><span id="faculty_eng"></span></p>
+                                <p font-size="small"
+                                    style="margin:0;font-weight:500;font-size:10px;line-height:14px;color: #000 !important;">
+                                    <span>ივანე
+                                        ჯავახიშვილის სახელობის<br>თბილისის სახელმწიფო უნივერსიტეტი<br>Ivane
+                                        Javakhishvili Tbilisi State University</span>
+                                </p>
+                            </td>
+                            <td width="30">
+                                <div></div>
+                            </td>
+                            <td class="faculty_bd" width="1" height="auto"
+                                style="width:1px;border-bottom:none;border-left:1px solid;border-color:#1166b0;">
+                            </td>
+                            <td width="30">
+                                <div style="width:30px;"></div>
+                            </td>
+                            <td style="vertical-align:middle;">
+                                <table cellpadding="0" cellspacing="0"
+                                    style="vertical-align:-webkit-baseline-middle;font-size:small;font-family:Verdana;">
+                                    <tr height="25" style="vertical-align:middle;display:none;" id="phone_ifany">
+                                        <td width="30" style="vertical-align:middle;">
+                                            <table cellpadding="0" cellspacing="0"
+                                                style="vertical-align:-webkit-baseline-middle;font-size:small;">
+                                                <tr>
+                                                    <td style="vertical-align:bottom;"><span class="faculty_color_bg"
+                                                            width="11"
+                                                            style="display:inline-block;background-color:#1166b0;"><img
+                                                                src="https://tsu.ge/assets/media/files/8/signatures/icons/phone-icon-2x.png"
+                                                                width="13" style="display:block;"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td style="padding:0px;"><span style="display:none;" id="wphone_div"><a
+                                                    style="text-decoration:none;color: #000 !important;font-size:10px;">
+                                                    +995 (032) 225 04 84 (<span id="wphone"></span>)</a></span><span
+                                                style="display:none;" id="phone_ifboth"> <br> </span><span
+                                                style="display:none;" id="pphone_div"><a
+                                                    style="text-decoration:none;color: #000 !important;font-size:10px;"
+                                                    id="pphone"></a></span></td>
+                                    </tr>
+                                    <tr height="25" style="vertical-align:middle;">
+                                        <td width="30" style="vertical-align:middle;">
+                                            <table cellpadding="0" cellspacing="0"
+                                                style="vertical-align:-webkit-baseline-middle;font-size:small;">
+                                                <tr>
+                                                    <td style="vertical-align:bottom;"><span class="faculty_color_bg"
+                                                            width="11"
+                                                            style="display:inline-block;background-color:#1166b0;"><img
+                                                                src="https://tsu.ge/assets/media/files/8/signatures/icons/email-icon-2x.png"
+                                                                width="13"
+                                                                style="display:block;background-color:#1166b0;"
+                                                                class="faculty_color_bg"></span></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td style="padding:0px;"><a href="mailto:aleksi.ardshelia@tsu.ge"
+                                                style="text-decoration:none;color: #000 !important;;font-size:10px;"
+                                                id="email"></a></td>
+                                    </tr>
+                                    <tr height="25" style="vertical-align:middle;">
+                                        <td width="30" style="vertical-align:middle;">
+                                            <table cellpadding="0" cellspacing="0"
+                                                style="vertical-align:-webkit-baseline-middle;font-size:small;">
+                                                <tr>
+                                                    <td style="vertical-align:bottom;"><span width="11"
+                                                            style="display:inline-block;background-color:#1166b0;"
+                                                            class="faculty_color_bg"><img
+                                                                src="https://tsu.ge/assets/media/files/8/signatures/icons/link-icon-2x.png"
+                                                                width="13"
+                                                                style="display:block;background-color:#1166b0;"
+                                                                class="faculty_color_bg"></span></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td style="padding:0px;"><a id="web" href="https://www.tsu.ge"
+                                                style="text-decoration:none;color: #000 !important;font-size:10px;">TSU.GE</a>
+                                        </td>
+                                    </tr>
+                                    <tr height="25" style="vertical-align:middle;">
+                                        <td width="30" style="vertical-align:middle;">
+                                            <table cellpadding="0" cellspacing="0"
+                                                style="vertical-align:-webkit-baseline-middle;font-size:small;">
+                                                <tr>
+                                                    <td style="vertical-align:bottom;"><span width="11"
+                                                            style="display:inline-block;background-color:#1166b0;"
+                                                            class="faculty_color_bg"><img
+                                                                src="https://tsu.ge/assets/media/files/8/signatures/icons/address-icon-2x.png"
+                                                                width="13"
+                                                                style="display:block;background-color:#1166b0;"
+                                                                class="faculty_color_bg"></span></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td style="padding:0px;max-width:301px;"><span
+                                                style="font-size:10px;line-height:14px;color: #000 !important;"><span
+                                                    id="address_ge"></span><br><span id="address_eng"></span><br> ოთახი
+                                                №<span class="room"></span>
+                                                | Room №<span class="room"></span></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table cellpadding="0" cellspacing="0"
+                                    style="display:inline-block;vertical-align:-webkit-baseline-middle;font-size:small;padding-top:15px;">
+                                    <tr style="text-align:right;">
+                                        <td><a id="fb" href="https://www.facebook.com/TSU.Faculty.of.Law"
+                                                class="faculty_color_bg"
+                                                style="display:inline-block;padding:0px;background-color:#1166b0;"><img
+                                                    src="https://tsu.ge/assets/media/files/8/signatures/icons/facebook-icon-2x.png"
+                                                    height="24"
+                                                    style="background-color:#1166b0;max-width:135px;display:block;"
+                                                    class="faculty_color_bg"></a></td>
+                                        <td width="5">
+                                            <div></div>
+                                        </td>
+                                        <td width="5">
+                                            <div></div>
+                                        </td>
+                                        <td><a id="ig" href="https://www.instagram.com/tbilisistateuniversity_law/"
+                                                style="display:inline-block;padding:0px;background-color:#1166b0;"
+                                                class="faculty_color_bg"><img
+                                                    src="https://tsu.ge/assets/media/files/8/signatures/icons/instagram-icon-2x.png"
+                                                    height="24"
+                                                    style="background-color:#1166b0;max-width:135px;display:block;"
+                                                    class="faculty_color_bg"></a></td>
+                                        <!-- 51-69 -->
+                                        <td width="5">
+                                            <div></div>
+                                        </td>
+                                    </tr>
 
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <table cellpadding="0" cellspacing="0"
-                    style="width:100%;vertical-align:-webkit-baseline-middle;font-size:small;">
-                    <tr>
-                        <td height="10"></td>
-                    </tr>
-                    <tr>
-                        <td direction="horizontal" width="auto" height="1" class="faculty_bd "
-                            style="width:100%;border-bottom:1px solid ;border-left:none;display:block;border-color:#1166b0;">
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <table cellpadding="0" cellspacing="0"
-                    style="width:100%;vertical-align:-webkit-baseline-middle;font-size:small;font-family:Verdana;" id="conf">
-                    <tr>
-                        <td style="vertical-align:top;max-width:620px;">
-                            <p style="font-size:8px;text-align:justify;margin:10px 0 0 0;color: #000 !important;"><span
-                                    style="color:#dc0d1f;">შეტყობინება კონფიდენციალურობის შესახებ:</span>
-                                წინამდებარე წერილი კონფიდენციალურია და განკუთვნილია მხოლოდ წერილში მითითებული
-                                პიროვნების ან ორგანიზაციისათვის. თუ წერილი თქვენთვის არ არის განკუთვნილი,
-                                დაუშვებელია მისი შინაარსის გამჟღავნება, გავრცელება ან მის შინაარსზე დაყრდნობით
-                                ნებისმიერი ქმედების განხორციელება. თუ თქვენ შეცდომით მიიღეთ წინამდებარე წერილი,
-                                გთხოვთ, აღნიშნულის შესახებ დაუყოვნებლივ აცნობოთ ამავე წერილის
-                                გამომგზავნს.<br><span style="color:#dc0d1f;">CONFIDENTIALITY NOTICE:</span> This
-                                e-mail message may contain confidential and/or privileged material. Delivery of
-                                this message to any person other than the intended recipient(s) does not in any
-                                way waive privilege or confidentiality. The information transmitted is intended
-                                only for the person or entity to whom or which it is addressed. The sender
-                                accepts no liability for the proper transmission of this communication or for
-                                any delay in its receipt. </p>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table cellpadding="0" cellspacing="0"
+                        style="width:100%;vertical-align:-webkit-baseline-middle;font-size:small;">
+                        <tr>
+                            <td height="10"></td>
+                        </tr>
+                        <tr>
+                            <td direction="horizontal" width="auto" height="1" class="faculty_bd "
+                                style="width:100%;border-bottom:1px solid ;border-left:none;display:block;border-color:#1166b0;">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table cellpadding="0" cellspacing="0"
+                        style="width:100%;vertical-align:-webkit-baseline-middle;font-size:small;font-family:Verdana;"
+                        id="conf">
+                        <tr>
+                            <td style="vertical-align:top;max-width:620px;">
+                                <p style="font-size:8px;text-align:justify;margin:10px 0 0 0;color: #000 !important;">
+                                    <span style="color:#dc0d1f;">შეტყობინება კონფიდენციალურობის შესახებ:</span>
+                                    წინამდებარე წერილი კონფიდენციალურია და განკუთვნილია მხოლოდ წერილში მითითებული
+                                    პიროვნების ან ორგანიზაციისათვის. თუ წერილი თქვენთვის არ არის განკუთვნილი,
+                                    დაუშვებელია მისი შინაარსის გამჟღავნება, გავრცელება ან მის შინაარსზე დაყრდნობით
+                                    ნებისმიერი ქმედების განხორციელება. თუ თქვენ შეცდომით მიიღეთ წინამდებარე წერილი,
+                                    გთხოვთ, აღნიშნულის შესახებ დაუყოვნებლივ აცნობოთ ამავე წერილის
+                                    გამომგზავნს.<br><span style="color:#dc0d1f;">CONFIDENTIALITY NOTICE:</span> This
+                                    e-mail message may contain confidential and/or privileged material. Delivery of
+                                    this message to any person other than the intended recipient(s) does not in any
+                                    way waive privilege or confidentiality. The information transmitted is intended
+                                    only for the person or entity to whom or which it is addressed. The sender
+                                    accepts no liability for the proper transmission of this communication or for
+                                    any delay in its receipt. </p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
-    </table>
+        </table>
 
-</div>
+    </div>
 
-<div id="bottom">
-    <p>გაკეთებულია სიყვარულით ალექსი არდაშელიას მიერ ❤️</p>
-</div>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
-<script>
+    <div id="bottom">
+        <p>გაკეთებულია სიყვარულით ალექსი არდაშელიას მიერ ❤️</p>
+    </div>
 
 
-    let faculty_ge = document.getElementById('faculty_ge'),
-        faculty_eng = document.getElementById('faculty_eng'),
-        facultyP = document.getElementById('faculty_p'),
-        facultycolor_bd = document.getElementsByClassName('faculty_bd'),
-        facultycolor_bg = document.getElementsByClassName('faculty_color_bg'),
-        setFacultyColor,
-        wphoneyorn = document.getElementById('wphoneyorn'),
-        pphoneyorn = document.getElementById("pphoneyorn"),
-        atitle_ge = document.getElementById('atitle_ge'),
-        atitle_eng = document.getElementById('atitle_eng'),
-        jtitle_input_tr = document.getElementById('jtitle_input_tr'),
-        dep_input_tr = document.getElementById('dep_input_tr'),
-        roomnum = document.getElementsByClassName('room'),
-        clipboard = new ClipboardJS('#btnCopy');
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+    <script>
 
-    clipboard.on('success', function (e) {
-        console.info('Action:', e.action);
-        console.info('Text:', e.text);
-        console.info('Trigger:', e.trigger);
-        alert("ხელმოწერა დაკოპირებულია")
-        e.clearSelection();
-    });
 
-    clipboard.on('error', function (e) {
-        console.error('Action:', e.action);
-        console.error('Trigger:', e.trigger);
-        alert("ხელმოწერის დაკოპირება ვერ მოხერხდა")
-    });
+        let faculty_ge = document.getElementById('faculty_ge'),
+            faculty_eng = document.getElementById('faculty_eng'),
+            facultyP = document.getElementById('faculty_p'),
+            facultycolor_bd = document.getElementsByClassName('faculty_bd'),
+            facultycolor_bg = document.getElementsByClassName('faculty_color_bg'),
+            setFacultyColor,
+            wphoneyorn = document.getElementById('wphoneyorn'),
+            pphoneyorn = document.getElementById("pphoneyorn"),
+            atitle_ge = document.getElementById('atitle_ge'),
+            atitle_eng = document.getElementById('atitle_eng'),
+            jtitle_input_tr = document.getElementById('jtitle_input_tr'),
+            dep_input_tr = document.getElementById('dep_input_tr'),
+            roomnum = document.getElementsByClassName('room'),
+            clipboard = new ClipboardJS('#btnCopy');
 
-    const phoneFormat = (input) => {
-        if (typeof (input) !== 'string') input = input.toString()
-        return input.replace(/^(\d{3})(\d{2})(\d{2})(\d{2})/, '$1 $2 $3 $4')
-    }
+        clipboard.on('success', function (e) {
+            console.info('Action:', e.action);
+            console.info('Text:', e.text);
+            console.info('Trigger:', e.trigger);
+            alert("ხელმოწერა დაკოპირებულია")
+            e.clearSelection();
+        });
 
-    function name_ge() {
-        document.getElementById("name_ge").innerHTML = document.getElementById("name_ge_input").value;
-    };
-    function name_eng() {
-        let enname = document.getElementById("name_eng_input").value.split(' ');
-        document.getElementById("name_eng").innerHTML = enname[0].charAt(0).toUpperCase() + enname[0].slice(1) + " " + enname[1].toUpperCase();
-    };
-    function faculty() {
-        let selectFaculty = document.getElementById('faculty_input').value.split('|');
-        console.log(selectFaculty[0])
-        if (selectFaculty[0] == "") {
-            facultyP.style.display = 'none';
+        clipboard.on('error', function (e) {
+            console.error('Action:', e.action);
+            console.error('Trigger:', e.trigger);
+            alert("ხელმოწერის დაკოპირება ვერ მოხერხდა")
+        });
+
+        const phoneFormat = (input) => {
+            if (typeof (input) !== 'string') input = input.toString()
+            return input.replace(/^(\d{3})(\d{2})(\d{2})(\d{2})/, '$1 $2 $3 $4')
         }
-        else {
-            facultyP.style.display = 'block';
-        }
-        faculty_ge.innerHTML = selectFaculty[0];
-        faculty_eng.innerHTML = selectFaculty[1];
-        setFacultyColor = selectFaculty[2];
-        document.getElementById('web').href = selectFaculty[3];
-        document.getElementById('fb').href = selectFaculty[4];
-        document.getElementById('ig').href = selectFaculty[5];
-        facultyP.style.color = setFacultyColor;
-        for (let i = 0; i < facultycolor_bd.length; i++) {
-            facultycolor_bd[i].style.borderColor = setFacultyColor;
-        }
-        for (let i = 0; i < facultycolor_bg.length; i++) {
-            facultycolor_bg[i].style.backgroundColor = setFacultyColor;
-        }
-    };
-    function atitleYorN() {
-        if (document.getElementById('atitleyorn').checked) {
-            document.getElementById('atitle').style.display = 'block';
-            document.getElementById('atitle_input_tr').style.display = 'table-row';
-            atitle()
-        }
-        else {
-            document.getElementById('atitle').style.display = 'none';
-            document.getElementById('atitle_input_tr').style.display = 'none';
-            atitle_ge.innerHTML = null;
-            atitle_eng.innerHTML = null;
-        }
-    };
-    function atitle() {
-        let atitleval = document.getElementById('atitle_input').selectedIndex;
-        if (atitleval == 0) {
-            atitle_ge.innerHTML = null;
-            atitle_eng.innerHTML = null;
-        }
-        if (atitleval === 1) {
-            atitle_ge.innerHTML = 'პროფესორი';
-            atitle_eng.innerHTML = 'Professor';
-        }
-        if (atitleval === 2) {
-            atitle_ge.innerHTML = 'ასოცირებული პროფესორი';
-            atitle_eng.innerHTML = 'Associate Professor';
-        }
-        if (atitleval === 3) {
-            atitle_ge.innerHTML = 'ასისტენტ-პროფესორი';
-            atitle_eng.innerHTML = 'Assistant Professor';
-        }
-        if (atitleval === 4) {
-            atitle_ge.innerHTML = 'ასისტენტი';
-            atitle_eng.innerHTML = 'Assistant';
-        }
-    };
-    function jtitleYorN() {
-        if (document.getElementById('jtitleyorn').checked) {
-            document.getElementById('jtitle').style.display = 'block';
-            document.getElementsByClassName('jtitle_input_tr')[0].style.display = 'table-row';
-            document.getElementsByClassName('jtitle_input_tr')[1].style.display = 'table-row';
-            jtitle_ge;
-            jtitle_eng;
-        }
-        else {
-            document.getElementById('jtitle').style.display = 'none';
-            document.getElementsByClassName('jtitle_input_tr')[0].style.display = 'none';
-            document.getElementsByClassName('jtitle_input_tr')[1].style.display = 'none';
-            document.getElementById("jtitle_ge").innerHTML = null;
-            document.getElementById("jtitle_eng").innerHTML = null;
-        }
-    };
-    function jtitle_ge() {
-        document.getElementById("jtitle_ge").innerHTML = document.getElementById("jtitle_ge_input").value;
-    };
-    function jtitle_eng() {
-        document.getElementById("jtitle_eng").innerHTML = document.getElementById("jtitle_eng_input").value;
-    };
-    function depYorN() {
-        if (document.getElementById('depyorn').checked) {
-            document.getElementById('dep').style.display = 'block';
-            document.getElementsByClassName('dep_input_tr')[0].style.display = 'table-row';
-            document.getElementsByClassName('dep_input_tr')[1].style.display = 'table-row';
-            dep_ge;
-            dep_eng;
-        }
-        else {
-            document.getElementById('dep').style.display = 'none';
-            document.getElementsByClassName('dep_input_tr')[0].style.display = 'none';
-            document.getElementsByClassName('dep_input_tr')[1].style.display = 'none';
-            document.getElementById("dep_ge").innerHTML = null;
-            document.getElementById("dep_eng").innerHTML = null;
+
+        function name_ge() {
+            document.getElementById("name_ge").innerHTML = document.getElementById("name_ge_input").value;
         };
-    };
-    function dep_ge() {
-        document.getElementById("dep_ge").innerHTML = document.getElementById("dep_ge_input").value;
-    };
-    function dep_eng() {
-        document.getElementById("dep_eng").innerHTML = document.getElementById("dep_eng_input").value;
-    };
-    function phoneyorn() {
-        if (wphoneyorn.checked) {
-            document.getElementById('wphone_div').style.display = 'inline';
-            document.getElementById('wphone_input_tr').style.display = 'table-row';
-            wphone();
-        }
-        if (!wphoneyorn.checked) {
-            document.getElementById('wphone_div').style.display = 'none';
-            document.getElementById('wphone_input_tr').style.display = 'none';
-            document.getElementById('wphone').innerHTML = null;
-            document.getElementById('wphone').parentElement.removeAttribute('href');
+        function name_eng() {
+            let enname = document.getElementById("name_eng_input").value.split(' ');
+            document.getElementById("name_eng").innerHTML = enname[0].charAt(0).toUpperCase() + enname[0].slice(1) + " " + enname[1].toUpperCase();
+        };
+        function faculty() {
+            let selectFaculty = document.getElementById('faculty_input').value.split('|');
+            console.log(selectFaculty[0])
+            if (selectFaculty[0] == "") {
+                facultyP.style.display = 'none';
+            }
+            else {
+                facultyP.style.display = 'block';
+            }
+            faculty_ge.innerHTML = selectFaculty[0];
+            faculty_eng.innerHTML = selectFaculty[1];
+            setFacultyColor = selectFaculty[2];
+            document.getElementById('web').href = selectFaculty[3];
+            document.getElementById('fb').href = selectFaculty[4];
+            document.getElementById('ig').href = selectFaculty[5];
+            facultyP.style.color = setFacultyColor;
+            for (let i = 0; i < facultycolor_bd.length; i++) {
+                facultycolor_bd[i].style.borderColor = setFacultyColor;
+            }
+            for (let i = 0; i < facultycolor_bg.length; i++) {
+                facultycolor_bg[i].style.backgroundColor = setFacultyColor;
+            }
+        };
+        function atitleYorN() {
+            if (document.getElementById('atitleyorn').checked) {
+                document.getElementById('atitle').style.display = 'block';
+                document.getElementById('atitle_input_tr').style.display = 'table-row';
+                atitle()
+            }
+            else {
+                document.getElementById('atitle').style.display = 'none';
+                document.getElementById('atitle_input_tr').style.display = 'none';
+                atitle_ge.innerHTML = null;
+                atitle_eng.innerHTML = null;
+            }
+        };
+        function atitle() {
+            let atitleval = document.getElementById('atitle_input').selectedIndex;
+            if (atitleval == 0) {
+                atitle_ge.innerHTML = null;
+                atitle_eng.innerHTML = null;
+            }
+            if (atitleval === 1) {
+                atitle_ge.innerHTML = 'პროფესორი';
+                atitle_eng.innerHTML = 'Professor';
+            }
+            if (atitleval === 2) {
+                atitle_ge.innerHTML = 'ასოცირებული პროფესორი';
+                atitle_eng.innerHTML = 'Associate Professor';
+            }
+            if (atitleval === 3) {
+                atitle_ge.innerHTML = 'ასისტენტ-პროფესორი';
+                atitle_eng.innerHTML = 'Assistant Professor';
+            }
+            if (atitleval === 4) {
+                atitle_ge.innerHTML = 'ასისტენტი';
+                atitle_eng.innerHTML = 'Assistant';
+            }
+        };
+        function jtitleYorN() {
+            if (document.getElementById('jtitleyorn').checked) {
+                document.getElementById('jtitle').style.display = 'block';
+                document.getElementsByClassName('jtitle_input_tr')[0].style.display = 'table-row';
+                document.getElementsByClassName('jtitle_input_tr')[1].style.display = 'table-row';
+                jtitle_ge;
+                jtitle_eng;
+            }
+            else {
+                document.getElementById('jtitle').style.display = 'none';
+                document.getElementsByClassName('jtitle_input_tr')[0].style.display = 'none';
+                document.getElementsByClassName('jtitle_input_tr')[1].style.display = 'none';
+                document.getElementById("jtitle_ge").innerHTML = null;
+                document.getElementById("jtitle_eng").innerHTML = null;
+            }
+        };
+        function jtitle_ge() {
+            document.getElementById("jtitle_ge").innerHTML = document.getElementById("jtitle_ge_input").value;
+        };
+        function jtitle_eng() {
+            document.getElementById("jtitle_eng").innerHTML = document.getElementById("jtitle_eng_input").value;
+        };
+        function depYorN() {
+            if (document.getElementById('depyorn').checked) {
+                document.getElementById('dep').style.display = 'block';
+                document.getElementsByClassName('dep_input_tr')[0].style.display = 'table-row';
+                document.getElementsByClassName('dep_input_tr')[1].style.display = 'table-row';
+                dep_ge;
+                dep_eng;
+            }
+            else {
+                document.getElementById('dep').style.display = 'none';
+                document.getElementsByClassName('dep_input_tr')[0].style.display = 'none';
+                document.getElementsByClassName('dep_input_tr')[1].style.display = 'none';
+                document.getElementById("dep_ge").innerHTML = null;
+                document.getElementById("dep_eng").innerHTML = null;
+            };
+        };
+        function dep_ge() {
+            document.getElementById("dep_ge").innerHTML = document.getElementById("dep_ge_input").value;
+        };
+        function dep_eng() {
+            document.getElementById("dep_eng").innerHTML = document.getElementById("dep_eng_input").value;
+        };
+        function phoneyorn() {
+            if (wphoneyorn.checked) {
+                document.getElementById('wphone_div').style.display = 'inline';
+                document.getElementById('wphone_input_tr').style.display = 'table-row';
+                wphone();
+            }
+            if (!wphoneyorn.checked) {
+                document.getElementById('wphone_div').style.display = 'none';
+                document.getElementById('wphone_input_tr').style.display = 'none';
+                document.getElementById('wphone').innerHTML = null;
+                document.getElementById('wphone').parentElement.removeAttribute('href');
 
-        }
-        if (pphoneyorn.checked) {
-            document.getElementById('pphone_div').style.display = 'inline';
-            document.getElementById('pphone_input_tr').style.display = 'table-row';
-            pphone();
-        }
-        if (!pphoneyorn.checked) {
-            document.getElementById('pphone_div').style.display = 'none';
-            document.getElementById('pphone_input_tr').style.display = 'none';
-            document.getElementById('pphone').innerHTML = null;
-            document.getElementById('pphone').removeAttribute('href');
-        }
-        if (wphoneyorn.checked || pphoneyorn.checked) {
-            document.getElementById('phone_ifany').style.display = 'table-row';
-        }
-        if (!wphoneyorn.checked && !pphoneyorn.checked) {
-            document.getElementById('phone_ifany').style.display = 'none';
-        }
-        if (wphoneyorn.checked && pphoneyorn.checked) {
-            document.getElementById('phone_ifboth').style.display = 'inline';
-        }
-        else {
-            document.getElementById('phone_ifboth').style.display = 'none';
-        }
-    };
-    function wphone() {
-        document.getElementById('wphone').innerHTML = document.getElementById("wphone_input").value;
-        document.getElementById('wphone').parentElement.href = "tel:+995 (032) 225 04 84"
-    };
-    function pphone() {
-        document.getElementById('pphone').innerHTML = '+995 ' + phoneFormat(document.getElementById("pphone_input").value);
-        document.getElementById('pphone').href = "tel:+995 " + document.getElementById("pphone_input").value;
+            }
+            if (pphoneyorn.checked) {
+                document.getElementById('pphone_div').style.display = 'inline';
+                document.getElementById('pphone_input_tr').style.display = 'table-row';
+                pphone();
+            }
+            if (!pphoneyorn.checked) {
+                document.getElementById('pphone_div').style.display = 'none';
+                document.getElementById('pphone_input_tr').style.display = 'none';
+                document.getElementById('pphone').innerHTML = null;
+                document.getElementById('pphone').removeAttribute('href');
+            }
+            if (wphoneyorn.checked || pphoneyorn.checked) {
+                document.getElementById('phone_ifany').style.display = 'table-row';
+            }
+            if (!wphoneyorn.checked && !pphoneyorn.checked) {
+                document.getElementById('phone_ifany').style.display = 'none';
+            }
+            if (wphoneyorn.checked && pphoneyorn.checked) {
+                document.getElementById('phone_ifboth').style.display = 'inline';
+            }
+            else {
+                document.getElementById('phone_ifboth').style.display = 'none';
+            }
+        };
+        function wphone() {
+            document.getElementById('wphone').innerHTML = document.getElementById("wphone_input").value;
+            document.getElementById('wphone').parentElement.href = "tel:+995 (032) 225 04 84"
+        };
+        function pphone() {
+            document.getElementById('pphone').innerHTML = '+995 ' + phoneFormat(document.getElementById("pphone_input").value);
+            document.getElementById('pphone').href = "tel:+995 " + document.getElementById("pphone_input").value;
 
-    };
-    function email() {
-        document.getElementById('email').innerHTML = document.getElementById("email_input").value;
-        document.getElementById('email').href = "mailto:" + document.getElementById("email_input").value;
-    }
-    function address() {
-        let selectAddress = document.getElementById('address_input').value.split('|');
-        document.getElementById('address_ge').innerHTML = selectAddress[0]
-        document.getElementById('address_eng').innerHTML = selectAddress[1]
-    };
-    function room() {
-        roomnum[0].innerHTML = document.getElementById("room_input").value;
-        roomnum[1].innerHTML = document.getElementById("room_input").value;
-    };
-    function confYorN() {
-        if (document.getElementById('confyorn').checked) {
-            document.getElementById('conf').style.display = 'table';
+        };
+        function email() {
+            document.getElementById('email').innerHTML = document.getElementById("email_input").value;
+            document.getElementById('email').href = "mailto:" + document.getElementById("email_input").value;
         }
+        function address() {
+            let selectAddress = document.getElementById('address_input').value.split('|');
+            document.getElementById('address_ge').innerHTML = selectAddress[0]
+            document.getElementById('address_eng').innerHTML = selectAddress[1]
+        };
+        function room() {
+            roomnum[0].innerHTML = document.getElementById("room_input").value;
+            roomnum[1].innerHTML = document.getElementById("room_input").value;
+        };
+        function confYorN() {
+            if (document.getElementById('confyorn').checked) {
+                document.getElementById('conf').style.display = 'table';
+            }
 
-        else {
-            document.getElementById('conf').style.display = 'none';
+            else {
+                document.getElementById('conf').style.display = 'none';
+            }
         }
-    }
-</script>
+    </script>
 </body>
 
 </html>
